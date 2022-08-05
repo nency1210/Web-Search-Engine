@@ -1,0 +1,644 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Kali Linux Tutorial - javatpoint</title>
+  <link rel="SHORTCUT ICON" href="https://static.javatpoint.com/images/favicon2.png"> 
+  <link rel="stylesheet" type="text/css" href="https://static.javatpoint.com/link.css?v=5.0" async>
+  <link rel="dns-prefetch" href="https://clients1.google.com">
+  <link rel="dns-prefetch" href="https://static.javatpoint.com">
+  <link rel="dns-prefetch" href="https://googleads.g.doubleclick.net">
+  <link rel="dns-prefetch" href="https://www.google.com">
+  <link rel="dns-prefetch" href="https://feedify.net">
+  <meta name="theme-color" content="#4CAF50">
+  <meta property="og:title" content="Kali Linux Tutorial - javatpoint">
+  <meta property="og:description" content="Kali Linux Tutorial with What is Kali Linux, Install Kali Linux, Update Kali Linux, Install Kali Linux on Windows, Kali Linux, virtual box, Kali Linux Commands, Kali Linux Tools etc."> 
+  <meta name="keywords" content="kali linux, kali, what is kali linux, install kali linux, update kali linux, install kali linux on windows, kali linux commands, kali linux tools">
+  <meta name="description" content="Kali Linux Tutorial with What is Kali Linux, Install Kali Linux, Update Kali Linux, Install Kali Linux on Windows, Kali Linux, virtual box, Kali Linux Commands, Kali Linux Tools etc.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="canonical" href="https://www.javatpoint.com/kali-linux"> 
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="article">
+  <meta name="twitter:title" property="og:title" content="Kali Linux Tutorial - javatpoint">
+  <meta name="twitter:description" property="og:description" content="Kali Linux Tutorial with What is Kali Linux, Install Kali Linux, Update Kali Linux, Install Kali Linux on Windows, Kali Linux, virtual box, Kali Linux Commands, Kali Linux Tools etc.">
+  <meta property="og:url" content="https://www.javatpoint.com/kali-linux">
+  <meta property="og:site_name" content="www.javatpoint.com">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@pagejavatpoint">
+  <meta name="twitter:domain" content="www.javatpoint.com">
+  <meta name="twitter:creator" content="@pagejavatpoint"> 
+  <link href="https://www.javatpoint.com/manifest.json" rel="manifest"> 
+  <script data-cfasync="false" type="text/javascript">(function(w, d) { var s = d.createElement('script'); s.src = '//delivery.adrecover.com/37784/adRecover.js?ts=1543562646174'; s.type = 'text/javascript'; s.async = true; (d.getElementsByTagName('head')[0] || d.getElementsByTagName('body')[0]).appendChild(s); })(window, document);</script> 
+  <script data-cfasync="false" type="text/javascript">
+(function (w, d) {
+  var siteId = "37780";
+  var targetElement =
+    d.getElementsByTagName("head")[0] || d.getElementsByTagName("body")[0];
+  var s = d.createElement("script");
+  s.src = "//cdn.adpushup.com/" + siteId + "/adpushup.js";
+  s.crossOrigin = "anonymous";
+  s.type = "text/javascript";
+  s.async = true;
+  targetElement.appendChild(s);
+  function sendErrorLog(log) {
+    var eventName = "script_error";
+    log.siteId = siteId;
+    var data = btoa(JSON.stringify(log));
+    var img = document.createElement("img");
+    img.src =
+      "https://aplogger.adpushup.com/log?event=HC_" + eventName + "&data=" + data;
+  }
+  var searchParams =
+    typeof URLSearchParams === "function" &&
+    new URLSearchParams(window.location.search);
+  if (searchParams) {
+    var isDebugModeOn = searchParams.has("apDebug");
+  }
+  w.addEventListener("error", function (event) {
+    try {
+      var filename = event.filename || "";
+      if (filename.indexOf("/" + siteId + "/adpushup.js") === -1) {
+        return;
+      }
+      var error = event.error;
+      if (error) {
+        var message = error.message;
+        var stack = error.stack;
+      }
+      message = message || event.message;
+      var log = {
+        message: message,
+        stack: stack || "",
+        timestamp: Math.floor(event.timeStamp),
+        type: "uncaughterror",
+      };
+      sendErrorLog(log);
+      !isDebugModeOn && event.preventDefault();
+    } catch (error) {}
+  });
+  w.addEventListener("unhandledrejection", function (event) {
+    var reason = event.reason;
+    if (typeof reason === "object") reason = JSON.stringify(reason);
+    var log = {
+      message: reason || "no reason found",
+      timestamp: Math.floor(event.timeStamp),
+      type: "unhandledrejection",
+    };
+    sendErrorLog(log);
+    !isDebugModeOn && event.preventDefault();
+  });
+  var ga = d.createElement("script");
+  ga.src = "https://www.googletagmanager.com/gtag/js?id=G-Z0TZ7TDHS1";
+  ga.type = "text/javascript";
+  ga.async = true;
+  targetElement.appendChild(ga);
+  w.dataLayer = window.dataLayer || [];
+  w.gtag = function () {
+    window.dataLayer.push(arguments);
+  };
+  w.gtag("js", new Date());
+  w.gtag("config", "G-Z0TZ7TDHS1", {
+    custom_map: { dimension1: "siteid" },
+  });
+  w.gtag("event", "script-call", {
+    send_to: "G-Z0TZ7TDHS1",
+    siteid: siteId,
+  });
+  s.onerror = function (msg) {
+    w.gtag("event", "ad-block", {
+      send_to: "G-Z0TZ7TDHS1",
+      siteid: siteId,
+    });
+  };
+})(window, document);
+</script> 
+ </head> 
+ <body onload="highlightlink()"> <button onclick="topFunction()" id="myBtn">&#x21e7; SCROLL TO TOP</button> 
+  <div id="page" style="margin:-8px;background-color:#f5f5f4;">
+   <div id="container"> 
+    <div class="header">
+     <table style="width:100%;margin-bottom:5px"> 
+      <tbody>
+       <tr> 
+        <td> 
+         <div style="clear:both;float:left;width:230px;margin-top:15px;margin-left:20px"> <a href="https://www.javatpoint.com"><img src="https://static.javatpoint.com/images/logo/jtp_logo.png" alt="Javatpoint Logo"></a> 
+         </div> 
+         <div style="float:left;width:60%;">
+          <script> (function() { var cx = '005383125436438536544:y1edweedxwi'; var gcse = document.createElement('script'); gcse.type = 'text/javascript'; gcse.async = true; gcse.src = 'https://cse.google.com/cse.js?cx=' + cx; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(gcse, s); })();</script><gcse:search></gcse:search> 
+         </div> </td> 
+       </tr>
+      </tbody>
+     </table> 
+    </div> 
+    <div class="headermobile"> 
+     <div style="margin-top:10px;padding:0px;text-align:left;"> <span style="float:left"><input type="image" src="https://www.javatpoint.com/images/menuhome64.png" alt="Go To Top" onclick="showmenu()"></span> <span style="float:left"><a href="https://www.javatpoint.com"><img src="https://www.javatpoint.com/images/logo/jtp_logo.png" alt="Javatpoint Logo"></a></span> 
+     </div> 
+     <div style="margin:0px;padding:0px;clear:both"> 
+      <script>
+  (function() {
+    var cx = '005383125436438536544:y1edweedxwi';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script> <gcse:search></gcse:search> 
+     </div> 
+    </div> 
+    <div id="link" style="clear:both"> 
+     <div class="ddsmoothmenu"> 
+      <ul> 
+       <li><a href="https://www.javatpoint.com">Home</a></li> 
+       <li><a href="java-tutorial">Java</a></li> 
+       <li><a href="kali-linux" class="selected">Kali Linux</a></li> 
+       <li><a href="ethical-hacking-tutorial">Ethical Hacking</a></li> 
+       <li><a href="linux-tutorial">Linux</a></li> 
+       <li><a href="shell-scripting-tutorial">Shell Scripting</a></li> 
+       <li><a href="c-programming-language-tutorial">C</a></li> 
+       <li><a href="sql-tutorial">SQL</a></li> 
+       <li><a href="html-tutorial">HTML</a></li> 
+       <li><a href="css-tutorial">CSS</a></li> 
+       <li><a href="javascript-tutorial">JavaScript</a></li> 
+       <li><a href="xml-tutorial">XML</a></li> 
+       <li><a href="ajax-tutorial">Ajax</a></li> 
+       <li><a href="python-tutorial">Python</a></li> 
+       <li><a href="android-tutorial">Android</a></li> 
+       <li><a href="examaccess">Quiz</a></li> 
+       <li><a href="free-java-projects">Projects</a></li> 
+       <li><a href="corejava-interview-questions">Interview Q</a></li> 
+       <li><a href="forum">Forum</a></li> 
+      </ul> 
+      <br style="clear: left"> 
+     </div>
+    </div> 
+    <div class="mobilemenu" style="clear:both"> 
+     <ins class="adPushupAds" data-adpcontrol="hqdgs" data-ver="2" data-siteid="37780" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSBDbV8zMDB4MjUwX01vYl8xNC85IC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTppbmxpbmUtYmxvY2s7d2lkdGg6MzAwcHg7aGVpZ2h0OjI1MHB4IgogICAgIGRhdGEtYWQtY2xpZW50PSJjYS1wdWItNDY5OTg1ODU0OTAyMzM4MiIKICAgICBkYXRhLWFkLXNsb3Q9IjcwMTQyNzI1MTkiPjwvaW5zPgo8c2NyaXB0PgooYWRzYnlnb29nbGUgPSB3aW5kb3cuYWRzYnlnb29nbGUgfHwgW10pLnB1c2goe30pOwo8L3NjcmlwdD4="></ins>
+     <script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script> 
+    </div> 
+    <div id="menu"> 
+     <div class="leftmenu2"> 
+      <h2 class="spanh2"><span class="spanh2">Kali Linux Tutorial</span></h2> 
+     </div> 
+     <div class="leftmenu"> <a href="kali-linux">Kali Linux Tutorial</a> <a href="kali-linux-installation">Install Kali Linux</a> <a href="configuring-kali-linux">Configuring &amp; Updating</a> <a href="kali-linux-commands">Kali Linux Commands</a> 
+     </div> 
+     <div class="leftmenu2"> 
+      <h2 class="spanh2"><span class="spanh2">Kali Linux Tools</span></h2> 
+     </div> 
+     <div class="leftmenu"> <a href="kali-linux-information-gathering-tools">Information Gathering Tools</a> <a href="kali-linux-vulnerability-analysis-tools">Vulnerability Analysis Tools</a> <a href="kali-linux-exploitation-tools">Exploitation Tools</a> <a href="kali-linux-wireless-attack-tools">Wireless Attack Tools</a> <a href="kali-linux-forensic-tools">Forensic Tools</a> <a href="kali-linux-web-application-tools">Web Application Tools</a> <a href="kali-linux-stress-testing-tools">Stress Testing Tools</a> <a href="kali-linux-sniffing-and-spoofing-tools">Sniffing &amp; Spoofing Tools</a> <a href="kali-linux-password-attack-tools">Password Attack Tools</a> <a href="kali-linux-maintaining-access-tools">Maintaining Access Tools</a> <a href="kali-linux-reverse-engineering-tools">Reverse Engineering Tools</a> <a href="kali-linux-hardware-hacking-tools">Hardware Hacking Tools</a> <a href="kali-linux-reporting-tools">Reporting Tools</a> <a href="hacking-wifi-using-kali-linux">Hacking Wifi using Kali Linux</a> 
+     </div> 
+     <div class="leftmenu2"> 
+      <h2 class="spanh2"><span class="spanh2">Misc.</span></h2> 
+     </div> 
+     <div class="leftmenu"> <a href="kali-linux-latest-version">Kali Linux Latest Version</a> <a href="kali-linux-net-hunter">Kali Linux net hunter</a> <a href="making-a-kali-bootable-usb-drive">Making a Kali Bootable USB Drive</a> <a href="kali-linux-terminal">Kali Linux - Terminal</a> <a href="kali-linux-root-password-reset">Kali Linux root password reset</a> <a href="enable-root-user-in-kali-linux">Enable Root User in Kali Linux</a> <a href="how-to-hack-a-facebook-account-using-kali-linux">How to hack a Facebook account using Kali Linux</a> <a href="how-to-install-xampp-in-kali-linux">How to Install XAMPP in Kali Linux</a> <a href="how-to-run-a-java-program-on-kail-linux">How to run a java program on Kail Linux</a> <a href="how-to-install-xdm-on-kali-linux">How to install XDM on Kali Linux</a> <a href="features-of-kali-linux">Features of Kali Linux</a> <a href="use-of-kali-linux">Use of Kali Linux</a> <a href="how-to-install-vpnbook-on-kali-linux">How to install VPNbook on Kali Linux</a> <a href="how-to-check-kali-linux-version">How to Check Kali Linux Version</a> <a href="kali-linux-system-requirements">Kali Linux System Requirements</a> <a href="advantages-and-disadvantages-of-kali-linux">Advantages and Disadvantages of Kali Linux</a> <a href="kali-linux-tools-list">Kali Linux Tools List</a> <a href="how-to-install-anydesk-on-kali-linux">How to install AnyDesk on Kali Linux</a> <a href="best-wifi-adapters-for-kali-linux">Best WiFi Adapters for Kali Linux</a> <a href="install-mozilla-firefox-in-kali-linux">Install Mozilla Firefox In Kali Linux</a> <a href="kali-linux-vs-fedora">Kali Linux vs Fedora</a> <a href="sqlmap-in-kali-linux">Sqlmap in Kali Linux</a> <a href="skipfish-in-kali-linux">Skipfish in Kali Linux</a> <a href="kali-linux-basic-commands">Kali Linux Basic Commands</a> <a href="kali-linux-shortcut-keys">Kali Linux Shortcut Keys</a> <a href="how-to-take-screenshot-in-kali-linux">How to take Screenshot in Kali Linux</a> <a href="how-to-update-kali-linux">How to Update Kali Linux</a> <a href="how-to-change-time-in-kali-kinux">How to Change Time in Kali Linux</a> <a href="kill-process">Kill Process</a> <a href="social-engineering-in-kali-linux">Social Engineering in Kali Linux</a> <a href="crunch-kali-linux">Crunch Kali Linux</a> <a href="kali-linux-tree-command">Kali Linux Tree Command</a> <a href="how-to-install-google-chrome-in-kali-linux">How to Install Google Chrome in Kali Linux</a> <a href="how-to-install-pip3-in-kali-linux">How to Install pip3 in Kali Linux</a> <a href="top-5-tools-for-sniffing-and-spoofing">Top 5 Tools for Sniffing and Spoofing</a> <a href="install-libreoffice-in-kali-linux">Install LibreOffice in Kali Linux</a> <a href="nmap-commands-in-kali-linux">Nmap Commands in Kali Linux</a> <a href="regular-updates-and-cleaning-kali-linux-system">Regular Updates and Cleaning Kali Linux System</a> <a href="how-to-secure-our-kali-linux-to-ensure-our-protection">How to Secure Our Kali Linux to Ensure Our Protection</a> <a href="kali-linux-web-penetration-testing-tools">Kali Linux - Web Penetration Testing Tools</a> <a href="top-10-kali-linux-tools-for-hacking">Top 10 Kali Linux Tools for Hacking</a> <a href="pwnxss-automated-xss-vulnerability-scanner-tool-in-kali-linux">PwnXSS-Automated XSS Vulnerability Scanner Tool in Kali Linux</a> <a href="red-hawk-information-gathering-and-vulnerability-scanning-tool-in-kali-linux">Red Hawk-Information Gathering and Vulnerability Scanning Tool in Kali Linux</a> <a href="sitadel-web-application-security-scanner-in-kali-linux">Sitadel-Web Application Security Scanner in Kali Linux</a> <a href="grim-information-gathering-tool-in-kali-linux">Grim-Information Gathering Tool in Kali Linux</a> <a href="vulnerability-scanning-in-kali-linux">Vulnerability Scanning in Kali Linux</a> <a href="yuki-chan-automated-penetration-testing-and-auditing-tool-in-kali-linux">Yuki Chan-Automated Penetration Testing and Auditing Tool in Kali Linux</a> <a href="dmitry-tool-in-kali-linux">Dmitry Tool in Kali Linux</a> <a href="infosploit-information-gathering-tool-in-kali-linux">InfoSploit-Information Gathering Tool in Kali Linux</a> <a href="playing-games-on-kali-linux">Playing Games on Kali Linux</a> <a href="how-to-install-dropbox-on-kali-linux">How to Install Dropbox on Kali Linux</a> <a href="how-to-install-gobuster-tool-on-kali-linux">How to Install Gobuster Tool on Kali Linux</a> <a href="quasar-tool-in-kali-linux">Quasar Tool in Kali Linux</a> <a href="recon-ng-information-gathering-tool-in-kali-linux">Recon-ng Information Gathering Tool in Kali Linux</a> <a href="how-to-install-arduino-software-on-kali-linux">How to Install Arduino Software (IDE) on Kali Linux</a> <a href="how-to-install-zoom-on-kali-linux">How to Install Zoom on Kali Linux</a> <a href="netnoob-tool-in-kali-linux">Netnoob Tool in Kali Linux</a> <a href="tidos-framework-offensive-web-application-penetration-testing-framework">TIDoS-Framework-Offensive Web Application Penetration Testing Framework</a> <a href="fsociety-tool-in-kali-linux">Fsociety Tool in Kali Linux</a> <a href="kithack-hacking-tools-pack-in-kali-linux">KitHack-Hacking Tools Pack in Kali Linux</a> <a href="tor-browser-kali-linux">Tor Browser Kali Linux</a> <a href="kali-linux-books">Kali Linux Books</a> <a href="parsero-tool-in-kali-linux">Parsero Tool in Kali Linux</a> <a href="arch-linux-vs-kali-linux">Arch Linux vs Kali Linux</a> <a href="best-bluetooth-adapter-for-kali-linux">Best Bluetooth Adapter for Kali Linux</a> <a href="hawkscan-reconnaissance-and-information-gathering-tool-in-kali-linux">HawkScan-Reconnaissance and Information Gathering Tool in Kali Linux</a> <a href="best-ddos-tools-for-kali-linux">Best DDOS Tools for Kali Linux</a> <a href="database-assessment-tools-for-kali-linux">Database Assessment Tools for Kali Linux</a> <a href="clamav-and-clamtk-antivirus-scanner-tool-for-kali-linux">ClamAV and ClamTK Antivirus Scanner Tool for Kali Linux</a> <a href="how-to-install-sqlninja-in-kali-linux">How to Install Sqlninja in Kali Linux</a> <a href="sherlock-tool-in-kali-linux">Sherlock Tool in Kali Linux</a> <a href="best-vpn-kali-linux">Best VPN Kali Linux</a> <a href="how-to-install-vlc-on-kali-linux">How to Install VLC on Kali Linux</a> <a href="best-video-player-for-kali-linux">Best Video Player for Kali Linux</a> <a href="wps-office-for-kali-linux">WPS Office for Kali Linux</a> <a href="how-to-install-opera-in-kali-linux">How to Install Opera in Kali Linux</a> <a href="kali-linux-course">Kali Linux Course</a> <a href="phishing-tools-for-kali-linux">Phishing Tools for Kali Linux</a> <a href="best-chromebook-for-kali-linux">Best Chromebook for Kali Linux</a> <a href="best-kali-linux-alternatives">Best Kali Linux Alternatives</a> <a href="best-virtual-machines-for-kali-linux">Best Virtual Machines for Kali Linux</a> <a href="best-android-emulator-for-kali-linux">Best Android Emulator for Kali Linux</a> <a href="kali-linux-usb-sticks">Kali Linux USB Sticks</a> <a href="best-office-suites-for-kali-linux">Best Office Suites for Kali Linux</a> <a href="best-note-taking-apps-for-kali-linux">Best Note-Taking Apps for Kali Linux</a> <a href="best-photo-editors-for-kali-linux">Best Photo Editors for Kali Linux</a> <a href="best-text-editor-for-kali-linux">Best Text Editor for Kali Linux</a> <a href="kali-linux-video-editing-software">Kali Linux Video Editing Software</a> <a href="best-open-source-paint-tool-for-kali-linux">Best Open-source Paint Tool for Kali Linux</a> <a href="scylla-tool-in-kali-linux">Scylla Tool in Kali Linux</a> <a href="spiderfoot-a-automate-osint-framework-in-kali-linux">SpiderFoot- A Automate OSINT Framework in Kali Linux</a> <a href="webkiller-tool-in-kali-linux">Webkiller Tool in Kali Linux</a> 
+     </div> 
+     <div class="leftmenu2"> 
+      <h2 class="spanh2"><span class="spanh2">Interview Questions</span></h2> 
+     </div> 
+     <div class="leftmenu"> <a href="kali-linux-interview-questions">Kali Linux Interview</a> 
+     </div> 
+     <img src="https://www.javatpoint.com/wh.JPG" alt="JavaTpoint"> 
+     <br> 
+     <div id="leftad" style="margin-left:20px"> 
+      <div id="17c09743-0b89-427c-ba64-e09f6a1745a2" class="_ap_apex_ad"> 
+       <script>
+		var adpushup = window.adpushup = window.adpushup || {};
+		adpushup.que = adpushup.que || [];
+		adpushup.que.push(function() {
+			adpushup.triggerAd("17c09743-0b89-427c-ba64-e09f6a1745a2");
+		});
+	</script> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="onlycontent"> 
+     <div class="onlycontentad"> 
+      <div id="9bbcb75d-b5e2-40e1-a811-e7680d1f59a4" class="_ap_apex_ad"> 
+       <script>
+		var adpushup = window.adpushup = window.adpushup || {};
+		adpushup.que = adpushup.que || [];
+		adpushup.que.push(function() {
+			adpushup.triggerAd("9bbcb75d-b5e2-40e1-a811-e7680d1f59a4");
+		});
+	</script> 
+      </div> 
+     </div> 
+     <div class="onlycontentinner"> 
+      <div id="city"> 
+       <table> 
+        <tbody>
+         <tr>
+          <td> 
+           <div id="bottomnextup"> <a class="next" href="kali-linux-installation">next &#x2192;</a> 
+           </div> <h1 class="h1">Kali Linux Tutorial</h1> <img src="https://static.javatpoint.com/tutorial/kali-linux/images/kali-linux-tutorial2.png" alt="Kali Linux Tutorial" class="imageright"> <p>Kali Linux tutorial covers both fundamental and advanced hacking and penetration testing concepts. Our Kali Linux tutorial is designed for both beginners and professionals. Kali Linux tutorial covers all the areas associated with <strong>hacking</strong> and <strong>penetration testing.</strong> We'll start by learning how to install the required software. After this, we will learn the network configuration, basic commands and tools for <strong>hacking, gaining access, post-exploitation,</strong> and <strong>website hacking.</strong></p> <h2 class="h2">What is Kali Linux?</h2> <p>Kali Linux is a <strong>Debian-based Linux distribution</strong> that is designed for <strong>digital forensics</strong> and <strong>penetration testing.</strong> It is funded and maintained by <strong>Offensive Security,</strong> an information training company. Kali Linux was developed through the rewrite of <strong>BackTrack</strong> by <strong>Mati Aharoni</strong> and <strong>Devon Kearns</strong> of <strong>Offensive Security.</strong> Kali Linux comes with a large number of tools that are well suited to a variety of information security tasks, including <strong>penetration testing, computer forensics, security research,</strong> and <strong>reverse engineering.</strong></p> <h3 class="h3">Kali Linux Logo</h3> <img src="https://static.javatpoint.com/tutorial/kali-linux/images/kali-linux-tutorial1.png" alt="Kali Linux Tutorial"> <p><strong>BackTrack</strong> was their previous information security operating system. Kali Linux's first version, <strong>Kali 1.0.0,</strong> was released in <strong>March 2013.</strong> Kali Linux is now funded and supported by <strong>Offensive Security.</strong> Today, if we went to Kali's website (<a href="https://www.kali.org/" rel="nofollow" target="_blank">www.kali.org</a>), we'd notice a giant banner that states, <strong>"Our Most Advanced Penetration Testing Distribution,</strong> Ever." A very bold statement that ironically has yet to be disproven. There are over 600 <strong>penetration-testing applications</strong> preconfigured on Kali Linux for us to explore. Each program has its own set of capabilities and applications. Kali Linux performs a fantastic job of categorizing these important tools into the following groups:</p> 
+           <ol class="points"> 
+            <li>Information Gathering</li> 
+            <li>Vulnerability Analysis</li> 
+            <li>Wireless Attacks</li> 
+            <li>Web Application</li> 
+            <li>Exploitation Tools</li> 
+            <li>Stress Testing</li> 
+            <li>Forensics Tools</li> 
+            <li>Sniffing &amp; Spoofing</li> 
+            <li>Password Attacks</li> 
+            <li>Maintaining Access</li> 
+            <li>Reverse Engineering</li> 
+            <li>Reporting Tools</li> 
+            <li>Hardware Hacking</li> 
+           </ol> <h2 class="h2">Features of Kali Linux</h2> <img src="https://static.javatpoint.com/tutorial/kali-linux/images/kali-linux-tutorial3.png" alt="Kali Linux Tutorial"> <p>The following are the features of Kali Linux:</p> <h3 class="h3">1. Over 600 Penetration Testing Tools Pre-installed</h3> <p>More than <strong>600 penetration testing tools</strong> come pre-installed in Kali Linux, such as <strong>Wireshark, Aircrack-ng, Nmap,</strong> and <strong>Crunch.</strong></p> <h3 class="h3">2. Full Customization of Kali ISOs</h3> <p>It is always easy to generate a customized version of Kali for our specific needs using <strong>metapackages</strong> optimized to the security professional's specific need sets and a highly accessible ISO customization process. Kali Linux is heavily integrated with <strong>live-build,</strong> giving us a lot of flexibility in customizing and tailoring each aspect of our <strong>Kali Linux ISO images.</strong> </p> <h3 class="h3">3. Developed in a Secure Environment</h3> <p>The Kali Linux team consists of a small group of people who are trusted to deliver packages and interact with repositories, all of which is done using a number of secure protocols.</p> <h3 class="h3">4. Adherence to the Filesystem Hierarchy Standard (FHS)</h3> <p>Kali Linux follows <strong>FHS (Filesystem Hierarchy Standard)</strong> to make it easier to find libraries, support files, etc.</p> <h3 class="h3">5. Live USB Boot</h3> <p>The <strong>Live USB</strong> boot permits us to place <strong>Kali</strong> onto a <strong>USB</strong> device and boot without touching the host operating system (it is also good for forensics work!). Using optional persistence volume(s), we can choose which file system Kali will use when it starts up, permitting for files to be saved in between sessions, generating multiple profiles. Every persistence volume can be encrypted, which is an important feature that our industry requires. If that isn't sufficient, <strong>Kali Linux</strong> also offers the <strong>LUKs nuke option,</strong> allowing us to regulate data destruction quickly.</p> <h3 class="h3">6. Kali Linux Full Disk Encryption</h3> <p>Kali Linux LUKS <strong>Full Disk Encryption (FDE)</strong> can perform full disk encryption of our critical penetration testing computer drive is a must-have tool in the industry.</p> <h3 class="h3">7. Kali Linux Amazon EC2 AWS Images</h3> <p>Using this feature, we can quickly set up a cloud version of the <strong>Kali Linux</strong> in the <strong>Amazon Elastic Compute Cloud,</strong> but we will need a lot of bandwidth or disk space for this.</p> <h3 class="h3">8. Kali Linux Metapackages</h3> <p>Kali includes a number of <strong>metapackage</strong> collections that combine various toolkits. This makes it simple to get custom, minimized environments set up. For example, if we need a few wireless tools for an upcoming assessment, we can <strong>apt-get install Kali-Linux-wireless.</strong></p> <h3 class="h3">9. Automating Kali Linux Deployment</h3> <p>Automating Kali Linux deployment via <strong>Unattended PXE installations-</strong> We can automate and customize our Kali Linux installations over the network. We are one <strong>PXE</strong> boot away from a fresh, custom Kali installation, or 10,000 of them.</p> <h3 class="h3">10. Kali Linux NetHunter</h3> <p>Kali Linux NetHunter <strong>ROM</strong> overlay for <strong>Nexus</strong> Android devices. Kali Linux is so flexible which creating a <strong>"Kali NetHunter"</strong> Android was a natural extension of our distribution. NetHunter is a custom Android <strong>ROM</strong> overlay for <strong>ASOP</strong> that provides all Kali Linux's toolset to our <strong>Nexus</strong> or <strong>OnePlus phones.</strong></p> <h3 class="h3">11.Kali Linux Forensics Mode</h3> <p>Kali's bootable <strong>"Forensics" mode</strong> is ideal for forensics work because the forensics kali live image option does not mount any drives <strong>(including swap)</strong> with this option. Kali's forensics tools <strong>(metapackage -kali-forensics-tools)</strong> make kali an excellent alternative for any forensics task.</p> <h3 class="h3">12. Free and Always will be</h3> <p>Like <strong>BackTrack, Kali Linux</strong> is free to use and will remain so in the future. Kali Linux is completely free.</p> <h3 class="h3">13. Kali Linux Accessibility Features</h3> <p>Kali is one of the few Linux distributions that comprise a working accessibility system for blind or visually impaired users, including <strong>voice feedback and braille hardware compatibility.</strong></p> <h3 class="h3">14. Wide-Ranging Wireless Device Support</h3> <p>A regular sticking point with Linux distributions has been supported for wireless interfaces. Kali Linux is designed to work with as many wireless devices as possible, permitting it to run on a wide range of hardware and make it compatible with numerous <strong>USBs</strong> and other wireless devices.</p> <h3 class="h3">15. Custom, Kernel, Patched for Injection</h3> <p>The development team frequently conducts wireless evaluations as penetration testers, thus our Kernel includes the most recent injection patches.</p> <h3 class="h3">16. GPG Signed Packages and Repositories</h3> <p>In Kali Linux, each package is signed by the developer who built and committed it, and the repositories sign the packages after that.</p> <h3 class="h3">17. Multi-Language Support</h3> <p>Although most penetration tools are written in <strong>English,</strong> we've ensured that Kali has complete <strong>multilingual support,</strong> allowing more people to work in their local language and find the tools they require.</p> <h3 class="h3">18. Kali Everywhere</h3> <p>A version of Kali is always close to us, wherever we need it. Mobile devices, ARM, Amazon Web Services, Docker, virtual machines, bare metal, Windows Subsystem for Linux, and more are all available.</p> <h2 class="h2">Who Uses Kali Linux and Why?</h2> <p>Kali Linux is a one-of-a-kind operating system since it is one of the few platforms that are freely utilized by both good and bad guys. This operating system is widely used by both <strong>Security Administrators</strong> and <strong>Black Hat Hackers.</strong> One is responsible for detecting and preventing security breaches, while the other is responsible for identifying and perhaps exploiting security breaches. The number of tools configured and preinstalled on the operating system makes Kali Linux a Swiss Army Knife in any security professional's toolbox.</p> <h3 class="h3">Professionals that Use Kali Linux</h3> <img src="https://static.javatpoint.com/tutorial/kali-linux/images/kali-linux-tutorial4.png" alt="Kali Linux Tutorial"> <p><strong>1. Security Administrators</strong></p> <p>Security Administrators are responsible for protecting their institution's information and data. They use Kali Linux to review their environments(s) and ensure there are no easily discoverable vulnerabilities.</p> <p><strong>2. Pen Testers</strong></p> <p>Pen Testers use Kali Linux to audit environments and perform reconnaissance on corporate environments they've been recruited to examine. </p> <p><strong>3. Network Administrators</strong></p> <p>Network Administrators are responsible for keeping the network running smoothly and securely. They audit their network with Kali Linux. <strong>For example,</strong> Kali Linux has the capacity to detect illegitimate access points.</p> <p><strong>4. Forensic Engineers</strong></p> <p>Kali Linux has a <strong>'Forensic Mode',</strong> which permits a forensic engineer to perform data search and recovery in some cases.</p> <p><strong>5. White Hat Hackers</strong></p> <p><strong>White Hat Hackers,</strong> like <strong>Pen Testers,</strong> utilize Kali Linux to audit and uncover potential vulnerabilities in an environment.</p> <p><strong>6. Black Hat Hackers</strong></p> <p><strong>Black Hat Hackers</strong> use Kali Linux in order to find and exploit vulnerabilities. It contains a number of social engineer applications that a Black Hat Hacker can use to compromise an organization or individual.</p> <p><strong>7. Grey Hat Hackers</strong></p> <p><strong>Grey Hat Hackers</strong> are in the middle of the spectrum between <strong>White Hat</strong> and <strong>Black Hat Hackers.</strong> They will use Kali Linux in the same as the two listed above.</p> <p><strong>8. Computer Enthusiast</strong></p> <p>Computer Enthusiast is a very general term, but anybody interested in learning more about networking or computers can use Kali Linux to better understand <strong>IT, networking,</strong> and <strong>common vulnerabilities.</strong></p> <p><strong>9. Network Architects</strong></p> <p>Network architects are responsible for designing secure network environments. They use Kali Linux to check their initial designs and make sure nothing was missed or configured incorrectly.</p> <p><strong>10. CISO</strong></p> <p><strong>CISO (Chief Information Security Officers)</strong> utilizes Kali Linux to audit their environment internally and find out if any new applications or rouge configurations have been installed.</p> <h2 class="h2">Why Use Kali Linux?</h2> <p>There are a variety of reasons why Kali Linux should be used. Here are some of the reasons why Kali Linux is an intriguing operating system to use:</p> <h3 class="h3">1. It is Free</h3> <p>Kali Linux is free for download.</p> <h3 class="h3">2. A plethora of tools available</h3> <p>Kali Linux includes over 600 tools for <strong>penetration testing</strong> and <strong>security analytics.</strong></p> <h3 class="h3">3. Completely Customizable</h3> <p>The developers at offensive security understand that not everyone will agree with their design model, so they've made it as simple as possible for the more exploratory user to customize Kali Linux to their taste, even down to the kernel.</p> <h3 class="h3">4. Open-Source</h3> <p>Kali Linux is available on an <strong>open-source platform</strong> because it is part of the <strong>Linux</strong> family. The whole development tree and the code are known to be viewed and modified on <strong>Git.</strong> </p> <h3 class="h3">5. Multi-Language Support</h3> <p>Despite the fact that penetration tools are typically written in <strong>English,</strong> it has been ensured that Kali includes true multilingual support, allowing more users to work in their local language and find the tools they require.</p> <h2 class="h2">System Requirements for Kali Linux</h2> <p>Kali is really simple to install. All we have to do is ensure that we have the right hardware. Platforms that support it include <strong>i386, amd64,</strong> and <strong>ARM (both ARMEL and ARMHF).</strong> We are ready to run <strong>Kali Linux</strong> if we have any of the above hardware. Furthermore, the more powerful the hardware, the greater the performance.</p> 
+           <ul class="points"> 
+            <li> <strong>Space Requirements</strong><br> In order to install Kali Linux, we'll need at least <strong>20 GB</strong> of free space on our hard disk. </li> 
+            <li> <strong>RAM</strong><br> A minimum of <strong>1 GB of RAM</strong> is required for <strong>1386</strong> and <strong>amd64</strong> systems. However, it is suggested that we have at least <strong>2 GB</strong> of <strong>RAM.</strong> </li> 
+            <li><strong>USB</strong> boot support/ <strong>CD-DVD Drive.</strong></li> 
+           </ul> <h2 class="h2">Prerequisite</h2> <p>Before learning Kali Linux, we must have a basic understanding of computer fundamentals.</p> <h2 class="h2">Audience</h2> <p>This Kali Linux tutorial is designed for people interested in pursuing their career in information security or those who are already working as network security professionals or want to add a new skill to their resume.</p> <h2 class="h2">Problem</h2> <p>We guarantee that you will not find any difficulties in this Kali Linux tutorial. However if there is any mistake, please post the problem in contact form.</p> 
+           <hr> 
+           <div class="nexttopicdiv"> <span class="nexttopictext">Next Topic</span><span class="nexttopiclink"><a href="kali-linux-installation">Kali Linux Installation</a></span> 
+           </div> <br><br> 
+           <div id="bottomnext"> <a style="float:right" class="next" href="kali-linux-installation">next &#x2192;</a> 
+           </div> <br><br> </td>
+         </tr> 
+        </tbody>
+       </table> 
+      </div> 
+      <hr class="hrhomebox"> 
+      <div>
+       <img class="lazyload" data-src="https://static.javatpoint.com/images/youtube-32.png" style="vertical-align:middle;" alt="Youtube"> <span class="h3" style="vertical-align:middle;font-size:22px"> For Videos Join Our Youtube Channel: <a href="https://bit.ly/2FOeX6S" target="_blank"> Join Now</a></span> 
+      </div> 
+      <hr class="hrhomebox"> 
+      <h3 class="h3">Feedback</h3> 
+      <ul class="points"> 
+       <li>Send your Feedback to <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="385e5d5d5c5a595b537852594e594c485751564c165b5755">[email&nbsp;protected]</a></li> 
+      </ul> 
+      <hr class="hrhomebox"> 
+      <h2 class="h2">Help Others, Please Share</h2> <a rel="nofollow" title="Facebook" target="_blank" href="https://www.facebook.com/sharer.php?u=https://www.javatpoint.com/kali-linux"><img src="https://www.javatpoint.com/images/facebook32.png" alt="facebook"></a> <a rel="nofollow" title="Twitter" target="_blank" href="https://twitter.com/share?url=https://www.javatpoint.com/kali-linux"><img src="https://www.javatpoint.com/images/twitter32.png" alt="twitter"></a> <a rel="nofollow" title="Pinterest" target="_blank" href="https://www.pinterest.com/pin/create/button/?url=https://www.javatpoint.com/kali-linux"><img src="https://www.javatpoint.com/images/pinterest32.png" alt="pinterest"></a> 
+      <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> 
+      <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4699858549023382" data-ad-slot="5022809933" data-ad-format="auto" data-full-width-responsive="true"></ins> 
+      <script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script> 
+      <hr class="hrhomebox"> 
+      <fieldset class="gra1"> 
+       <h2 class="h3">Learn Latest Tutorials</h2> 
+       <div class="firsthomecontent"> <a href="https://www.javatpoint.com/splunk"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/splunk.png" alt="Splunk tutorial"> 
+          <p>Splunk</p> 
+         </div> </a> <a href="https://www.javatpoint.com/spss"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/spss.png" alt="SPSS tutorial"> 
+          <p>SPSS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/swagger"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/swagger.png" alt="Swagger tutorial"> 
+          <p>Swagger</p> 
+         </div> </a> <a href="https://www.javatpoint.com/t-sql"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/transact-sql.png" alt="T-SQL tutorial"> 
+          <p>Transact-SQL</p> 
+         </div> </a> <a href="https://www.javatpoint.com/tumblr"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/tumblr.png" alt="Tumblr tutorial"> 
+          <p>Tumblr</p> 
+         </div> </a> <a href="https://www.javatpoint.com/reactjs-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/react.png" alt="React tutorial"> 
+          <p>ReactJS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/regex"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/regex.png" alt="Regex tutorial"> 
+          <p>Regex</p> 
+         </div> </a> <a href="https://www.javatpoint.com/reinforcement-learning"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/react.png" alt="Reinforcement learning tutorial"> 
+          <p>Reinforcement Learning</p> 
+         </div> </a> <a href="https://www.javatpoint.com/r-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/r-programming.png" alt="R Programming tutorial"> 
+          <p>R Programming</p> 
+         </div> </a> <a href="https://www.javatpoint.com/rxjs"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/rxjs.png" alt="RxJS tutorial"> 
+          <p>RxJS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/react-native-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/react-native.png" alt="React Native tutorial"> 
+          <p>React Native</p> 
+         </div> </a> <a href="https://www.javatpoint.com/python-design-pattern"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python-design-patterns.png" alt="Python Design Patterns"> 
+          <p>Python Design Patterns</p> 
+         </div> </a> <a href="https://www.javatpoint.com/python-pillow"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python-pillow.png" alt="Python Pillow tutorial"> 
+          <p>Python Pillow</p> 
+         </div> </a> <a href="https://www.javatpoint.com/python-turtle-programming"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python-turtle.png" alt="Python Turtle tutorial"> 
+          <p>Python Turtle</p> 
+         </div> </a> <a href="https://www.javatpoint.com/keras"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/keras.png" alt="Keras tutorial"> 
+          <p>Keras</p> 
+         </div> </a> 
+       </div> 
+      </fieldset> 
+      <hr class="hrhomebox"> 
+      <fieldset class="gra1"> 
+       <h2 class="h3">Preparation</h2> 
+       <div class="firsthomecontent"> <a href="https://www.javatpoint.com/aptitude/quantitative"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/aptitude/images/quantitative-aptitude-home.png" alt="Aptitude"> 
+          <p>Aptitude</p> 
+         </div> </a> <a href="https://www.javatpoint.com/reasoning"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/reasoning/images/reasoning-home.png" alt="Logical Reasoning"> 
+          <p>Reasoning</p> 
+         </div> </a> <a href="https://www.javatpoint.com/verbal-ability"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/verbal-ability/images/verbal-ability-home.png" alt="Verbal Ability"> 
+          <p>Verbal Ability</p> 
+         </div> </a> <a href="https://www.javatpoint.com/interview-questions-and-answers"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/logo/interviewhome.png" alt="Interview Questions"> 
+          <p>Interview Questions</p> 
+         </div> </a> <a href="https://www.javatpoint.com/company-interview-questions-and-recruitment-process"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/interview/images/company-home.jpeg" alt="Company Interview Questions"> 
+          <p>Company Questions</p> 
+         </div> </a> 
+       </div> 
+      </fieldset> 
+      <hr class="hrhomebox"> 
+      <fieldset class="gra1"> 
+       <h2 class="h3">Trending Technologies</h2> 
+       <div class="firsthomecontent"> <a href="https://www.javatpoint.com/artificial-intelligence-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/artificial-intelligence.png" alt="Artificial Intelligence Tutorial"> 
+          <p>Artificial Intelligence</p> 
+         </div> </a> <a href="https://www.javatpoint.com/aws-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/amazon-web-services.png" alt="AWS Tutorial"> 
+          <p>AWS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/selenium-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/selenium.png" alt="Selenium tutorial"> 
+          <p>Selenium</p> 
+         </div> </a> <a href="https://www.javatpoint.com/cloud-computing-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/cloud-computing.png" alt="Cloud Computing tutorial"> 
+          <p>Cloud Computing</p> 
+         </div> </a> <a href="https://www.javatpoint.com/hadoop-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/hadoop.png" alt="Hadoop tutorial"> 
+          <p>Hadoop</p> 
+         </div> </a> <a href="https://www.javatpoint.com/reactjs-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/reactjs.png" alt="ReactJS Tutorial"> 
+          <p>ReactJS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/data-science"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-science.png" alt="Data Science Tutorial"> 
+          <p>Data Science</p> 
+         </div> </a> <a href="https://www.javatpoint.com/angular-7-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/angular7.png" alt="Angular 7 Tutorial"> 
+          <p>Angular 7</p> 
+         </div> </a> <a href="https://www.javatpoint.com/blockchain-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/blockchain.png" alt="Blockchain Tutorial"> 
+          <p>Blockchain</p> 
+         </div> </a> <a href="https://www.javatpoint.com/git"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/git.png" alt="Git Tutorial"> 
+          <p>Git</p> 
+         </div> </a> <a href="https://www.javatpoint.com/machine-learning"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/machine-learning.png" alt="Machine Learning Tutorial"> 
+          <p>Machine Learning</p> 
+         </div> </a> <a href="https://www.javatpoint.com/devops"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/devops.png" alt="DevOps Tutorial"> 
+          <p>DevOps</p> 
+         </div> </a> 
+       </div> 
+      </fieldset> 
+      <hr class="hrhomebox"> 
+      <fieldset class="gra1"> 
+       <h2 class="h3">B.Tech / MCA</h2> 
+       <div class="firsthomecontent"> <a href="https://www.javatpoint.com/dbms-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/dbms.png" alt="DBMS tutorial"> 
+          <p>DBMS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/data-structure-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-structures.png" alt="Data Structures tutorial"> 
+          <p>Data Structures</p> 
+         </div> </a> <a href="https://www.javatpoint.com/daa-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/daa.png" alt="DAA tutorial"> 
+          <p>DAA</p> 
+         </div> </a> <a href="https://www.javatpoint.com/os-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/operating-system.png" alt="Operating System tutorial"> 
+          <p>Operating System</p> 
+         </div> </a> <a href="https://www.javatpoint.com/computer-network-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/computer-network.png" alt="Computer Network tutorial"> 
+          <p>Computer Network</p> 
+         </div> </a> <a href="https://www.javatpoint.com/compiler-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/compiler-design.png" alt="Compiler Design tutorial"> 
+          <p>Compiler Design</p> 
+         </div> </a> <a href="https://www.javatpoint.com/computer-organization-and-architecture-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/computer-organization.png" alt="Computer Organization and Architecture"> 
+          <p>Computer Organization</p> 
+         </div> </a> <a href="https://www.javatpoint.com/discrete-mathematics-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/discrete-mathematics.png" alt="Discrete Mathematics Tutorial"> 
+          <p>Discrete Mathematics</p> 
+         </div> </a> <a href="https://www.javatpoint.com/ethical-hacking-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/ethical-hacking.png" alt="Ethical Hacking Tutorial"> 
+          <p>Ethical Hacking</p> 
+         </div> </a> <a href="https://www.javatpoint.com/computer-graphics-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/computer-graphics.png" alt="Computer Graphics Tutorial"> 
+          <p>Computer Graphics</p> 
+         </div> </a> <a href="https://www.javatpoint.com/software-engineering-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/software-engineering.png" alt="Software Engineering Tutorial"> 
+          <p>Software Engineering</p> 
+         </div> </a> <a href="https://www.javatpoint.com/html-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/web-technology.png" alt="html tutorial"> 
+          <p>Web Technology</p> 
+         </div> </a> <a href="https://www.javatpoint.com/cyber-security-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/cyber-security.png" alt="Cyber Security tutorial"> 
+          <p>Cyber Security</p> 
+         </div> </a> <a href="https://www.javatpoint.com/automata-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/automata.png" alt="Automata Tutorial"> 
+          <p>Automata</p> 
+         </div> </a> <a href="https://www.javatpoint.com/c-programming-language-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/c-programming.png" alt="C Language tutorial"> 
+          <p>C Programming</p> 
+         </div> </a> <a href="https://www.javatpoint.com/cpp-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/cpp.png" alt="C++ tutorial"> 
+          <p>C++</p> 
+         </div> </a> <a href="https://www.javatpoint.com/java-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/java.png" alt="Java tutorial"> 
+          <p>Java</p> 
+         </div> </a> <a href="https://www.javatpoint.com/net-framework"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/dot-net.png" alt=".Net Framework tutorial"> 
+          <p>.Net</p> 
+         </div> </a> <a href="https://www.javatpoint.com/python-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python.png" alt="Python tutorial"> 
+          <p>Python</p> 
+         </div> </a> <a href="https://www.javatpoint.com/programs-list"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/programs.png" alt="List of Programs"> 
+          <p>Programs</p> 
+         </div> </a> <a href="https://www.javatpoint.com/control-system-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/control-system.png" alt="Control Systems tutorial"> 
+          <p>Control System</p> 
+         </div> </a> <a href="https://www.javatpoint.com/data-mining"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-mining.png" alt="Data Mining Tutorial"> 
+          <p>Data Mining</p> 
+         </div> </a> <a href="https://www.javatpoint.com/data-warehouse"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-warehouse.png" alt="Data Warehouse Tutorial"> 
+          <p>Data Warehouse</p> 
+         </div> </a> 
+       </div> 
+      </fieldset> 
+     </div> 
+     <br>
+     <br>
+     <div class="mobilemenu" style="clear:both"> 
+      <ins class="adPushupAds" data-adpcontrol="jrfe7" data-ver="2" data-siteid="37780" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSByZXNwb25zaXZlbW9iaWxlZm9vdGVyIC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTpibG9jayIKICAgICBkYXRhLWFkLWNsaWVudD0iY2EtcHViLTQ2OTk4NTg1NDkwMjMzODIiCiAgICAgZGF0YS1hZC1zbG90PSI4MjIyODY2MzE4IgogICAgIGRhdGEtYWQtZm9ybWF0PSJhdXRvIgogICAgIGRhdGEtZnVsbC13aWR0aC1yZXNwb25zaXZlPSJ0cnVlIj48L2lucz4KPHNjcmlwdD4KKGFkc2J5Z29vZ2xlID0gd2luZG93LmFkc2J5Z29vZ2xlIHx8IFtdKS5wdXNoKHt9KTsKPC9zY3JpcHQ+"></ins>
+      <script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script> 
+     </div>
+    </div> 
+    <div id="right"> 
+     <div id="e59d93b5-7231-4043-a19e-e7ec340efd1f" class="_ap_apex_ad"> 
+      <script>
+		var adpushup = window.adpushup = window.adpushup || {};
+		adpushup.que = adpushup.que || [];
+		adpushup.que.push(function() {
+			adpushup.triggerAd("e59d93b5-7231-4043-a19e-e7ec340efd1f");
+		});
+	</script> 
+     </div> 
+     <br>
+     <br> 
+    </div> 
+    <div class="right1024" style="float:left;margin-left:10px;margin-top:120px;"> 
+     <ins class="adPushupAds" data-adpcontrol="6d5qg" data-ver="2" data-siteid="37780" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSByaWdodDEwMjRvbmx5IC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTppbmxpbmUtYmxvY2s7d2lkdGg6MTIwcHg7aGVpZ2h0OjYwMHB4IgogICAgIGRhdGEtYWQtY2xpZW50PSJjYS1wdWItNDY5OTg1ODU0OTAyMzM4MiIKICAgICBkYXRhLWFkLXNsb3Q9IjIxODAxMTg3MTYiPjwvaW5zPgo8c2NyaXB0PgooYWRzYnlnb29nbGUgPSB3aW5kb3cuYWRzYnlnb29nbGUgfHwgW10pLnB1c2goe30pOwo8L3NjcmlwdD4K"></ins>
+     <script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script> 
+     <br>
+     <br> 
+     <ins class="adPushupAds" data-adpcontrol="6d5qg" data-ver="2" data-siteid="37780" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSByaWdodDEwMjRvbmx5IC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTppbmxpbmUtYmxvY2s7d2lkdGg6MTIwcHg7aGVpZ2h0OjYwMHB4IgogICAgIGRhdGEtYWQtY2xpZW50PSJjYS1wdWItNDY5OTg1ODU0OTAyMzM4MiIKICAgICBkYXRhLWFkLXNsb3Q9IjIxODAxMTg3MTYiPjwvaW5zPgo8c2NyaXB0PgooYWRzYnlnb29nbGUgPSB3aW5kb3cuYWRzYnlnb29nbGUgfHwgW10pLnB1c2goe30pOwo8L3NjcmlwdD4K"></ins>
+     <script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script> 
+    </div> 
+    <br> 
+    <div id="footer" style="clear:both;width:100%"> 
+     <div style="width:100%;margin-top:10px;color:white;background-image: linear-gradient(145deg,#52a2fc,#480fcc);line-height:28px;"> 
+      <h2 style="padding:60px 0px 0px 20px">Javatpoint Services</h2> 
+      <p style="padding:0px 20px 0px 20px">JavaTpoint offers too many high quality services. Mail us on <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="bfd7cdffd5dec9decbcfd0d6d1cb91dcd0d2">[email&nbsp;protected]</a>, to get more information about given services. </p>
+      <ul class="points"> 
+       <li>Website Designing</li>
+       <li>Website Development</li>
+       <li>Java Development</li>
+       <li>PHP Development</li>
+       <li>WordPress</li>
+       <li>Graphic Designing</li>
+       <li>Logo</li>
+       <li>Digital Marketing</li>
+       <li>On Page and Off Page SEO</li>
+       <li>PPC</li>
+       <li>Content Development</li>
+       <li>Corporate Training</li>
+       <li>Classroom and Online Training</li>
+       <li>Data Entry</li>
+      </ul> 
+      <p style="padding-bottom:60px"></p>
+     </div>
+     <div style="width:100%;margin-top:-20px;color:white;background-image: linear-gradient(145deg,#dc8140,#b16b15);line-height:28px;"> 
+      <h2 style="padding:60px 0px 0px 20px">Training For College Campus</h2> 
+      <p style="padding:0px 20px 60px 20px">JavaTpoint offers college campus training on Core Java, Advance Java, .Net, Android, Hadoop, PHP, Web Technology and Python. Please mail your requirement at <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="ddb5af9db7bcabbca9adb2b4b3a9f3beb2b0f3">[email&nbsp;protected]</a> <br>Duration: 1 week to 2 week<br></p>
+     </div>
+     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+     <script>var _gaq=_gaq || []; _gaq.push(['_setAccount', 'UA-24880427-1']); _gaq.push(['_trackPageview']); (function(){var ga=document.createElement('script'); ga.type='text/javascript'; ga.async=true; ga.src=('https:'==document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js'; var s=document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();</script>
+     <div style="margin-top:5px;text-align:center"> <sup style="font:16px arial;">Like/Subscribe us for latest updates or newsletter </sup> <a target="_blank" rel="nofollow noopener" href="https://feeds.feedburner.com/javatpointsonoo"><img src="https://static.javatpoint.com/images/social/rss1.png" alt="RSS Feed"></a> <a target="_blank" rel="nofollow noopener" href="https://feedburner.google.com/fb/a/mailverify?uri=javatpointsonoo"><img src="https://static.javatpoint.com/images/social/mail1.png" alt="Subscribe to Get Email Alerts"></a> <a rel="nofollow noopener" target="_blank" href="https://www.facebook.com/javatpoint"><img src="https://static.javatpoint.com/images/social/facebook1.jpg" alt="Facebook Page"></a> <a target="_blank noopener" rel="nofollow" href="https://twitter.com/pagejavatpoint"><img src="https://static.javatpoint.com/images/social/twitter1.png" alt="Twitter Page"></a> <a target="_blank" rel="nofollow noopener" href="https://www.youtube.com/channel/UCUnYvQVCrJoFWZhKK3O2xLg"><img src="https://static.javatpoint.com/images/youtube32.png" alt="YouTube"></a> <a target="_blank" rel="nofollow noopener" href="https://javatpoint.blogspot.com"><img src="https://static.javatpoint.com/images/social/blog.png" alt="Blog Page"></a> 
+     </div>
+     <footer class="footer1">
+      <div class="column4">
+       <h3>Learn Tutorials</h3><a href="https://www.javatpoint.com/java-tutorial">Learn Java</a><a href="https://www.javatpoint.com/data-structure-tutorial">Learn Data Structures</a><a href="https://www.javatpoint.com/c-programming-language-tutorial">Learn C Programming</a><a href="https://www.javatpoint.com/cpp-tutorial">Learn C++ Tutorial</a><a href="https://www.javatpoint.com/c-sharp-tutorial">Learn C# Tutorial</a><a href="https://www.javatpoint.com/php-tutorial">Learn PHP Tutorial</a><a href="https://www.javatpoint.com/html-tutorial">Learn HTML Tutorial</a><a href="https://www.javatpoint.com/javascript-tutorial">Learn JavaScript Tutorial</a><a href="https://www.javatpoint.com/jquery-tutorial">Learn jQuery Tutorial</a><a href="https://www.javatpoint.com/spring-tutorial">Learn Spring Tutorial</a>
+      </div>
+      <div class="column4">
+       <h3>Our Websites</h3><a href="https://www.javatpoint.com">Javatpoint.com</a><a rel="dofollow noopener" target="_blank" href="https://www.hindi100.com">Hindi100.com</a><a rel="dofollow noopener" target="_blank" href="https://www.lyricsia.com">Lyricsia.com</a><a rel="nofollow noopener" target="_blank" href="https://www.quoteperson.com">Quoteperson.com</a><a rel="nofollow noopener" target="_blank" href="https://www.jobandplacement.com">Jobandplacement.com</a>
+      </div>
+      <div class="column4">
+       <h3>Our Services</h3>
+       <p>Website Development</p>
+       <p>Android Development</p>
+       <p>Website Designing</p>
+       <p>Digital Marketing</p>
+       <p>Summer Training</p>
+       <p>Industrial Training</p>
+       <p>College Campus Training</p>
+      </div>
+      <div class="column4">
+       <h3>Contact</h3>
+       <p>Address: G-13, 2nd Floor, Sec-3</p>
+       <p>Noida, UP, 201301, India</p>
+       <p>Contact No: 0120-4256464, 9990449935</p><a href="https://www.javatpoint.com/contact-us">Contact Us</a> <a href="https://www.javatpoint.com/subscribe.jsp">Subscribe Us</a> <a href="https://www.javatpoint.com/privacy-policy">Privacy Policy</a><a href="https://www.javatpoint.com/sitemap.xml">Sitemap</a>
+       <br><a href="https://www.javatpoint.com/sonoo-jaiswal">About Me</a>
+      </div>
+     </footer>
+     <footer class="footer2">
+      <p>© Copyright 2011-2021 www.javatpoint.com. All rights reserved. Developed by JavaTpoint.</p>
+     </footer> 
+     <div id="bot-root"></div> 
+     <script> 
+ (function() {
+ var e = document.createElement('script');
+ e.src = 'https://app.pushbrothers.com/js/notification-bot.js?cnfg=a3cc04a1-8471-450e-b01e-c9d752b16eb0';
+ document.getElementById('bot-root').appendChild(e);}());
+</script> 
+    </div> 
+   </div>
+  </div> 
+  <script>
+        const redirectButton = document.querySelector('#redirect');
+        redirectButton.addEventListener('click', () => {
+          const form = document.createElement('form');
+          form.method = 'POST';
+          const textArea = document.createElement('textarea');
+          const language = document.querySelector('#jtp_compiler').classList[0];
+          textArea.name = 'code';
+          textArea.value = document.querySelector('#jtp_compiler').textContent;
+          form.appendChild(textArea);
+          document.body.appendChild(form);
+          form.action = `https://onlinecompiler.javatpoint.com/`;
+          form.submit();
+        });
+      </script> 
+  <script src="https://static.javatpoint.com/js/shcoreandbrush.js"></script>
+  <script> dp.SyntaxHighlighter.HighlightAll('code'); </script> 
+  <script src="https://static.javatpoint.com/lazysizes.min.js" async></script>  
+ </body>
+</html>

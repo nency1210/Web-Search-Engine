@@ -1,0 +1,167 @@
+https://www.javatpoint.com/python-programming-with-google-colab::python programming with google colab - javatpoint ⇧ scroll to top home google colab python turtle python openpyxl pygame java sql android cloud javascript servlet html struts2 spring quiz interview q comment google colab google colab tutorial python programming with google colab in this article, we will learn to practice python programming using google colab. we will discuss collaborative programming, automatic setting-up, getting help effectively. google colab is a suitable tool for python beginners. introduction google colab is the best project from google research. it is an open-source, jupyter based environment. it helps us write and execute python based code, other python-based third-party tools and machine learning frameworks such as python, pytorch, tensorflow, keras, opencv and many others. it runs on the web-browser. google colab is an open-source platform where we can write and python execute code. it requires any source on the internet. we can also mount it into google drive. google colab requires no configuration to get started and provides free access to gpus. it facilitates us to share live code, mathematical equations, data visualization, data cleaning and transformation, machine learning models, numerical simulations, and many others. advantages of using google colab google colab provides many features. these features are given below. it comes with pre-installed packages. we don't need to install python or its package. it runs on the web-browser. it allows us to work with web-browser jupyter notebooks. it is an open-source google platform, which means anyone can use it free of cost. it offers gpu and tpu power. it supports both python versions 2 and 3. it provides two hardware accelerations - gpu (graphical processing unit) and tpu (tensor processing unit). it provides a free jupyter notebook environment. what are gpus and tpus in google colab? the reason for the popularity of google colab it provides free gpus and tpus. machine learning and deep learning training model takes numerous hours on a cpu. we have faced all these issues in our local machine. with gpus and tpus, we can train models in a matter of minutes or seconds. machine learning enthusiasts always prefer gpu over cpu because of the absolute power and speed of execution. but gpus are much expensive; not everyone can afford them. that's why google colab comes into the scenario. google colab is completely free and can continuously run for 12 hours. it is sufficient to meet all requirements of the machine learning and deep learning projects. difference between gpu and cpu a few important features are given below. gpu cpu it has hundreds of simpler cores. it has very complex cores. it provides thousands of concurrent hardware threads. it provides single-thread performance optimization. it exploits floating-point throughput. it has a transistor space dedicated to complex ilp. up to tesla k80 with 12 gb of gddr5 vram, intel xeron processor with two cores @ 2.20 ghz and 13 gb ram intel xeon processor with two cores @ 2.30 ghz and 13 gb ram. it provides most die surface for integer and fp units. it is available with a few die surfaces for integer and fp units. which gpu is used today? let's take two scenarios before using the gpu for deep learning. first scenario: first, we need to determine our requirements regarding what kind of resources we need to accomplish our tasks. if our machine learning task is small or can be fit in complex sequential processing, we don't need a big system to work on gpu. it means if we are working on the other ml area/algorithm. we don't require using gpu. second scenario: if our task is much extensive and has handle-able data then we can use the gpu hardware acceleration. it enhances the execution speed and provides output within seconds or minutes. start working with google colab to start working with google colab, we need to type the url on the web browser below. it will launch the following window opens with a popup offering many features. it provides few options to create notebook as well as upload and select from various sources such as - google drive, local computer, githhub. click on the new notebook button to create new a colab notebook. gpu is the best choice. gpus are much suitable for intensive task. uploading file using goggle drive we can upload github's project and search it to get the code. similarly, we can upload the code directly from google drive. we can also filter saved notebooks by name, date, owner, or modified date. it will automatically upload the code in jupyter colab. cloning repositories in google colab we can also create a git repository inside the google colab. we just need to visit any github repository and copy the clone link of the repository. step - 1: find the github repo and get the "git" link. for example - we are using https://github.com/rajk9200/construction.git clone or download > copy the link step - 2: simply, run the following command. 
+!git clone https://github.com/rajk9200/construction.git
+ after hitting enter, it will start cloning. 
+cloning into 'construction'...
+remote: enumerating objects: 86, done.
+remote: counting objects: 100% (86/86), done.
+remote: compressing objects: 100% (70/70), done.
+remote: total 86 (delta 7), reused 86 (delta 7), pack-reused 0
+unpacking objects: 100% (86/86), done.
+ step - 3: open folder in google drive. step - 4: open a notebook and run the github repo in google colab. saving colab notebook all the notebooks are saved in the google drive automatically after a certain period. hence we don't lose our working process. however, we can save our notebook *.py and *.ipynb formats explicitly. setting up hardware accelerator gpu for runtime google colab offers a free cloud service with a gpu hardware accelerator. for the machine learning and deep learning, it requires very expensive gpu machine. gpu is most essential for doing multiple computations. why gpu is important for machine learning nowadays, gpu has become the most dominant part of machine learning and deep learning. it provides the optimized capability of more compute-intensive workloads and streaming memory loads. another reason of its popularity, it can launch millions of threads in one call. they function unusually better than cpus although it has a lower clock speed and it also lacks of many core management features compared to a cpu. setup hardware accelerator gpu in colab let's follow the given step to setup gpu. step - 1: go to the runtime option in google colab. step - 2: it will open the following popup screen change none to gpu. we can also select tpu according to our requirements by following the same process. step - 3: now, we will check the details about the gpu in colab. type the following code to import the important packages. 
+import tensorflow as tf
+from tensorflow.python.client import device_lib
+ check the gpu accelerator 
+tf.test.gpu_device_name()
+ output: /device:gpu:0
+ now, we will check the hardware used for gpu. 
+device_lib.list_local_devices()
+ output: [name: "/device:cpu:0"
+ device_type: "cpu"
+ memory_limit: 268435456
+ locality {
+ }
+ incarnation: 11369748053613106705, name: "/device:xla_cpu:0"
+ device_type: "xla_cpu"
+ memory_limit: 17179869184
+ locality {
+ }
+ incarnation: 514620808292544972
+ physical_device_desc: "device: xla_cpu device", name: "/device:xla_gpu:0"
+ device_type: "xla_gpu"
+ memory_limit: 17179869184
+ locality {
+ }
+ incarnation: 15275652847823456943
+ physical_device_desc: "device: xla_gpu device", name: "/device:gpu:0"
+ device_type: "gpu"
+ memory_limit: 14640891840
+ locality {
+   bus_id: 1
+   links {
+   }
+ }
+ incarnation: 1942537478599293460
+ physical_device_desc: "device: 0, name: tesla t4, pci bus id: 0000:00:04.0, compute capability: 7.5"]
+ using terminal commands on google colab we can also use colab cell for running terminal commands. in the google colab, python libraries such as pandas, numpy, scikit-learn. if we want to install another library of python using the following command. 
+!pip install library_name
+ it is quite easy to run the command. everything is similar to the regular terminal. we just need to put an exclamation (!) before writing each command as below. 
+!ls
+ or 
+!pwd
+ sharing our notebook we can share our colab notebook with others. it is the best way to interact with other data science expert. it helps to share our code same as sharing a google doc or google sheet. we need to click on the share button. it will show the option of creating a shareable link that we can share through any platform. there is also an option to invite the people through the email address. it is one of the outstanding features of google colab. few important colab commands colab provides some amazing commands. it offers various commands that facilitate us to perform operations in short. these commands are used with a % prefix. list of all magic commands are given below. 
+%lsmagic 
+ output: available line magics:
+%alias  %alias_magic  %autocall  %automagic  %autosave  %bookmark  %cat  %cd  %clear  %colors  %config  %connect_info  %cp  %debug  %dhist  %dirs  
+
+%doctest_mode  %ed  %edit  %env  %gui  %hist  %history  %killbgscripts  %ldir  %less  %lf  %lk  %ll  %load  %load_ext  %loadpy  %logoff  %logon  %logstart  %logstate  %logstop  %ls  %lsmagic  %lx  %macro  %magic  %man  %matplotlib  %mkdir  %more  %mv  %notebook  %page  %pastebin  %pdb  %pdef  %pdoc  
+%pfile  %pinfo  %pinfo2  %pip  %popd  %pprint  %precision  %profile  %prun  %psearch  %psource  %pushd  %pwd  %pycat  %pylab  %qtconsole  %quickref  %recall  %rehashx  %reload_ext  %rep  %rerun  %reset  
+
+%reset_selective  %rm  %rmdir  %run  %save  %sc  %set_env  %shell  %store  %sx  %system  %tb  %tensorflow_version  %time  %timeit  %unalias  %unload_ext  %who  %who_ls  %whos  %xdel  %xmode
+
+available cell magics:
+%%!  %%html  %%svg  %%bash  %%bigquery  %%capture  %%debug  %%file  %%html  %%javascript  %%js  %%latex  %%perl  %%prun  %%pypy  %%python  %%python2  %%python3  %%ruby  %%script  %%sh  %%shell  %%svg  %%sx  %%system  %%time  %%timeit  %%writefile
+
+automagic is on, % prefix is not needed for line magics.
+ command for list of local directories 
+%ldir
+ output: drwxr-xr-x 1 root 4096 dec  2 22:04 sample_data/
+ command for getting notebook history 
+%history
+ output: %lsmagic
+%ldir
+%history
+ getting cpu time 
+%time
+ output: cpu times: user 4 µs, sys: 0 ns, total: 4 µs
+wall time: 7.15 µs
+ getting the how long has the system has been running 
+%uptime 
+ output: 08:44:32 up 12 min,  0 users,  load average: 0.00, 0.03, 0.03
+ display available and used memory 
+!free -hprint("-"*100)
+ output: /bin/bash: -c: line 0: syntax error near unexpected token `('
+/bin/bash: -c: line 0: `free -hprint("-"*100)'
+ display the cpu specification 
+!lscpu
+print("-"*70)
+ output: architecture:        x86_64
+cpu op-mode(s):      32-bit, 64-bit
+byte order:          little endian
+cpu(s):              2
+on-line cpu(s) list: 0,1
+thread(s) per core:  2
+core(s) per socket:  1
+socket(s):           1
+numa node(s):        1
+vendor id:           genuineintel
+cpu family:          6
+model:               63
+model name:          intel(r) xeon(r) cpu @ 2.30ghz
+stepping:            0
+cpu mhz:             2300.000
+bogomips:            4600.00
+hypervisor vendor:   kvm
+virtualization type: full
+l1d cache:           32k
+l1i cache:           32k
+l2 cache:            256k
+l3 cache:            46080k
+numa node0 cpu(s):   0,1
+flags:               fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc cpuid tsc_known_freq pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm abm invpcid_single ssbd ibrs ibpb stibp fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid xsaveopt arat md_clear arch_capabilities
+ getting the list of all running vm processes 
+%%shecho "list all running vm processes."
+ps -ef
+echo "done"
+ output: list all running vm processes.
+done
+error: garbage option
+
+usage:
+ ps [options]
+
+ try 'ps --help <simple|list|output|threads|misc|all>'
+  or 'ps --help <s|l|o|t|m|a>'
+ for additional help text.
+
+for more details see ps(1).
+ how to design form in google colab google colab provides the facility to design forms. let's see the following code to understand how to design form in google colab. in this section, we will design a form takes the student information. 
+# @ title student details
+# @ mark down information
+
+name = "" #@param {type:"string"}
+age  = 0#@param {type:"number"}
+course = "" #@param {type:"string"}
+
+gender = 'male' #@param ["male", "female", "others"]
+
+date_of_birth = '2000-03-22' #@param {type:"date"}
+
+#@markdown ---print("submitting the form")
+
+print("submitted")
+ output: graph plotting we can plot various graphs in colab for the data visualization, as well. in the following example, the graph will show a plot containing more than one polynomial, y = x3 + x2 + x[3]. let's see the following code. example - 
+import numpy as np
+
+import matplotlib.pyplot as plt
+x = np.arange(-20,10)
+y = np.power(x,3)
+y1 = np.power(x,3) + np.power(x,2) + x
+plt.scatter(x,y1,c="yellow")
+plt.scatter(x,y)
+ output: the below code will draw the heat map. example - 
+import matplotlib.pyplot as plt
+import numpy as np
+import seaborn as sns
+length = 10
+data = 5 + np.random.randn(length, length)
+data += np.arange(length)
+data += np.reshape(np.arange(length), (length, 1))
+sns.heatmap(data)
+plt.show()
+ output: tpu (tensor processing unit) in google colab the tpu (tensor processing unit) is used to accelerate on a tensorflow graphs. they are based on the ai acceleration application-specification integrated circuit which is specially designed for the neural network machine. it is developed by google. tpu consists of an excellent configuration of teraflops, floating-point performance, and others. there are 180 teraflops of floating-point performance in each tpu. generally, a teraflop is the measurement of the computer's speed. its speed can be a trillion floating-point operations per second. how to set up a tpu in google colab? the steps are the same as the setup of a gpu. runtime ------> change runtime check running on tpu hardware accelerator to check the tpu hardware acceleration, it requires the tensorflow package. consider the below code. 
+import tensorflow as tf
+
+tpu = tf.distribute.cluster_resolver.tpuclusterresolver()  
+print('running on tpu ', tpu.cluster_spec().as_dict()['worker'])
+ running on tpu  ['10.43.45.130:8470']
+ conclusion google colab is a jupyter notebook developed by google research. it is used to execute the python-based code to build a machine learning or deep learning model. it provides the gpu and tpu hardware acceleration and available for free (unless we would like to go pro). it is quite easy to use and share due to the zero-configuration features requirement. we can combine the executable code with and html, images, latex, and others. one of the best thing, it has included a vital machine learning library like tensorflow, already installed. it is a perfect tool for machine learning and deep learning model building. colab is outstanding for developing neural networks. the parallelism and execution of multiple threads can be achieved by the cpu based hardware accelerator. if we use the ide for machine learning and deep learning model, it will take nemours hour to execute code. but with the help of the google colab, it can be done within few seconds or minutes. it provides the facility to import data from github and google drive. for videos join our youtube channel: join now feedback send your feedback to [email protected] help others, please share learn latest tutorials splunk spss swagger transact-sql tumblr reactjs regex reinforcement learning r programming rxjs react native python design patterns python pillow python turtle keras preparation aptitude reasoning verbal ability interview questions company questions trending technologies artificial intelligence aws selenium cloud computing hadoop reactjs data science angular 7 blockchain git machine learning devops b.tech / mca dbms data structures daa operating system computer network compiler design computer organization discrete mathematics ethical hacking computer graphics software engineering web technology cyber security automata c programming c++ java .net python programs control system data mining data warehouse javatpoint services javatpoint offers too many high quality services. mail us on [email protected], to get more information about given services. website designing website development java development php development wordpress graphic designing logo digital marketing on page and off page seo ppc content development corporate training classroom and online training data entry training for college campus javatpoint offers college campus training on core java, advance java, .net, android, hadoop, php, web technology and python. please mail your requirement at [email protected] duration: 1 week to 2 week like/subscribe us for latest updates or newsletter learn tutorialslearn javalearn data structureslearn c programminglearn c++ tutoriallearn c# tutoriallearn php tutoriallearn html tutoriallearn javascript tutoriallearn jquery tutoriallearn spring tutorial our websitesjavatpoint.comhindi100.comlyricsia.comquoteperson.comjobandplacement.com our services website development android development website designing digital marketing summer training industrial training college campus training contact address: g-13, 2nd floor, sec-3 noida, up, 201301, india contact no: 0120-4256464, 9990449935contact us subscribe us privacy policysitemap about me © copyright 2011-2021 www.javatpoint.com. all rights reserved. developed by javatpoint.

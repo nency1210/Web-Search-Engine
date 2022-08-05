@@ -1,0 +1,888 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>PWA Tutorial | Progressive Web Applications - javatpoint</title>
+  <link rel="SHORTCUT ICON" href="https://static.javatpoint.com/images/favicon2.png"> 
+  <link rel="stylesheet" type="text/css" href="https://static.javatpoint.com/link.css?v=5.0" async>
+  <link rel="dns-prefetch" href="https://clients1.google.com">
+  <link rel="dns-prefetch" href="https://static.javatpoint.com">
+  <link rel="dns-prefetch" href="https://googleads.g.doubleclick.net">
+  <link rel="dns-prefetch" href="https://www.google.com">
+  <link rel="dns-prefetch" href="https://feedify.net">
+  <meta name="theme-color" content="#4CAF50">
+  <meta property="og:title" content="PWA Tutorial | Progressive Web Applications - javatpoint">
+  <meta property="og:description" content="PWA Tutorial | Progressive Web Applications with Characteristics of PWA, Advantages of PWA, PWA and Native Application, components of PWA, How to convert the website into PWA using WordPress etc."> 
+  <meta name="keywords" content="pwa tutorial, what is progressive web applications, characteristics of pwa, advantages of pwa, pwa and native application, components of pwa, how to convert the website into pwa using wordpress">
+  <meta name="description" content="PWA Tutorial | Progressive Web Applications with Characteristics of PWA, Advantages of PWA, PWA and Native Application, components of PWA, How to convert the website into PWA using WordPress etc.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="canonical" href="https://www.javatpoint.com/progressive-web-applications"> 
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="article">
+  <meta name="twitter:title" property="og:title" content="PWA Tutorial | Progressive Web Applications - javatpoint">
+  <meta name="twitter:description" property="og:description" content="PWA Tutorial | Progressive Web Applications with Characteristics of PWA, Advantages of PWA, PWA and Native Application, components of PWA, How to convert the website into PWA using WordPress etc.">
+  <meta property="og:url" content="https://www.javatpoint.com/progressive-web-applications">
+  <meta property="og:site_name" content="www.javatpoint.com">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@pagejavatpoint">
+  <meta name="twitter:domain" content="www.javatpoint.com">
+  <meta name="twitter:creator" content="@pagejavatpoint"> 
+  <link href="https://www.javatpoint.com/manifest.json" rel="manifest"> 
+  <script data-cfasync="false" type="text/javascript">(function(w, d) { var s = d.createElement('script'); s.src = '//delivery.adrecover.com/37784/adRecover.js?ts=1543562646174'; s.type = 'text/javascript'; s.async = true; (d.getElementsByTagName('head')[0] || d.getElementsByTagName('body')[0]).appendChild(s); })(window, document);</script> 
+  <script data-cfasync="false" type="text/javascript">
+(function (w, d) {
+  var siteId = "37780";
+  var targetElement =
+    d.getElementsByTagName("head")[0] || d.getElementsByTagName("body")[0];
+  var s = d.createElement("script");
+  s.src = "//cdn.adpushup.com/" + siteId + "/adpushup.js";
+  s.crossOrigin = "anonymous";
+  s.type = "text/javascript";
+  s.async = true;
+  targetElement.appendChild(s);
+  function sendErrorLog(log) {
+    var eventName = "script_error";
+    log.siteId = siteId;
+    var data = btoa(JSON.stringify(log));
+    var img = document.createElement("img");
+    img.src =
+      "https://aplogger.adpushup.com/log?event=HC_" + eventName + "&data=" + data;
+  }
+  var searchParams =
+    typeof URLSearchParams === "function" &&
+    new URLSearchParams(window.location.search);
+  if (searchParams) {
+    var isDebugModeOn = searchParams.has("apDebug");
+  }
+  w.addEventListener("error", function (event) {
+    try {
+      var filename = event.filename || "";
+      if (filename.indexOf("/" + siteId + "/adpushup.js") === -1) {
+        return;
+      }
+      var error = event.error;
+      if (error) {
+        var message = error.message;
+        var stack = error.stack;
+      }
+      message = message || event.message;
+      var log = {
+        message: message,
+        stack: stack || "",
+        timestamp: Math.floor(event.timeStamp),
+        type: "uncaughterror",
+      };
+      sendErrorLog(log);
+      !isDebugModeOn && event.preventDefault();
+    } catch (error) {}
+  });
+  w.addEventListener("unhandledrejection", function (event) {
+    var reason = event.reason;
+    if (typeof reason === "object") reason = JSON.stringify(reason);
+    var log = {
+      message: reason || "no reason found",
+      timestamp: Math.floor(event.timeStamp),
+      type: "unhandledrejection",
+    };
+    sendErrorLog(log);
+    !isDebugModeOn && event.preventDefault();
+  });
+  var ga = d.createElement("script");
+  ga.src = "https://www.googletagmanager.com/gtag/js?id=G-Z0TZ7TDHS1";
+  ga.type = "text/javascript";
+  ga.async = true;
+  targetElement.appendChild(ga);
+  w.dataLayer = window.dataLayer || [];
+  w.gtag = function () {
+    window.dataLayer.push(arguments);
+  };
+  w.gtag("js", new Date());
+  w.gtag("config", "G-Z0TZ7TDHS1", {
+    custom_map: { dimension1: "siteid" },
+  });
+  w.gtag("event", "script-call", {
+    send_to: "G-Z0TZ7TDHS1",
+    siteid: siteId,
+  });
+  s.onerror = function (msg) {
+    w.gtag("event", "ad-block", {
+      send_to: "G-Z0TZ7TDHS1",
+      siteid: siteId,
+    });
+  };
+})(window, document);
+</script> 
+ </head> 
+ <body onload="highlightlink()"> <button onclick="topFunction()" id="myBtn">&#x21e7; SCROLL TO TOP</button> 
+  <div id="page" style="margin:-8px;background-color:#f5f5f4;">
+   <div id="container"> 
+    <div class="header">
+     <table style="width:100%;margin-bottom:5px"> 
+      <tbody>
+       <tr> 
+        <td> 
+         <div style="clear:both;float:left;width:230px;margin-top:15px;margin-left:20px"> <a href="https://www.javatpoint.com"><img src="https://static.javatpoint.com/images/logo/jtp_logo.png" alt="Javatpoint Logo"></a> 
+         </div> 
+         <div style="float:left;width:60%;">
+          <script> (function() { var cx = '005383125436438536544:y1edweedxwi'; var gcse = document.createElement('script'); gcse.type = 'text/javascript'; gcse.async = true; gcse.src = 'https://cse.google.com/cse.js?cx=' + cx; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(gcse, s); })();</script><gcse:search></gcse:search> 
+         </div> </td> 
+       </tr>
+      </tbody>
+     </table> 
+    </div> 
+    <div class="headermobile"> 
+     <div style="margin-top:10px;padding:0px;text-align:left;"> <span style="float:left"><input type="image" src="https://www.javatpoint.com/images/menuhome64.png" alt="Go To Top" onclick="showmenu()"></span> <span style="float:left"><a href="https://www.javatpoint.com"><img src="https://www.javatpoint.com/images/logo/jtp_logo.png" alt="Javatpoint Logo"></a></span> 
+     </div> 
+     <div style="margin:0px;padding:0px;clear:both"> 
+      <script>
+  (function() {
+    var cx = '005383125436438536544:y1edweedxwi';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script> <gcse:search></gcse:search> 
+     </div> 
+    </div> 
+    <div id="link" style="clear:both"> 
+     <div class="ddsmoothmenu"> 
+      <ul> 
+       <li><a href="https://www.javatpoint.com">Home</a></li> 
+       <li><a href="progressive-web-applications" class="selected">PWA</a></li> 
+       <li><a href="java-tutorial">Java</a></li> 
+       <li><a href="javascript-tutorial">JavaScript</a></li> 
+       <li><a href="html-tutorial">HTML</a></li> 
+       <li><a href="css-tutorial">CSS</a></li> 
+       <li><a href="c-programming-language-tutorial">C</a></li> 
+       <li><a href="rpa">RPA</a></li> 
+       <li><a href="python-tutorial">Python</a></li> 
+       <li><a href="xml-tutorial">XML</a></li> 
+       <li><a href="robotics-tutorial">Robotics</a></li> 
+       <li><a href="sql-tutorial">SQL</a></li> 
+       <li><a href="android-tutorial">Android</a></li> 
+       <li><a href="examaccess">Quiz</a></li> 
+       <li><a href="free-java-projects">Projects</a></li> 
+       <li><a href="corejava-interview-questions">Interview Q</a></li> 
+       <li><a href="comment.jsp">Comment</a></li> 
+       <li><a href="forum">Forum</a></li> 
+      </ul> 
+      <br style="clear: left"> 
+     </div>
+    </div> 
+    <div class="mobilemenu" style="clear:both"> 
+     <ins class="adPushupAds" data-adpcontrol="hqdgs" data-ver="2" data-siteid="37780" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSBDbV8zMDB4MjUwX01vYl8xNC85IC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTppbmxpbmUtYmxvY2s7d2lkdGg6MzAwcHg7aGVpZ2h0OjI1MHB4IgogICAgIGRhdGEtYWQtY2xpZW50PSJjYS1wdWItNDY5OTg1ODU0OTAyMzM4MiIKICAgICBkYXRhLWFkLXNsb3Q9IjcwMTQyNzI1MTkiPjwvaW5zPgo8c2NyaXB0PgooYWRzYnlnb29nbGUgPSB3aW5kb3cuYWRzYnlnb29nbGUgfHwgW10pLnB1c2goe30pOwo8L3NjcmlwdD4="></ins>
+     <script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script> 
+    </div> 
+    <div id="menu"> 
+     <div class="leftmenu2"> 
+      <h2 class="spanh2"><span class="spanh2">PWA Tutorial</span></h2> 
+     </div> 
+     <div class="leftmenu"> <a href="progressive-web-applications">PWA Tutorial</a> <a href="sieve-of-eratosthenes">Sieve of Eratosthenes</a> <a href="vigenere-cipher">Vigenere Cipher</a> 
+     </div> 
+     <img src="https://www.javatpoint.com/wh.JPG" alt="JavaTpoint"> 
+     <br> 
+     <div id="leftad" style="margin-left:20px"> 
+      <div id="17c09743-0b89-427c-ba64-e09f6a1745a2" class="_ap_apex_ad"> 
+       <script>
+		var adpushup = window.adpushup = window.adpushup || {};
+		adpushup.que = adpushup.que || [];
+		adpushup.que.push(function() {
+			adpushup.triggerAd("17c09743-0b89-427c-ba64-e09f6a1745a2");
+		});
+	</script> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="onlycontent"> 
+     <div class="onlycontentad"> 
+      <div id="9bbcb75d-b5e2-40e1-a811-e7680d1f59a4" class="_ap_apex_ad"> 
+       <script>
+		var adpushup = window.adpushup = window.adpushup || {};
+		adpushup.que = adpushup.que || [];
+		adpushup.que.push(function() {
+			adpushup.triggerAd("9bbcb75d-b5e2-40e1-a811-e7680d1f59a4");
+		});
+	</script> 
+      </div> 
+     </div> 
+     <div class="onlycontentinner"> 
+      <div id="city"> 
+       <table> 
+        <tbody>
+         <tr>
+          <td> 
+           <div id="bottomnextup"> <a class="next" href="sieve-of-eratosthenes">next &#x2192;</a> 
+           </div> <h1 class="h1">Progressive Web Applications</h1> <img src="https://static.javatpoint.com/tutorial/pwa/images/pwa.png" class="imageright" alt="Progressive Web Applications"> <p>The full form of PWA is Progressive Web Applications. PWA is HTML 5 webpage. It is a web application like a mobile application that is stored directly on the mobile from the website. In other words, it is a website that runs on the mobile browser of the user. PWA is a new technology. PWA allows the website to be stored in your device. It creates an icon in the form of a website app, and that icon feels like a mobile application upon opening.</p> <p>After the PWA icon of the website is created in the device, all the posts that are open with the help of the internet, are automatically stored in your device which does not need the internet to read the second time. It is a methodology where we combine native app experience with the Browser feature.</p> <p>Generally, when you have to build applications, you have to develop that application for different platforms, such as <a href="https://www.javatpoint.com/ios-development-using-swift">iOS</a>, <a href="https://www.javatpoint.com/android-tutorial">Android</a>, and <a href="https://www.javatpoint.com/windows">Windows</a>. But in the case of PWA, you do not need to develop separate applications for different platforms. You only need to create <a href="https://www.javatpoint.com/html-tutorial">HTML</a> 5 based webpages that can run on any mobile browser.</p> <h2 class="h2">Characteristics of PWA</h2> <img src="https://static.javatpoint.com/tutorial/pwa/images/characteristics-of-pwa.png" alt="Progressive Web Applications"> <p>Progressive web applications have the following characteristics that are important to understand:</p> 
+           <ol class="points"> 
+            <li><strong>Progressive:</strong> The term progressive means, a PWA application must work on any device and improve the performance of the user's mobile browser and design.</li> 
+            <li><strong>Discoverable:</strong> A PWA is a website with some extra features. It can be searched via mobile searching applications like Google Chrome. App Store or Play Store is not required for this.</li> 
+            <li><strong>Responsive:</strong> The UI of a progressive web app should fit the form factor and screen size of the device.</li> 
+            <li><strong>App-like:</strong> A PWA application should look like a native application. Although the methods for creating, sharing, launching, and updating of the PWA are completely different from the original application.</li> 
+            <li><strong>Connectivity-independent:</strong> It works even when connectivity is very low.</li> 
+           </ol> <h2 class="h2">Advantages of PWA</h2> 
+           <ol class="points"> 
+            <li>PWA works like an app on mobile and looks very impressive.</li> 
+            <li>It does not need an update.</li> 
+            <li>It is easily saved in the device.</li> 
+            <li>It's immediately loads on your mobile.</li> 
+            <li>It saves money and time compared to creating applications separately for android, iOS, and other platforms.</li> 
+            <li>Post can be read even if there is no internet.</li> 
+            <li>Internet data is less used in it.</li> 
+            <li>PWA is cheaper than the other applications.</li> 
+           </ol> <h2 class="h2">Disadvantages of PWA</h2> 
+           <ol class="points"> 
+            <li>It supports a limited mobile browser. It does not run on the safari, edge, and IE browser.</li> 
+            <li>iPhone users cannot establish connections securely in it.</li> 
+            <li>It makes maximum use of the battery of the device.</li> 
+            <li>It needs to be hosted on the server because it is a web app.</li> 
+            <li>It cannot be downloaded from popular app stores such as Google Play and Apple App Store.</li> 
+            <li>PWA does not provide the same level of support for all devices. For example, push notifications in PWA work on Android, but not on iOS.</li> 
+            <li>It supports limited hardware functionality.</li> 
+           </ol> <h2 class="h2">Difference between PWA and Native Application</h2> 
+           <table class="alt"> 
+            <tbody>
+             <tr> 
+              <th>Feature</th> 
+              <th>Progressive Web Application</th> 
+              <th>Native Application</th> 
+             </tr> 
+             <tr> 
+              <td>Function offline</td> 
+              <td>Yes</td> 
+              <td>Yes</td> 
+             </tr> 
+             <tr> 
+              <td>Installation requirement</td> 
+              <td>There is no need to install it in mobile.</td> 
+              <td>It is necessary to install it in the phone.</td> 
+             </tr> 
+             <tr> 
+              <td>Push-notification.</td> 
+              <td>It supports the push-notification feature.</td> 
+              <td>It also supports the push-notification feature.</td> 
+             </tr> 
+             <tr> 
+              <td>Platform</td> 
+              <td>It supports the cross-platform.</td> 
+              <td>It supports the specific platform. Example iOS, Android, and Windows</td> 
+             </tr> 
+             <tr> 
+              <td>Data consumption</td> 
+              <td>Low data consumption</td> 
+              <td>High data consumption</td> 
+             </tr> 
+             <tr> 
+              <td>Internet requirement</td> 
+              <td>No internet requirement</td> 
+              <td>Internet requirement</td> 
+             </tr> 
+             <tr> 
+              <td>Cost</td> 
+              <td>Low cost</td> 
+              <td>High cost</td> 
+             </tr> 
+             <tr> 
+              <td>Update the app</td> 
+              <td>It does not require to update the application.</td> 
+              <td>It requires to update the application.</td> 
+             </tr> 
+             <tr> 
+              <td>Implementation</td> 
+              <td>It is easy to implement.</td> 
+              <td>It is complex to implement.</td> 
+             </tr> 
+             <tr> 
+              <td>Indexed by google</td> 
+              <td>Yes</td> 
+              <td>No</td> 
+             </tr> 
+             <tr> 
+              <td>Shareable</td> 
+              <td>It is easy to share from anyone.</td> 
+              <td>It shares the entire application, so it complex.</td> 
+             </tr> 
+            </tbody>
+           </table> <h2 class="h2">Technical components of PWA</h2> <p>PWA has five components.</p> 
+           <ol class="points"> 
+            <li>Web App manifest</li> 
+            <li>Application shell</li> 
+            <li>Service worker</li> 
+            <li>Webpack</li> 
+            <li>Transport Layer Security (TLS)</li> 
+           </ol> <h3 class="h3">1. Web App manifest</h3> <p>The web app manifest is the first component of the PWA. It is a simple <a href="https://www.javatpoint.com/json-tutorial">JSON</a> file that controls a user's application. Usually, it is named "manifest.json". It is the most important component for the presence of PWA. When you first connect PWA to a network, a mobile browser reads the "manifest.json" file and stores it locally in cache memory.</p> <p>When there is no network access in PWA, the mobile browser uses the application's cache memory to run the PWA program while offline.</p> <p>The "manifest.json" file helps the PWA to give a look of a native app. With the help of the manifest.json file, the PWA developer can control how the application is presented to the user mobile screen. The PWA developer can also set a theme for the mobile's splash-screen and the application's address bar.</p> <p>The "manifest.json" file allows the PWA developer to search for a centralized location for the metadata of the web application. The JSON file defines the links to icons and icon sizes, the full and abbreviated name of an app, types, background color, theme, locations, and other visual details that are required for an app-like experience.</p> <h3 class="h3">2. Application Shell</h3> <p>The application shell is the third technical component of the PWA. It is specialized to split the static and dynamic content of the application. The minimal <a href="https://www.javatpoint.com/css-tutorial">CSS</a>, HTML, <a href="https://www.javatpoint.com/javascript-tutorial">JavaScript</a>, and any other dynamic and static resources offer the structure for your web page. It reduces the actual content that is unique to the webpage. This component ensures a very critical approach to the development of progressive web apps.</p> <p>It permits the PWA to be executed without any connection. The basic design elements of this component enable it to perform such a task. It drives especially for applications that are based on JavaScript.</p> <h3 class="h3">3. Service Worker</h3> <p>A service worker is a web worker. It is a JavaScript file that runs aside from the mobile <a href="https://www.javatpoint.com/browsers">browser</a>. In other words, it is another technical component that promotes the functionality of PWA. The service worker retrieves the resources from the cache memory and delivers the messages.</p> <p>It is independent of the application to which they are connected, and has many consequences:</p> 
+           <ul class="points"> 
+            <li>The service worker does not block the synchronized XHR, so it cannot be used in local storage (It is designed to be completely asynchronous).</li> 
+            <li>It can receive information from the server even when the application is not running. It shows notifications in the PWA application without opening in the mobile browser.</li> 
+            <li>It cannot directly access the DOM. Therefore, the PostMessage and Message Event Listener method is used to communicate with the webpage. The PostMessage method is used to send data, and the message event listener is used to receive data.</li> 
+           </ul> <p><strong>Things to understand about it:</strong></p> 
+           <ul class="points"> 
+            <li>It is a programmable-network proxy that helps you monitor how your page handles network requests.</li> 
+            <li>It only works on the HTTPS because HTTPS is very secure, and it intercepts network requests and modifies responses.</li> 
+           </ul> <h3 class="h4">Service worker lifecycle</h3> <p>The service worker lifecycle is the most complex part of the PWA. There are three stages in the lifetime of a service worker:</p> 
+           <ol class="points"> 
+            <li>Registration</li> 
+            <li>Installation</li> 
+            <li>Activation</li> 
+           </ol> <p><strong>Registration</strong></p> <p>A service worker is basically a JavaScript file. You need to register it in your crucial JavaScript code to use a service worker. Registration tells your browser location of the service worker and starts installing it on the background. One thing that distinguishes a service worker file from a standard JavaScript file is that a service worker runs in the background away from the mobile's main browser. This process is the first phase of the service worker's lifecycle.</p> <p>The code of service worker registration is placed in the main.js file.</p> 
+           <div class="codeblock">
+            <textarea name="code" class="xml">
+if ("Service-Worker- in navigator.js) 
+{
+  navigator. Service - worker. register ('/service-worker. json')
+  then (function (registration) 
+  {
+    console.log ('Registration successful finish, scope is:', registration. scope.);
+  }
+  Catch (function (error) 
+  {
+    console.log ('Registration failed, error:', error.js);
+  }
+}
+</textarea>
+           </div> <p>First, this code checks whether the browser supports the service worker. The service worker is then registered with <strong>navigator.serviceWorker.register</strong> when the service worker returns a promise. If the promise is fulfilled, the registration is successful; otherwise, the registration is failed.</p> <p><strong>Scope of registration</strong></p> <p>This scope determines the web pages that are managed by a service worker. The location of the service worker defines the default scope. Whenever you register a service worker file at the main folder of the system, it is not important to specify its scope, because it controls all webpages.</p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+navigator.service.worker.register ('/sw.js', { scope: '/'  });
+</textarea>
+           </div> <p><strong>Installation</strong></p> <p>When a new service worker is registered with the help of navigator.serviceWorker.register, the JavaScript code is downloaded, and the installation state is entered. If the installation succeeds, the service worker further proceeds to the next state.</p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+const assets to.cache = [
+'/js/app.js',
+'/about.html',   
+'/index.html',
+'/css/app.css',    
+]
+
+self. addEventListener ('install', function (event) {
+    event. wait Until (
+        caches. Open('staticAssetsCache')
+        then (function (cache) {
+              return cache Add All (assetsToCache.);
+        })
+      );
+});
+</textarea>
+           </div> <p><strong>Activation</strong></p> <p>Once the service worker is successfully installed, it converts to the activation phase. If there is an open page controlled by the previous service worker, the new service worker enters the waiting state. The new service worker is activated only when no pages are loaded in the old service worker. A service worker is not activated immediately after installation.</p> <p>A service worker will only be active in these cases:</p> 
+           <ul class="points"> 
+            <li>If no service worker currently active.</li> 
+            <li>If the user refreshes the webpage.</li> 
+           </ul> <p><strong>Service-worker.js</strong></p> 
+           <div class="codeblock">
+            <textarea name="code" class="xml">
+self.addEventListener('activate', function(event) {
+  // Perform some task
+});
+</textarea>
+           </div> <p>The service worker can manage network requests rather than caching. It roves around the latest <a href="https://www.javatpoint.com/internet">Internet</a> API.</p> <p><strong>1. Fetch:</strong> The Fetch API is a basic resource of the GUI. It makes it easier to control webpage requests and responses than older XMLHttprequests, and this often needs extra syntax, and its example is controlling the redirects. When a resource is requested on the network than the fetal event is terminated.</p> <h4 class="n">Note: It supports the CORS (Cross-Origin Resource Sharing). A local server is usually required for testing.</h4> <p>Fetch request example:</p> 
+           <div class="codeblock">
+            <textarea name="code" class="xml">
+fetch('ABCs/ABC.json')
+then (function (response){
+// response function
+})
+catch (function (error) 
+{
+console.log ('problem section: \n', error);
+});
+</textarea>
+           </div> <p><strong>2. Cache API:</strong> A cache interface has been provided for the service worker API, which allows you to create a repository of responses as requested. However, this interface was designed for service workers. It does not update the memory in the cache unless specifically requested.</p> <p><strong>Features of the service worker</strong></p> 
+           <ul class="points"> 
+            <li><strong>Offline:</strong> Enabling offline functionality is possibly the most demanding service worker facility.</li> 
+            <li><strong>Caching:</strong> The control of cache content is the most common feature for service workers.</li> 
+            <li><strong>Content delivery networks:</strong> The CDN and other external material may be difficult to handle. The PWA developers sometimes select out of publicly hosted software due to same-origin rules and SSL, but you may still upload scripts from CDNs.</li> 
+            <li><strong>Push notifications:</strong> The feature of push notifications is the best way to interact with users and visitors. This feature enhances the performance of the PWA application.</li> 
+            <li><strong>Background synchronization:</strong> It is another very important feature of a service worker that synchronizes tasks in the background.</li> 
+           </ul> <h3 class="h3"><strong>4. Webpack</strong></h3> <p>The webpack is the fourth component of the PWA. It is used to design the PWA front-end. It allows the PWA-developers to gather all JavaScript resources and data in one location.</p> <h3 class="h3">5. Transport Layer Security (TLS)</h3> <p>The transport layer security is the fifth component of the PWA. This component is a standard for all robust and secure data exchange between any two applications. The integrity of the data requires the website's service through the HTTPS and an SSL certificate installed on the server.</p> <h2 class="h2">How to convert the website into PWA using WordPress?</h2> <p>There are seven simple steps to convert a website to PWA.</p> <p>The first thing to do is to log in to the WordPress admin of your website.</p> <img src="https://static.javatpoint.com/tutorial/pwa/images/how-to-convert-the-website-into-pwa-using-wordpress.png" alt="Progressive Web Applications"> <p><strong>Step 2</strong>: After that, you have to go to the plugin option and click on the add new option.</p> <img src="https://static.javatpoint.com/tutorial/pwa/images/how-to-convert-the-website-into-pwa-using-wordpress2.png" alt="Progressive Web Applications"> <p><strong>Step 3:</strong> After this, click on the search button and search the plugin of the progressive web app and install it in WordPress.</p> <img src="https://static.javatpoint.com/tutorial/pwa/images/how-to-convert-the-website-into-pwa-using-wordpress3.png" alt="Progressive Web Applications"> <p><strong>Step 5:</strong> Then, activate the plugin of the progressive web app.</p> <img src="https://static.javatpoint.com/tutorial/pwa/images/how-to-convert-the-website-into-pwa-using-wordpress4.png" alt="Progressive Web Applications"> <p><strong>Step 6:</strong> Now, you will see many options in your dashboard (such as Application Name, Description, Icon, Color), which can customize as per your choice. </p> <img src="https://static.javatpoint.com/tutorial/pwa/images/how-to-convert-the-website-into-pwa-using-wordpress5.png" alt="Progressive Web Applications"> <p><strong>Step 7:</strong> Then click on the Save Settings button.</p> <img src="https://static.javatpoint.com/tutorial/pwa/images/how-to-convert-the-website-into-pwa-using-wordpress6.png" alt="Progressive Web Applications"> <h2 class="h2">How do you install a PWA?</h2> <p>On Android phones, installing a PWA is pretty simple.</p> <p><strong>Step 1:</strong> The first thing to do is open google chrome on your mobile phone.</p> <img src="https://static.javatpoint.com/tutorial/pwa/images/install-pwa.png" alt="Progressive Web Applications"> <p><strong>Step 2:</strong> Then, open the website, for example, Instagram.com.</p> <img src="https://static.javatpoint.com/tutorial/pwa/images/install-pwa2.png" alt="Progressive Web Applications"> <p><strong>Step 3:</strong> Now, click on the three dots of the right corner in the google chrome.</p> <img src="https://static.javatpoint.com/tutorial/pwa/images/install-pwa3.png" alt="Progressive Web Applications"> <p><strong>Step 4:</strong> Then, click on the Add to Home screen option and add it.</p> <img src="https://static.javatpoint.com/tutorial/pwa/images/install-pwa4.png" alt="Progressive Web Applications"> <p>On iOS, you visit the website with the Safari browser and click the share icon. This opens a sub-menu with more icons and an option to save to the home screen.</p> <h2 class="h2">Table of PWA framework tools</h2> 
+           <table class="alt"> 
+            <tbody>
+             <tr> 
+              <th>Tool Name</th> 
+              <th>Type</th> 
+              <th>Price</th> 
+              <th>Homepage Link</th> 
+              <th>Download link</th> 
+             </tr> 
+             <tr> 
+              <td>React PWA Library</td> 
+              <td>Open source</td> 
+              <td>Free</td> 
+              <td><a href="https://www.reactpwa.com/" rel="nofollow" target="_blank">https://www.reactpwa.com/</a></td> 
+              <td><a href="https://github.com/Atyantik/react-pwa/archive/master.zip" rel="nofollow" target="_blank">https://github.com/Atyantik/react-pwa/archive/master.zip</a></td> 
+             </tr> 
+             <tr> 
+              <td>Angular PWA Framework</td> 
+              <td>Open source</td> 
+              <td>Free</td> 
+              <td><a href="https://ionicframework.com/docs/angular/pwa" rel="nofollow" target="_blank">https://ionicframework.com/docs/angular/pwa</a></td> 
+              <td><a href="https://ionicframework.com/docs/angular/pwa" rel="nofollow" target="_blank">https://ionicframework.com/docs/angular/pwa</a></td> 
+             </tr> 
+             <tr> 
+              <td>Vue PWA Framework</td> 
+              <td>Open source</td> 
+              <td>Free</td> 
+              <td><a href="https://onsen.io/vue/" rel="nofollow" target="_blank">https://onsen.io/vue/</a></td> 
+              <td><a href="https://onsen.io/v2/guide/vue/" rel="nofollow" target="_blank">https://onsen.io/v2/guide/vue/</a></td> 
+             </tr> 
+             <tr> 
+              <td>Ionic PWA Framework</td> 
+              <td>Open source</td> 
+              <td>Free</td> 
+              <td><a href="https://ionicframework.com/pwa" rel="nofollow" target="_blank">https://ionicframework.com/pwa</a></td> 
+              <td><a href="https://ionicframework.com/pwa" rel="nofollow" target="_blank">https://ionicframework.com/pwa</a></td> 
+             </tr> 
+             <tr> 
+              <td>Svelte PWA Framework</td> 
+              <td>Open source</td> 
+              <td>Free</td> 
+              <td><a href="https://svelte.dev/" rel="nofollow" target="_blank">https://svelte.dev/</a></td> 
+              <td><a href="https://svelte.dev/" rel="nofollow" target="_blank">https://svelte.dev/</a></td> 
+             </tr> 
+             <tr> 
+              <td>PWA Builder</td> 
+              <td>Open source</td> 
+              <td>Free</td> 
+              <td><a href="https://www.pwabuilder.com/" rel="nofollow" target="_blank">https://www.pwabuilder.com/</a></td> 
+              <td><a href="https://www.pwabuilder.com/" rel="nofollow" target="_blank">https://www.pwabuilder.com/</a></td> 
+             </tr> 
+             <tr> 
+              <td>Webpack Module Bundler</td> 
+              <td>Open source</td> 
+              <td>Free</td> 
+              <td><a href="https://webpack.github.io/" rel="nofollow" target="_blank">https://webpack.github.io/</a></td> 
+              <td><a href="https://webpack.github.io/" rel="nofollow" target="_blank">https://webpack.github.io/</a></td> 
+             </tr> 
+             <tr> 
+              <td>Lighthouse PWA Analytics Tool</td> 
+              <td>Open source</td> 
+              <td>Free</td> 
+              <td><a href="https://developers.google.com/web/ilt/pwa/lighthouse-pwa-analysis-tool" rel="nofollow" target="_blank">https://developers.google.com/web/ilt/pwa/lighthouse-pwa-analysis-tool</a></td> 
+              <td><a href="https://developers.google.com/web/ilt/pwa/lighthouse-pwa-analysis-tool" rel="nofollow" target="_blank">https://developers.google.com/web/ilt/pwa/lighthouse-pwa-analysis-tool</a></td> 
+             </tr> 
+            </tbody>
+           </table> <h2 class="h2">Some popular examples of Progressive Web Apps</h2> <h3 class="h3">AliExpress</h3> <p>AliExpress is a popular e-commerce website that was introduced by the Alibaba Group. They turned their website a few years ago to a Progressive Web App for mobile phones.</p> <p>After changing to a Progressive Web App, AliExpress saw incredible results:</p> 
+           <ul class="points"> 
+            <li>104% increase in conversions for new users.</li> 
+            <li>3x increase loading time in the PWA app.</li> 
+            <li>50% higher re-engagement.</li> 
+           </ul> <h3 class="h3">Flipkart</h3> <p>In India, Flipkart is the largest e-commerce website. Flipkart has recently updated its website for mobile users to a PWA that is called Flipkart Lite. Flipkart lite combines the best of both the web and native apps. It provides a fast and uninterrupted experience to smartphone phone users.</p> <p>After changing to a Progressive Web App, Flipkart saw incredible results:</p> 
+           <ul class="points"> 
+            <li>70% increase in conversions.</li> 
+            <li>40% higher re-engagement.</li> 
+            <li>3x increase loading time in the PWA app.</li> 
+            <li>65% increase in pages session in the PWA app.</li> 
+           </ul> <h3 class="h3">Twitter Lite</h3> <p>Twitter is a popular platform for social media. In <strong>2017</strong>, they changed their website to Progressive Web App for the mobile users that are called twitter lite. Twitter Lite loads posts instantly. It reduces data usage by optimizing pictures and keep on cached data.</p> <p>Twitter Lite rebuilds customers with push notifications system. It also allows users to connect the Progressive Web App to their home screen of mobile phones.</p> <p>After changing to a Progressive Web App, Twitter saw incredible results:</p> 
+           <ul class="points"> 
+            <li>75% increase in Tweets sent.</li> 
+            <li>20% decrease in bounce rate in the PWA.</li> 
+            <li>65% increase in pages session in the PWA.</li> 
+           </ul> <h3 class="h3">Instagram</h3> <p>Instagram is a very popular social media app. They changed their website to Progressive Web App for mobile users. It reduces data consumption through processing photos.</p> <p>After changing to a Progressive Web App, Instagram saw incredible results:</p> 
+           <ul class="points"> 
+            <li>77% increase in conversions.</li> 
+            <li>50% higher re-engagement.</li> 
+            <li>3x increase loading time in the PWA app.</li> 
+            <li>4x lower data usage in the PWA app.</li> 
+           </ul> <h3 class="h3">BookMyShow</h3> <p>BookMyShow is a popular website in India that is used to book tickets online. In 2017, they changed their website to Progressive Web App for mobile users.</p> <p>Some uses had many problems with the BookMyShow mobile app. But PWA solved all problems. It gives smartphone users a smooth ticket-booking experience.</p> <p>After changing to a Progressive Web App, Instagram saw incredible results:</p> 
+           <ul class="points"> 
+            <li>Over 80% increase of conversions in the PWA app.</li> 
+            <li>Smaller size than the iOS app and android app.</li> 
+            <li>5x increase in conversion rates.</li> 
+           </ul> <h3 class="h3">MakeMyTrip</h3> <p>MakeMyTrip is the first online travel website in India. The website owner decided to invest in a progressive web application to provide its users with a fast and appealing mobile web experience. After changing to a Progressive Web App, Instagram saw incredible results:</p> 
+           <ul class="points"> 
+            <li>3x increase in conversion rates.</li> 
+            <li>Smaller size than the iOS app and android app.</li> 
+            <li>Over 160% increase of user sessions in the PWA app.</li> 
+           </ul> 
+           <hr> 
+           <div class="nexttopicdiv"> <span class="nexttopictext">Next Topic</span><span class="nexttopiclink"><a href="sieve-of-eratosthenes">Sieve of Eratosthenes</a></span> 
+           </div> <br><br> 
+           <div id="bottomnext"> <a style="float:right" class="next" href="sieve-of-eratosthenes">next &#x2192;</a> 
+           </div> <br><br> </td>
+         </tr> 
+        </tbody>
+       </table> 
+      </div> 
+      <hr class="hrhomebox"> 
+      <div>
+       <img class="lazyload" data-src="https://static.javatpoint.com/images/youtube-32.png" style="vertical-align:middle;" alt="Youtube"> <span class="h3" style="vertical-align:middle;font-size:22px"> For Videos Join Our Youtube Channel: <a href="https://bit.ly/2FOeX6S" target="_blank"> Join Now</a></span> 
+      </div> 
+      <hr class="hrhomebox"> 
+      <h3 class="h3">Feedback</h3> 
+      <ul class="points"> 
+       <li>Send your Feedback to <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="9ff9fafafbfdfefcf4dff5fee9feebeff0f6f1ebb1fcf0f2">[email&nbsp;protected]</a></li> 
+      </ul> 
+      <hr class="hrhomebox"> 
+      <h2 class="h2">Help Others, Please Share</h2> <a rel="nofollow" title="Facebook" target="_blank" href="https://www.facebook.com/sharer.php?u=https://www.javatpoint.com/progressive-web-applications"><img src="https://www.javatpoint.com/images/facebook32.png" alt="facebook"></a> <a rel="nofollow" title="Twitter" target="_blank" href="https://twitter.com/share?url=https://www.javatpoint.com/progressive-web-applications"><img src="https://www.javatpoint.com/images/twitter32.png" alt="twitter"></a> <a rel="nofollow" title="Pinterest" target="_blank" href="https://www.pinterest.com/pin/create/button/?url=https://www.javatpoint.com/progressive-web-applications"><img src="https://www.javatpoint.com/images/pinterest32.png" alt="pinterest"></a> 
+      <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> 
+      <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4699858549023382" data-ad-slot="5022809933" data-ad-format="auto" data-full-width-responsive="true"></ins> 
+      <script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script> 
+      <hr class="hrhomebox"> 
+      <fieldset class="gra1"> 
+       <h2 class="h3">Learn Latest Tutorials</h2> 
+       <div class="firsthomecontent"> <a href="https://www.javatpoint.com/splunk"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/splunk.png" alt="Splunk tutorial"> 
+          <p>Splunk</p> 
+         </div> </a> <a href="https://www.javatpoint.com/spss"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/spss.png" alt="SPSS tutorial"> 
+          <p>SPSS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/swagger"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/swagger.png" alt="Swagger tutorial"> 
+          <p>Swagger</p> 
+         </div> </a> <a href="https://www.javatpoint.com/t-sql"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/transact-sql.png" alt="T-SQL tutorial"> 
+          <p>Transact-SQL</p> 
+         </div> </a> <a href="https://www.javatpoint.com/tumblr"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/tumblr.png" alt="Tumblr tutorial"> 
+          <p>Tumblr</p> 
+         </div> </a> <a href="https://www.javatpoint.com/reactjs-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/react.png" alt="React tutorial"> 
+          <p>ReactJS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/regex"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/regex.png" alt="Regex tutorial"> 
+          <p>Regex</p> 
+         </div> </a> <a href="https://www.javatpoint.com/reinforcement-learning"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/react.png" alt="Reinforcement learning tutorial"> 
+          <p>Reinforcement Learning</p> 
+         </div> </a> <a href="https://www.javatpoint.com/r-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/r-programming.png" alt="R Programming tutorial"> 
+          <p>R Programming</p> 
+         </div> </a> <a href="https://www.javatpoint.com/rxjs"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/rxjs.png" alt="RxJS tutorial"> 
+          <p>RxJS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/react-native-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/react-native.png" alt="React Native tutorial"> 
+          <p>React Native</p> 
+         </div> </a> <a href="https://www.javatpoint.com/python-design-pattern"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python-design-patterns.png" alt="Python Design Patterns"> 
+          <p>Python Design Patterns</p> 
+         </div> </a> <a href="https://www.javatpoint.com/python-pillow"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python-pillow.png" alt="Python Pillow tutorial"> 
+          <p>Python Pillow</p> 
+         </div> </a> <a href="https://www.javatpoint.com/python-turtle-programming"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python-turtle.png" alt="Python Turtle tutorial"> 
+          <p>Python Turtle</p> 
+         </div> </a> <a href="https://www.javatpoint.com/keras"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/keras.png" alt="Keras tutorial"> 
+          <p>Keras</p> 
+         </div> </a> 
+       </div> 
+      </fieldset> 
+      <hr class="hrhomebox"> 
+      <fieldset class="gra1"> 
+       <h2 class="h3">Preparation</h2> 
+       <div class="firsthomecontent"> <a href="https://www.javatpoint.com/aptitude/quantitative"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/aptitude/images/quantitative-aptitude-home.png" alt="Aptitude"> 
+          <p>Aptitude</p> 
+         </div> </a> <a href="https://www.javatpoint.com/reasoning"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/reasoning/images/reasoning-home.png" alt="Logical Reasoning"> 
+          <p>Reasoning</p> 
+         </div> </a> <a href="https://www.javatpoint.com/verbal-ability"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/verbal-ability/images/verbal-ability-home.png" alt="Verbal Ability"> 
+          <p>Verbal Ability</p> 
+         </div> </a> <a href="https://www.javatpoint.com/interview-questions-and-answers"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/logo/interviewhome.png" alt="Interview Questions"> 
+          <p>Interview Questions</p> 
+         </div> </a> <a href="https://www.javatpoint.com/company-interview-questions-and-recruitment-process"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/interview/images/company-home.jpeg" alt="Company Interview Questions"> 
+          <p>Company Questions</p> 
+         </div> </a> 
+       </div> 
+      </fieldset> 
+      <hr class="hrhomebox"> 
+      <fieldset class="gra1"> 
+       <h2 class="h3">Trending Technologies</h2> 
+       <div class="firsthomecontent"> <a href="https://www.javatpoint.com/artificial-intelligence-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/artificial-intelligence.png" alt="Artificial Intelligence Tutorial"> 
+          <p>Artificial Intelligence</p> 
+         </div> </a> <a href="https://www.javatpoint.com/aws-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/amazon-web-services.png" alt="AWS Tutorial"> 
+          <p>AWS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/selenium-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/selenium.png" alt="Selenium tutorial"> 
+          <p>Selenium</p> 
+         </div> </a> <a href="https://www.javatpoint.com/cloud-computing-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/cloud-computing.png" alt="Cloud Computing tutorial"> 
+          <p>Cloud Computing</p> 
+         </div> </a> <a href="https://www.javatpoint.com/hadoop-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/hadoop.png" alt="Hadoop tutorial"> 
+          <p>Hadoop</p> 
+         </div> </a> <a href="https://www.javatpoint.com/reactjs-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/reactjs.png" alt="ReactJS Tutorial"> 
+          <p>ReactJS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/data-science"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-science.png" alt="Data Science Tutorial"> 
+          <p>Data Science</p> 
+         </div> </a> <a href="https://www.javatpoint.com/angular-7-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/angular7.png" alt="Angular 7 Tutorial"> 
+          <p>Angular 7</p> 
+         </div> </a> <a href="https://www.javatpoint.com/blockchain-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/blockchain.png" alt="Blockchain Tutorial"> 
+          <p>Blockchain</p> 
+         </div> </a> <a href="https://www.javatpoint.com/git"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/git.png" alt="Git Tutorial"> 
+          <p>Git</p> 
+         </div> </a> <a href="https://www.javatpoint.com/machine-learning"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/machine-learning.png" alt="Machine Learning Tutorial"> 
+          <p>Machine Learning</p> 
+         </div> </a> <a href="https://www.javatpoint.com/devops"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/devops.png" alt="DevOps Tutorial"> 
+          <p>DevOps</p> 
+         </div> </a> 
+       </div> 
+      </fieldset> 
+      <hr class="hrhomebox"> 
+      <fieldset class="gra1"> 
+       <h2 class="h3">B.Tech / MCA</h2> 
+       <div class="firsthomecontent"> <a href="https://www.javatpoint.com/dbms-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/dbms.png" alt="DBMS tutorial"> 
+          <p>DBMS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/data-structure-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-structures.png" alt="Data Structures tutorial"> 
+          <p>Data Structures</p> 
+         </div> </a> <a href="https://www.javatpoint.com/daa-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/daa.png" alt="DAA tutorial"> 
+          <p>DAA</p> 
+         </div> </a> <a href="https://www.javatpoint.com/os-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/operating-system.png" alt="Operating System tutorial"> 
+          <p>Operating System</p> 
+         </div> </a> <a href="https://www.javatpoint.com/computer-network-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/computer-network.png" alt="Computer Network tutorial"> 
+          <p>Computer Network</p> 
+         </div> </a> <a href="https://www.javatpoint.com/compiler-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/compiler-design.png" alt="Compiler Design tutorial"> 
+          <p>Compiler Design</p> 
+         </div> </a> <a href="https://www.javatpoint.com/computer-organization-and-architecture-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/computer-organization.png" alt="Computer Organization and Architecture"> 
+          <p>Computer Organization</p> 
+         </div> </a> <a href="https://www.javatpoint.com/discrete-mathematics-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/discrete-mathematics.png" alt="Discrete Mathematics Tutorial"> 
+          <p>Discrete Mathematics</p> 
+         </div> </a> <a href="https://www.javatpoint.com/ethical-hacking-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/ethical-hacking.png" alt="Ethical Hacking Tutorial"> 
+          <p>Ethical Hacking</p> 
+         </div> </a> <a href="https://www.javatpoint.com/computer-graphics-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/computer-graphics.png" alt="Computer Graphics Tutorial"> 
+          <p>Computer Graphics</p> 
+         </div> </a> <a href="https://www.javatpoint.com/software-engineering-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/software-engineering.png" alt="Software Engineering Tutorial"> 
+          <p>Software Engineering</p> 
+         </div> </a> <a href="https://www.javatpoint.com/html-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/web-technology.png" alt="html tutorial"> 
+          <p>Web Technology</p> 
+         </div> </a> <a href="https://www.javatpoint.com/cyber-security-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/cyber-security.png" alt="Cyber Security tutorial"> 
+          <p>Cyber Security</p> 
+         </div> </a> <a href="https://www.javatpoint.com/automata-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/automata.png" alt="Automata Tutorial"> 
+          <p>Automata</p> 
+         </div> </a> <a href="https://www.javatpoint.com/c-programming-language-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/c-programming.png" alt="C Language tutorial"> 
+          <p>C Programming</p> 
+         </div> </a> <a href="https://www.javatpoint.com/cpp-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/cpp.png" alt="C++ tutorial"> 
+          <p>C++</p> 
+         </div> </a> <a href="https://www.javatpoint.com/java-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/java.png" alt="Java tutorial"> 
+          <p>Java</p> 
+         </div> </a> <a href="https://www.javatpoint.com/net-framework"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/dot-net.png" alt=".Net Framework tutorial"> 
+          <p>.Net</p> 
+         </div> </a> <a href="https://www.javatpoint.com/python-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python.png" alt="Python tutorial"> 
+          <p>Python</p> 
+         </div> </a> <a href="https://www.javatpoint.com/programs-list"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/programs.png" alt="List of Programs"> 
+          <p>Programs</p> 
+         </div> </a> <a href="https://www.javatpoint.com/control-system-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/control-system.png" alt="Control Systems tutorial"> 
+          <p>Control System</p> 
+         </div> </a> <a href="https://www.javatpoint.com/data-mining"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-mining.png" alt="Data Mining Tutorial"> 
+          <p>Data Mining</p> 
+         </div> </a> <a href="https://www.javatpoint.com/data-warehouse"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-warehouse.png" alt="Data Warehouse Tutorial"> 
+          <p>Data Warehouse</p> 
+         </div> </a> 
+       </div> 
+      </fieldset> 
+     </div> 
+     <br>
+     <br>
+     <div class="mobilemenu" style="clear:both"> 
+      <ins class="adPushupAds" data-adpcontrol="jrfe7" data-ver="2" data-siteid="37780" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSByZXNwb25zaXZlbW9iaWxlZm9vdGVyIC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTpibG9jayIKICAgICBkYXRhLWFkLWNsaWVudD0iY2EtcHViLTQ2OTk4NTg1NDkwMjMzODIiCiAgICAgZGF0YS1hZC1zbG90PSI4MjIyODY2MzE4IgogICAgIGRhdGEtYWQtZm9ybWF0PSJhdXRvIgogICAgIGRhdGEtZnVsbC13aWR0aC1yZXNwb25zaXZlPSJ0cnVlIj48L2lucz4KPHNjcmlwdD4KKGFkc2J5Z29vZ2xlID0gd2luZG93LmFkc2J5Z29vZ2xlIHx8IFtdKS5wdXNoKHt9KTsKPC9zY3JpcHQ+"></ins>
+      <script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script> 
+     </div>
+    </div> 
+    <div id="right"> 
+     <div id="e59d93b5-7231-4043-a19e-e7ec340efd1f" class="_ap_apex_ad"> 
+      <script>
+		var adpushup = window.adpushup = window.adpushup || {};
+		adpushup.que = adpushup.que || [];
+		adpushup.que.push(function() {
+			adpushup.triggerAd("e59d93b5-7231-4043-a19e-e7ec340efd1f");
+		});
+	</script> 
+     </div> 
+     <br>
+     <br> 
+    </div> 
+    <div class="right1024" style="float:left;margin-left:10px;margin-top:120px;"> 
+     <ins class="adPushupAds" data-adpcontrol="6d5qg" data-ver="2" data-siteid="37780" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSByaWdodDEwMjRvbmx5IC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTppbmxpbmUtYmxvY2s7d2lkdGg6MTIwcHg7aGVpZ2h0OjYwMHB4IgogICAgIGRhdGEtYWQtY2xpZW50PSJjYS1wdWItNDY5OTg1ODU0OTAyMzM4MiIKICAgICBkYXRhLWFkLXNsb3Q9IjIxODAxMTg3MTYiPjwvaW5zPgo8c2NyaXB0PgooYWRzYnlnb29nbGUgPSB3aW5kb3cuYWRzYnlnb29nbGUgfHwgW10pLnB1c2goe30pOwo8L3NjcmlwdD4K"></ins>
+     <script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script> 
+     <br>
+     <br> 
+     <ins class="adPushupAds" data-adpcontrol="6d5qg" data-ver="2" data-siteid="37780" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSByaWdodDEwMjRvbmx5IC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTppbmxpbmUtYmxvY2s7d2lkdGg6MTIwcHg7aGVpZ2h0OjYwMHB4IgogICAgIGRhdGEtYWQtY2xpZW50PSJjYS1wdWItNDY5OTg1ODU0OTAyMzM4MiIKICAgICBkYXRhLWFkLXNsb3Q9IjIxODAxMTg3MTYiPjwvaW5zPgo8c2NyaXB0PgooYWRzYnlnb29nbGUgPSB3aW5kb3cuYWRzYnlnb29nbGUgfHwgW10pLnB1c2goe30pOwo8L3NjcmlwdD4K"></ins>
+     <script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script> 
+    </div> 
+    <br> 
+    <div id="footer" style="clear:both;width:100%"> 
+     <div style="width:100%;margin-top:10px;color:white;background-image: linear-gradient(145deg,#52a2fc,#480fcc);line-height:28px;"> 
+      <h2 style="padding:60px 0px 0px 20px">Javatpoint Services</h2> 
+      <p style="padding:0px 20px 0px 20px">JavaTpoint offers too many high quality services. Mail us on <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="3b53497b515a4d5a4f4b5452554f15585456">[email&nbsp;protected]</a>, to get more information about given services. </p>
+      <ul class="points"> 
+       <li>Website Designing</li>
+       <li>Website Development</li>
+       <li>Java Development</li>
+       <li>PHP Development</li>
+       <li>WordPress</li>
+       <li>Graphic Designing</li>
+       <li>Logo</li>
+       <li>Digital Marketing</li>
+       <li>On Page and Off Page SEO</li>
+       <li>PPC</li>
+       <li>Content Development</li>
+       <li>Corporate Training</li>
+       <li>Classroom and Online Training</li>
+       <li>Data Entry</li>
+      </ul> 
+      <p style="padding-bottom:60px"></p>
+     </div>
+     <div style="width:100%;margin-top:-20px;color:white;background-image: linear-gradient(145deg,#dc8140,#b16b15);line-height:28px;"> 
+      <h2 style="padding:60px 0px 0px 20px">Training For College Campus</h2> 
+      <p style="padding:0px 20px 60px 20px">JavaTpoint offers college campus training on Core Java, Advance Java, .Net, Android, Hadoop, PHP, Web Technology and Python. Please mail your requirement at <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="89e1fbc9e3e8ffe8fdf9e6e0e7fda7eae6e4a7">[email&nbsp;protected]</a> <br>Duration: 1 week to 2 week<br></p>
+     </div>
+     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+     <script>var _gaq=_gaq || []; _gaq.push(['_setAccount', 'UA-24880427-1']); _gaq.push(['_trackPageview']); (function(){var ga=document.createElement('script'); ga.type='text/javascript'; ga.async=true; ga.src=('https:'==document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js'; var s=document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();</script>
+     <div style="margin-top:5px;text-align:center"> <sup style="font:16px arial;">Like/Subscribe us for latest updates or newsletter </sup> <a target="_blank" rel="nofollow noopener" href="https://feeds.feedburner.com/javatpointsonoo"><img src="https://static.javatpoint.com/images/social/rss1.png" alt="RSS Feed"></a> <a target="_blank" rel="nofollow noopener" href="https://feedburner.google.com/fb/a/mailverify?uri=javatpointsonoo"><img src="https://static.javatpoint.com/images/social/mail1.png" alt="Subscribe to Get Email Alerts"></a> <a rel="nofollow noopener" target="_blank" href="https://www.facebook.com/javatpoint"><img src="https://static.javatpoint.com/images/social/facebook1.jpg" alt="Facebook Page"></a> <a target="_blank noopener" rel="nofollow" href="https://twitter.com/pagejavatpoint"><img src="https://static.javatpoint.com/images/social/twitter1.png" alt="Twitter Page"></a> <a target="_blank" rel="nofollow noopener" href="https://www.youtube.com/channel/UCUnYvQVCrJoFWZhKK3O2xLg"><img src="https://static.javatpoint.com/images/youtube32.png" alt="YouTube"></a> <a target="_blank" rel="nofollow noopener" href="https://javatpoint.blogspot.com"><img src="https://static.javatpoint.com/images/social/blog.png" alt="Blog Page"></a> 
+     </div>
+     <footer class="footer1">
+      <div class="column4">
+       <h3>Learn Tutorials</h3><a href="https://www.javatpoint.com/java-tutorial">Learn Java</a><a href="https://www.javatpoint.com/data-structure-tutorial">Learn Data Structures</a><a href="https://www.javatpoint.com/c-programming-language-tutorial">Learn C Programming</a><a href="https://www.javatpoint.com/cpp-tutorial">Learn C++ Tutorial</a><a href="https://www.javatpoint.com/c-sharp-tutorial">Learn C# Tutorial</a><a href="https://www.javatpoint.com/php-tutorial">Learn PHP Tutorial</a><a href="https://www.javatpoint.com/html-tutorial">Learn HTML Tutorial</a><a href="https://www.javatpoint.com/javascript-tutorial">Learn JavaScript Tutorial</a><a href="https://www.javatpoint.com/jquery-tutorial">Learn jQuery Tutorial</a><a href="https://www.javatpoint.com/spring-tutorial">Learn Spring Tutorial</a>
+      </div>
+      <div class="column4">
+       <h3>Our Websites</h3><a href="https://www.javatpoint.com">Javatpoint.com</a><a rel="dofollow noopener" target="_blank" href="https://www.hindi100.com">Hindi100.com</a><a rel="dofollow noopener" target="_blank" href="https://www.lyricsia.com">Lyricsia.com</a><a rel="nofollow noopener" target="_blank" href="https://www.quoteperson.com">Quoteperson.com</a><a rel="nofollow noopener" target="_blank" href="https://www.jobandplacement.com">Jobandplacement.com</a>
+      </div>
+      <div class="column4">
+       <h3>Our Services</h3>
+       <p>Website Development</p>
+       <p>Android Development</p>
+       <p>Website Designing</p>
+       <p>Digital Marketing</p>
+       <p>Summer Training</p>
+       <p>Industrial Training</p>
+       <p>College Campus Training</p>
+      </div>
+      <div class="column4">
+       <h3>Contact</h3>
+       <p>Address: G-13, 2nd Floor, Sec-3</p>
+       <p>Noida, UP, 201301, India</p>
+       <p>Contact No: 0120-4256464, 9990449935</p><a href="https://www.javatpoint.com/contact-us">Contact Us</a> <a href="https://www.javatpoint.com/subscribe.jsp">Subscribe Us</a> <a href="https://www.javatpoint.com/privacy-policy">Privacy Policy</a><a href="https://www.javatpoint.com/sitemap.xml">Sitemap</a>
+       <br><a href="https://www.javatpoint.com/sonoo-jaiswal">About Me</a>
+      </div>
+     </footer>
+     <footer class="footer2">
+      <p>© Copyright 2011-2021 www.javatpoint.com. All rights reserved. Developed by JavaTpoint.</p>
+     </footer> 
+     <div id="bot-root"></div> 
+     <script> 
+ (function() {
+ var e = document.createElement('script');
+ e.src = 'https://app.pushbrothers.com/js/notification-bot.js?cnfg=a3cc04a1-8471-450e-b01e-c9d752b16eb0';
+ document.getElementById('bot-root').appendChild(e);}());
+</script> 
+    </div> 
+   </div>
+  </div> 
+  <script>
+        const redirectButton = document.querySelector('#redirect');
+        redirectButton.addEventListener('click', () => {
+          const form = document.createElement('form');
+          form.method = 'POST';
+          const textArea = document.createElement('textarea');
+          const language = document.querySelector('#jtp_compiler').classList[0];
+          textArea.name = 'code';
+          textArea.value = document.querySelector('#jtp_compiler').textContent;
+          form.appendChild(textArea);
+          document.body.appendChild(form);
+          form.action = `https://onlinecompiler.javatpoint.com/`;
+          form.submit();
+        });
+      </script> 
+  <script src="https://static.javatpoint.com/js/shcoreandbrush.js"></script>
+  <script> dp.SyntaxHighlighter.HighlightAll('code'); </script> 
+  <script src="https://static.javatpoint.com/lazysizes.min.js" async></script>  
+ </body>
+</html>

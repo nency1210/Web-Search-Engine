@@ -1,0 +1,58 @@
+https://www.javatpoint.com/graphql::graphql tutorial - javatpoint ⇧ scroll to top home java graphql restful web services spring spring boot servlet jsp struts2 mail api hibernate android design pattern graphql tutorial graphql tutorial graphql installation graphql architecture graphql first example application components graphql vs rest advantage & disadvantage graphql schema graphql type system graphql resolvers apollo framework apollo: the graphql toolkit apollo client installation apollo server installation interview questions graphql interview next → graphql tutorial graphql is a new api standard invented and developed by facebook. it is an open-source server-side technology, now maintained by a large community of companies and individuals of all over the world. it is also an execution engine that works as a data query language and used to fetch declarative data. it was developed to optimize restful api calls and provides a flexible, robust, and more efficient alternative to rest. graphql is data query and manipulation language for your api and a server-side runtime for executing queries when you define a type system for your data. unlike the rest apis, a graphql server provides only a single endpoint and responds with the precise data that a client asked for. history of graphql graphql was an internal project of facebook. it was developed by facebook in 2012 and was used in their native mobile apps. after that, it was publicly released in 2015 at the react.js conference. later in 2018, facebook moved this graphql project to a newly-established foundation named graphql foundation, which was hosted by the non-profit linux foundation. graphql was created by facebook's team, where the leading creator was lee byron, who wants to make graphql omnipresent across web platforms. operating system compatibility graphql is a cross-platform, open-source, data query, and manipulation language for apis. graphql servers are available for multiple languages such as java, python, c#, php, r, haskell, javascript, perl, ruby, scala, go, elixir, erlang, and clojure, etc. so, it can be used with any programming language and framework. graphql: a rapidly growing community graphql is constantly and rapidly growing its community because a large number of companies like netflix and coursera are interested and working on similar ideas to make this api more efficient. after graphql became open-sourced, netflix open-sourced its solution falcor and coursera canceled its initiatives and completely switched to using graphql. now, graphql is used by a lot of companies such as facebook, github, twitter, coursera, yelp, pinterest, serverless, producthunt, shopify, etc. why use graphql? we already had an api named rest for data communication, which follows a clear and well-structured resource-oriented approach. it also provides some great ideas such as stateless servers, structured access to resources, etc. but, rest is not so flexible to cope up with the rapidly changing requirements of the clients that access them. in this case, when the data gets more complex, the routes get longer. sometimes, it is challenging to fetch the data with a single request. that's why we use graphql. let's see the advantages of using graphql: 1. graphql is more precise, accurate, and efficient. graphql is precise, accurate, and efficient. just send a graphql query to your api and get the exact result that you need. the results of graphql are always predictable. applications using graphql are fast and stable because they fetch the data for required fields only, unlike the rest apis, where rest apis fetch data for all the fields for a specific object. you can understand it by an example. suppose there is an object named employee with the attributes id, firstname, and lastname. now, we have to create a mobile application to fetch only the firstname and id. if we design a rest endpoint like /api/v1/employee, it will fetch data for all the fields for the employee object. this is called data over fetching because here, data is over fetched by the rest service. we can solve this problem by using graphql. see the following graphql query: 
+{
+   employee {
+      id
+      firstname
+   }
+}
+ here, the graphql query fetches values only for the id and firstname fields and not fetch the values for other attributes of the employee object. 
+{
+   "data": {
+      "employee": [
+         {
+            "id": "101",
+            "firstname": "albert"
+         },
+         {
+            "id": "102",
+            "firstname": "freda"
+         }
+      ]
+   }
+}
+ 2. retrieve many resources from a single request by using graphql, you can fetch all the data required for your application from a single request while rest apis require loading from multiple urls. that's why applications using graphql are fast even on slow mobile network connections. see this example: we have an object employee. suppose we have another object named company which has the attributes: name and location. the employee object has an association relationship with the company object. if we use rest api to fetch the details of employees and their companies, we have to make two requests to the server like /api/v1/employees and /api/v1/companies. this will force mobile applications to make multiple calls to the server to get the desired data. but if you use graphql, the mobile application can fetch details for both employee and company objects in a single request. see the following graphql query: 
+{
+   employee{
+      id
+      firstname
+      college{
+         name
+         location
+      }
+   }
+}
+ you can see the output contains exactly those fields you have requested for: 
+{
+   "data": {
+      "employee": [
+         {
+            "id": "101",
+            "firstname": "albert",
+            "company": {
+               "name": "jtp",
+               "location": "paris"
+            }
+         },
+         
+         {
+            "id": "102",
+            "firstname": "freda",
+            "company": {
+               "name": "hcl",
+               "location": "noida"
+            }         
+         }
+      ]
+   }
+}
+ 3. graphql queries are simple and human-readable. 4. graphql is best suited for microservices and complex systems because of using a simple query. 5. it facilitates you to deal with many databases efficiently. 6. data can be fetched using a single api call. 7. you don't face over fetching and under fetching issues in graphql. 8. using graphql, you can discover the schema in the appropriate format. 9. graphql provides rich and powerful developer tools for testing queries and documentation. audience to learn graphql, you must have the basic knowledge of . prerequisites our graphql tutorial is designed to help beginners and professionals. problem we assure that you will not find any problem in this graphql tutorial. however, if there is any mistake, please post the problem in the contact form. next topicgraphql installation next → for videos join our youtube channel: join now feedback send your feedback to [email protected] help others, please share learn latest tutorials splunk spss swagger transact-sql tumblr reactjs regex reinforcement learning r programming rxjs react native python design patterns python pillow python turtle keras preparation aptitude reasoning verbal ability interview questions company questions trending technologies artificial intelligence aws selenium cloud computing hadoop reactjs data science angular 7 blockchain git machine learning devops b.tech / mca dbms data structures daa operating system computer network compiler design computer organization discrete mathematics ethical hacking computer graphics software engineering web technology cyber security automata c programming c++ java .net python programs control system data mining data warehouse javatpoint services javatpoint offers too many high quality services. mail us on [email protected], to get more information about given services. website designing website development java development php development wordpress graphic designing logo digital marketing on page and off page seo ppc content development corporate training classroom and online training data entry training for college campus javatpoint offers college campus training on core java, advance java, .net, android, hadoop, php, web technology and python. please mail your requirement at [email protected] duration: 1 week to 2 week like/subscribe us for latest updates or newsletter learn tutorialslearn javalearn data structureslearn c programminglearn c++ tutoriallearn c# tutoriallearn php tutoriallearn html tutoriallearn javascript tutoriallearn jquery tutoriallearn spring tutorial our websitesjavatpoint.comhindi100.comlyricsia.comquoteperson.comjobandplacement.com our services website development android development website designing digital marketing summer training industrial training college campus training contact address: g-13, 2nd floor, sec-3 noida, up, 201301, india contact no: 0120-4256464, 9990449935contact us subscribe us privacy policysitemap about me © copyright 2011-2021 www.javatpoint.com. all rights reserved. developed by javatpoint.

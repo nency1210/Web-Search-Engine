@@ -1,0 +1,987 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Dialogflow | Dialogflow Tutorial - javatpoint</title>
+  <link rel="SHORTCUT ICON" href="https://static.javatpoint.com/images/favicon2.png"> 
+  <link rel="stylesheet" type="text/css" href="https://static.javatpoint.com/link.css?v=5.0" async>
+  <link rel="dns-prefetch" href="https://clients1.google.com">
+  <link rel="dns-prefetch" href="https://static.javatpoint.com">
+  <link rel="dns-prefetch" href="https://googleads.g.doubleclick.net">
+  <link rel="dns-prefetch" href="https://www.google.com">
+  <link rel="dns-prefetch" href="https://feedify.net">
+  <meta name="theme-color" content="#4CAF50">
+  <meta property="og:title" content="Dialogflow | Dialogflow Tutorial - javatpoint">
+  <meta property="og:description" content="Dialogflow | Dialogflow Tutorial with What is Dialogflow, Features of Dialogflow, Basics of Dialogflow, Components of the Dialogflow, How to Import the Example File to Your Agent etc."> 
+  <meta name="keywords" content="dialogflow tutorial, what is dialogflow, features of dialogflow, basics of dialogflow, components of the dialogflow, how to create your first dialogflow agent, how to import the example file to your agent, how to create a new intent, how to use your new entity">
+  <meta name="description" content="Dialogflow | Dialogflow Tutorial with What is Dialogflow, Features of Dialogflow, Basics of Dialogflow, Components of the Dialogflow, How to Import the Example File to Your Agent etc.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="canonical" href="https://www.javatpoint.com/dialogflow"> 
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="article">
+  <meta name="twitter:title" property="og:title" content="Dialogflow | Dialogflow Tutorial - javatpoint">
+  <meta name="twitter:description" property="og:description" content="Dialogflow | Dialogflow Tutorial with What is Dialogflow, Features of Dialogflow, Basics of Dialogflow, Components of the Dialogflow, How to Import the Example File to Your Agent etc.">
+  <meta property="og:url" content="https://www.javatpoint.com/dialogflow">
+  <meta property="og:site_name" content="www.javatpoint.com">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@pagejavatpoint">
+  <meta name="twitter:domain" content="www.javatpoint.com">
+  <meta name="twitter:creator" content="@pagejavatpoint"> 
+  <link href="https://www.javatpoint.com/manifest.json" rel="manifest"> 
+  <script data-cfasync="false" type="text/javascript">(function(w, d) { var s = d.createElement('script'); s.src = '//delivery.adrecover.com/37784/adRecover.js?ts=1543562646174'; s.type = 'text/javascript'; s.async = true; (d.getElementsByTagName('head')[0] || d.getElementsByTagName('body')[0]).appendChild(s); })(window, document);</script> 
+  <script data-cfasync="false" type="text/javascript">
+(function (w, d) {
+  var siteId = "37780";
+  var targetElement =
+    d.getElementsByTagName("head")[0] || d.getElementsByTagName("body")[0];
+  var s = d.createElement("script");
+  s.src = "//cdn.adpushup.com/" + siteId + "/adpushup.js";
+  s.crossOrigin = "anonymous";
+  s.type = "text/javascript";
+  s.async = true;
+  targetElement.appendChild(s);
+  function sendErrorLog(log) {
+    var eventName = "script_error";
+    log.siteId = siteId;
+    var data = btoa(JSON.stringify(log));
+    var img = document.createElement("img");
+    img.src =
+      "https://aplogger.adpushup.com/log?event=HC_" + eventName + "&data=" + data;
+  }
+  var searchParams =
+    typeof URLSearchParams === "function" &&
+    new URLSearchParams(window.location.search);
+  if (searchParams) {
+    var isDebugModeOn = searchParams.has("apDebug");
+  }
+  w.addEventListener("error", function (event) {
+    try {
+      var filename = event.filename || "";
+      if (filename.indexOf("/" + siteId + "/adpushup.js") === -1) {
+        return;
+      }
+      var error = event.error;
+      if (error) {
+        var message = error.message;
+        var stack = error.stack;
+      }
+      message = message || event.message;
+      var log = {
+        message: message,
+        stack: stack || "",
+        timestamp: Math.floor(event.timeStamp),
+        type: "uncaughterror",
+      };
+      sendErrorLog(log);
+      !isDebugModeOn && event.preventDefault();
+    } catch (error) {}
+  });
+  w.addEventListener("unhandledrejection", function (event) {
+    var reason = event.reason;
+    if (typeof reason === "object") reason = JSON.stringify(reason);
+    var log = {
+      message: reason || "no reason found",
+      timestamp: Math.floor(event.timeStamp),
+      type: "unhandledrejection",
+    };
+    sendErrorLog(log);
+    !isDebugModeOn && event.preventDefault();
+  });
+  var ga = d.createElement("script");
+  ga.src = "https://www.googletagmanager.com/gtag/js?id=G-Z0TZ7TDHS1";
+  ga.type = "text/javascript";
+  ga.async = true;
+  targetElement.appendChild(ga);
+  w.dataLayer = window.dataLayer || [];
+  w.gtag = function () {
+    window.dataLayer.push(arguments);
+  };
+  w.gtag("js", new Date());
+  w.gtag("config", "G-Z0TZ7TDHS1", {
+    custom_map: { dimension1: "siteid" },
+  });
+  w.gtag("event", "script-call", {
+    send_to: "G-Z0TZ7TDHS1",
+    siteid: siteId,
+  });
+  s.onerror = function (msg) {
+    w.gtag("event", "ad-block", {
+      send_to: "G-Z0TZ7TDHS1",
+      siteid: siteId,
+    });
+  };
+})(window, document);
+</script> 
+ </head> 
+ <body onload="highlightlink()"> <button onclick="topFunction()" id="myBtn">&#x21e7; SCROLL TO TOP</button> 
+  <div id="page" style="margin:-8px;background-color:#f5f5f4;">
+   <div id="container"> 
+    <div class="header">
+     <table style="width:100%;margin-bottom:5px"> 
+      <tbody>
+       <tr> 
+        <td> 
+         <div style="clear:both;float:left;width:230px;margin-top:15px;margin-left:20px"> <a href="https://www.javatpoint.com"><img src="https://static.javatpoint.com/images/logo/jtp_logo.png" alt="Javatpoint Logo"></a> 
+         </div> 
+         <div style="float:left;width:60%;">
+          <script> (function() { var cx = '005383125436438536544:y1edweedxwi'; var gcse = document.createElement('script'); gcse.type = 'text/javascript'; gcse.async = true; gcse.src = 'https://cse.google.com/cse.js?cx=' + cx; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(gcse, s); })();</script><gcse:search></gcse:search> 
+         </div> </td> 
+       </tr>
+      </tbody>
+     </table> 
+    </div> 
+    <div class="headermobile"> 
+     <div style="margin-top:10px;padding:0px;text-align:left;"> <span style="float:left"><input type="image" src="https://www.javatpoint.com/images/menuhome64.png" alt="Go To Top" onclick="showmenu()"></span> <span style="float:left"><a href="https://www.javatpoint.com"><img src="https://www.javatpoint.com/images/logo/jtp_logo.png" alt="Javatpoint Logo"></a></span> 
+     </div> 
+     <div style="margin:0px;padding:0px;clear:both"> 
+      <script>
+  (function() {
+    var cx = '005383125436438536544:y1edweedxwi';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script> <gcse:search></gcse:search> 
+     </div> 
+    </div> 
+    <div id="link" style="clear:both"> 
+     <div class="ddsmoothmenu"> 
+      <ul> 
+       <li><a href="https://www.javatpoint.com">Home</a></li> 
+       <li><a href="dialogflow" class="selected">Dialogflow</a></li> 
+       <li><a href="java-tutorial">Java</a></li> 
+       <li><a href="javascript-tutorial">JavaScript</a></li> 
+       <li><a href="xml-tutorial">XML</a></li> 
+       <li><a href="python-tutorial">Python</a></li> 
+       <li><a href="robotics-tutorial">Robotics</a></li> 
+       <li><a href="c-programming-language-tutorial">C</a></li> 
+       <li><a href="embedded-system-tutorial">Embedded System</a></li> 
+       <li><a href="sql-tutorial">SQL</a></li> 
+       <li><a href="html-tutorial">HTML</a></li> 
+       <li><a href="css-tutorial">CSS</a></li> 
+       <li><a href="android-tutorial">Android</a></li> 
+       <li><a href="examaccess">Quiz</a></li> 
+       <li><a href="free-java-projects">Projects</a></li> 
+       <li><a href="corejava-interview-questions">Interview Q</a></li> 
+       <li><a href="comment.jsp">Comment</a></li> 
+       <li><a href="forum">Forum</a></li> 
+      </ul> 
+      <br style="clear: left"> 
+     </div>
+    </div> 
+    <div class="mobilemenu" style="clear:both"> 
+     <ins class="adPushupAds" data-adpcontrol="hqdgs" data-ver="2" data-siteid="37780" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSBDbV8zMDB4MjUwX01vYl8xNC85IC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTppbmxpbmUtYmxvY2s7d2lkdGg6MzAwcHg7aGVpZ2h0OjI1MHB4IgogICAgIGRhdGEtYWQtY2xpZW50PSJjYS1wdWItNDY5OTg1ODU0OTAyMzM4MiIKICAgICBkYXRhLWFkLXNsb3Q9IjcwMTQyNzI1MTkiPjwvaW5zPgo8c2NyaXB0PgooYWRzYnlnb29nbGUgPSB3aW5kb3cuYWRzYnlnb29nbGUgfHwgW10pLnB1c2goe30pOwo8L3NjcmlwdD4="></ins>
+     <script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script> 
+    </div> 
+    <div id="menu"> 
+     <div class="leftmenu2"> 
+      <h2 class="spanh2"><span class="spanh2">Dialogflow Tutorial</span></h2> 
+     </div> 
+     <div class="leftmenu"> <a href="dialogflow">Dialogflow Tutorial</a> 
+     </div> 
+     <img src="https://www.javatpoint.com/wh.JPG" alt="JavaTpoint"> 
+     <br> 
+     <div id="leftad" style="margin-left:20px"> 
+      <div id="17c09743-0b89-427c-ba64-e09f6a1745a2" class="_ap_apex_ad"> 
+       <script>
+		var adpushup = window.adpushup = window.adpushup || {};
+		adpushup.que = adpushup.que || [];
+		adpushup.que.push(function() {
+			adpushup.triggerAd("17c09743-0b89-427c-ba64-e09f6a1745a2");
+		});
+	</script> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="onlycontent"> 
+     <div class="onlycontentad"> 
+      <div id="9bbcb75d-b5e2-40e1-a811-e7680d1f59a4" class="_ap_apex_ad"> 
+       <script>
+		var adpushup = window.adpushup = window.adpushup || {};
+		adpushup.que = adpushup.que || [];
+		adpushup.que.push(function() {
+			adpushup.triggerAd("9bbcb75d-b5e2-40e1-a811-e7680d1f59a4");
+		});
+	</script> 
+      </div> 
+     </div> 
+     <div class="onlycontentinner"> 
+      <div id="city"> 
+       <table> 
+        <tbody>
+         <tr>
+          <td> <h1 class="h1">Dialogflow Tutorial</h1> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/dialogflow.png" class="imageright" alt="Dialogflow Tutorial"> 
+           <ul class="points"> 
+            <li>Dialogflow is a Google service which operates on a Google Cloud Platform.</li> 
+            <li>The Dialogflow is an intuitive and user-friendly tool that includes <strong><em>Google's machine learning expertise</em></strong> and some <strong><em>Google products</em></strong> such as Google Cloud Speech-to-Text.</li> 
+            <li>Dialogflow is an NLP (Natural Language Processing) platform, which is used to develop an application related to the conversations and experience for the customers of the company in different languages on numerous platforms.</li> 
+            <li>Dialogflow is mainly used to build actions for most of the Google Assistant devices.</li> 
+           </ul> <p>In our Dialogflow tutorial, we are going to discuss the following topics-</p> 
+           <ul class="points"> 
+            <li><a href="#Whatis">What is Dialogflow</a></li> 
+            <li><a href="#Features">Features of the Dialogflow</a></li> 
+            <li><a href="#UseCases">Use Cases of Dialogflow</a></li> 
+            <li><a href="#Advantages">Advantages of Dialogflow</a></li> 
+            <li><a href="#WhyChoose">Why Choose Dialogflow?</a></li> 
+            <li><a href="#Basics">Basics of Dialogflow</a></li> 
+            <li><a href="#Components">Components of the Dialogflow</a></li> 
+            <li><a href="#Create-your-first-Dialogflow-Agent">How to Create your first Dialogflow Agent</a></li> 
+            <li><a href="#Import-Example-File">How to Import the Example File to Your Agent</a></li> 
+            <li><a href="#Create-New-Intent">How to Create a New Intent</a></li> 
+            <li><a href="#Create-Parameter">How to Create Parameter in Dialogflow</a></li> 
+            <li><a href="#Create-Own-Entities">How to Create your Own Entities</a></li> 
+            <li><a href="#USE-New-Entity">How to USE your New Entity</a></li> 
+            <li><a href="#Contexts">Contexts</a></li> 
+            <li><a href="#Default-Welcome-Intent">How to Customize the Default Welcome Intent</a></li> 
+            <li><a href="#Custom-Intent">How to Create a Custom Intent</a></li> 
+            <li><a href="#Fallback-Intent">How to Customize the Fallback Intent</a></li> 
+            <li><a href="#Intent-with-Parameters">Create an Intent with Parameters</a></li> 
+            <li><a href="#Knowledge-Base">Knowledge Base in Dialogflow</a></li> 
+            <li><a href="#Training">Training in Dialogflow</a></li> 
+            <li><a href="#Intent-Matching-with-Follow-up-Intent">Intent Matching with Follow-up Intent</a></li> 
+            <li><a href="#Integratio-with-an-Integration">Integration with an Integration</a></li> 
+            <li><a href="#Build-Resume-Chatbot">How to Build Resume Chatbot for Google Assistant</a></li> 
+            <li><a href="#Build-an-Appointment-Scheduler">How to Build an Appointment Scheduler with Dialogflow</a></li> 
+            <li><a href="#Build-a-Chatbot">How to Build a Chatbot for a FAQ with Dialogflow</a></li> 
+           </ul> 
+           <hr> <h2 id="Whatis" class="h2">What is Dialogflow</h2> <p>Dialogflow is defined as a Google service which operates on a Google Cloud Platform. The Dialogflow is an intuitive and user-friendly tool that includes some <strong><em>Google products</em></strong> such as Google Cloud Speech-to-Text and <strong><em>Google's machine learning expertise</em></strong>. It is mainly used to build actions for most of the Google Assistant devices.</p> <p>In other words, Dialogflow is defined as an <a href="https://www.javatpoint.com/nlp">NLP (Natural Language Processing)</a> platform, which is used to develop an application related to the conversations and experience for the customers of the company in different languages on numerous platforms. By using Google-powered, products developers can design text-based and voice-conversation interfaces in order to answer the queries of customers in various languages. <strong><em>For example -</em></strong> various companies use Dialogflow to make messaging bots that reply to the queries of the customers on different platforms such as <strong><em>Google Assistant, Slack, Facebook Messenger, Alexa Voice Search (AVS), etc.</em></strong></p> 
+           <hr> <h2 id="Features" class="h2">Features of the Dialogflow</h2> <p>There are various features of the Dialogflow:</p> 
+           <ol class="points"> 
+            <li>Develop serverless apps easy</li> 
+            <li>Deliver automated phone service</li> 
+            <li>Designed for a voice-first world</li> 
+            <li>Reply on automatic spelling correction</li> 
+            <li>Improve experience with built-in analytics</li> 
+            <li>Understand user sentiment</li> 
+            <li>Deploy across platforms and languages</li> 
+            <li>Bring your enterprise knowledge</li> 
+            <li>Powered by Google machine learning</li> 
+           </ol> <p><strong>Develop Serverless Apps Easy</strong></p> <p>There is a unified code editor offered by the Google Dialogflow through which we can easily develop natively serverless apps which are connected to our conversational interface via firebase cloud functions.</p> <p><strong>Deliver Automated Phone Service</strong></p> <p>With the help of the Dialogflow phone gateway, within a minute we can easily add the dedicated phone number into our Dialogflow agent and the users who call the agent with the new phone number will contact your Dialogflow agent directly. The Phone Gateway is based on the cost invested by Google in various things such as speech recognition, phone connectivity, speech synthesis, natural language processing, etc.</p> <p><strong>Designed for a Voice-First World</strong></p> <p>With a single <a href="https://www.javatpoint.com/api-full-form">API</a> request, we are able to extend our conversational interface to identify voice communications and produce a voice reply. Dialogflow supports synchronous modes and real-time streaming, which are powered by the Google Cloud Text-to-speech and Cloud Text-to-Speech.</p> <p><strong>Reply on Automatic Spelling Correction</strong></p> <p>In the chat environments, most of the users interact in a hurry, and sometime there may be situations where the users do not emphasize on accurate spelling or grammar in their chats. So, in that situation, there is a feature provided by the Dialogflow named automatic spelling correction that helps to automatically spell correction mistakes with the help of the technology used by Google for search.</p> <p><strong>Improve Experience with Built-in Analytics</strong></p> <p>In the Dialogflow, the integrated analytics dashboard provides you with a vision for conversational communication. Thus, you can customize your bot to better understanding and reply to the user intentions.</p> <p><strong>Understand User Sentiment</strong></p> <p>For the query of each user, Dialogflow performs sentiment analysis, which is powered by the <strong><em>Cloud Natural Language.</em></strong> The score of sentiment analysis is used to distribute the unfulfilled users to the live agents or to gain a well knowledge about which attempts lead to the highest client feeling.</p> <p><strong>Deploy Across Platforms and Languages</strong></p> <p>It supports more than 20 languages with 14 different platforms.</p> <p><strong>Bring your Enterprise Knowledge</strong></p> <p>With the help of the Dialogflow knowledge connectors, we can easily augment data in bulk from the enterprise to the agent that contains articles based on knowledge and FAQs. To extract the correct answer from the data corpus, the knowledge connectors of the Dialogflow use those technologies used by the Google Assistant and Google Search.</p> <p><strong>Powered by Google Machine Learning</strong></p> <p>The Dialogflow tool is powered by Google <a href="https://www.javatpoint.com/machine-learning">Machine learning</a>. In the Dialogflow, the understanding of the natural language identify the intent of the users and helps to extract those entities which are prebuilt like a number, date, and time. By offering a small dataset, we can also train the agent to easily recognize the customer entity types.</p> 
+           <hr> <h2 id="UseCases" class="h2">Use Cases of Dialogflow</h2> <p>There are various use cases of Dialogflow:</p> 
+           <ol class="points"> 
+            <li>Commerce</li> 
+            <li>Enterprise productivity</li> 
+            <li>IoT Devices</li> 
+            <li>Customer Service</li> 
+           </ol> <p><strong>1. Commerce: -</strong> The Dialogflow is used in business. By using Dialogflow, at any time, transactions can be possible with the users on any platform which the user prefers. If you want to purchase goods or schedule deliveries from your users, the Dialogflow provides the facility of self-service experience to those users who need rich and personalized replies.</p> <p><strong>2. Enterprise Productivity: -</strong> We can use Dialogflow for enterprise productivity. By using conversational skills inside the workplace apps makes it convenient for workers to access essential information related to the business and increase productivity, for example: offer sales with knowledge associated with the local opportunities.</p> <p><strong>3. IoT Devices: -</strong> The Dialogflow is also used in <a href="https://www.javatpoint.com/iot-internet-of-things">IoT</a> devices. With the help of the conversational interface, we can make our <a href="https://www.javatpoint.com/iot-devices">IoT devices</a> smarter. The Dialogflow adds an intelligent layer to the smart devices and allow devices to understand and respond precisely to the context of a user's interactions.</p> <p><strong>4. Customer Service: -</strong> With the help of the Dialogflow, we can create conversational interfaces that are able to perform different tasks such as scheduling appointments, replies general queries, following up on previous orders, etc.</p> 
+           <hr> <h2 id="Advantages" class="h2">Advantages of Dialogflow</h2> <p>There are various advantages of the Dialogflow:</p> 
+           <ol class="points"> 
+            <li>Sentiment analysis</li> 
+            <li>User-Friendly</li> 
+            <li>Incorporates Google features</li> 
+            <li>Swift and more efficient coding</li> 
+            <li>Can express itself via natural conversation</li> 
+            <li>Can handle small talks</li> 
+            <li>Powered by Google's machine learning.</li> 
+           </ol> <p><strong>1. Sentiment Analysis: -</strong> The Dialogflow can perform sentiment analysis for the queries of the user.</p> <p><strong>2. User-Friendly: -</strong> The Dialogflow is a user-friendly tool, and built with a serverless application structure and an integrated code editor.</p> <p><strong>3. Incorporates Google feature: -</strong> The Dialogflow includes various features of Google, such as speech-to-text and machine learning.</p> <p><strong>4. Swift and More Efficient Coding: -</strong> By simplifying the coding process, the Dialogflow helps us to save the time of the developers. The developers can efficiently perform all the tasks related to the coding because the system contains a built-in, inline code editor. By using this, their agents can be linked via Cloud functions or on-premise to their application.</p> <p><strong>5. Can Express itself via Natural Conversation: -</strong> With the help of Dialogflow, we can create a chatbot. And the chatbots can make a conversation in a natural manner. It simply means that although the customers speak to an application program or a computer, generally to ask for help or assistance, they will obtain in-context replies. When you communicate in a chatbot, then you will not feel like you are talking with a robotic or mechanical.</p> <p><strong>6. Powered by Google's Machine Learning: -</strong> In Dialogflow, the machine learning technology is used and it increase the Dialogflow's capabilities.</p> 
+           <hr> <h2 id="WhyChoose" class="h2">Why choose Dialogflow</h2> <p>There are various reasons for choosing Dialogflow:</p> 
+           <ol class="points"> 
+            <li>Multi-channel easy integration</li> 
+            <li>Price</li> 
+            <li>Natural Language Processing</li> 
+           </ol> <p><strong>1. Multi-channel Easy Integration: -</strong> The Dialogflow offers you single-click integrations to various types of the most popular messaging applications such as <strong><em>Twitter, Skype, Kik, Viber, Facebook Messenger, Telegram, Slack, Twilio,</em></strong> and also for several voice assistants such as <strong><em>Microsoft Cortana, Amazon Alexa</em></strong>, and <strong><em>Google Assistant</em></strong>.</p> <p><strong>2. Price: -</strong> The free edition of Dialogflow is also available if you only learn how to create a chatbot.</p> <p><strong>3. Natural Language Processing: -</strong> The Dialogflow uses the concept of NLP (Natural Language Processing), so the Dialogflow offers a good user experience. The agents of Dialogflow are better at NLP.</p> 
+           <hr> <h2 id="Basics" class="h2">Basics of Dialogflow</h2> <p>Before using Dialogflow, there are various things which you should know about the Dialogflow.</p> <h3 class="h3">Helps Users Interact with Technology</h3> <p>The traditional computer system needs predictable and structured input to perform function appropriately, and sometimes it makes the use of interfaces difficult and unnatural. Sometimes there may be situation where the end-users cannot grasp this structure input, and, in that situation, the end-users are having a tough time finding out what to do. Ideally, the interfaces are able to infer exactly what the end-user wants, based on the natural language end-users use.</p> <p><strong><em>For Example:</em></strong> suppose the request of the user is <strong><em>"How's the weather today"?</em></strong> the other users can also ask:</p> 
+           <ul class="points"> 
+            <li>How's the weather right now?</li> 
+            <li>How's the temperature in London?</li> 
+            <li>What will be the weather on 23 march?</li> 
+           </ul> <p>As you know, conversational experiences are challenging to implement for these simple questions. The natural language processing and interpreting need a parser of very robust language. Dialogflow provides you this type of parser so that you can offer a good quality conversational experience to the end-users.</p> <h3 class="h3">Agents</h3> <p><strong><em>The Dialogflow agent is defined as a virtual agent whose task is to manage the end -user conversations</em></strong>. An agent is a module that can understand the complexities of the human language. During a conversation, the Dialogflow converts the text of end-user or audio into the structured data so that your applications can understand this. The Dialogflow agent is designed to manage the kinds of conversation your system needs.</p> <p>The Dialogflow agent is the same as an agent in a human call center. Both are trained to handle the conversation scenario and don't need to be over explicit in their training,</p> <h3 class="h3">Intents</h3> <p>An intent classifies the intention of an end-user for one conversation turn. For every agent, we have to define various users, and our combined agent is capable of handling an entire conversation. At the time, when the end-user says or writes something which is denoted as end-user expression, then the Dialogflow check and matches the end-user expression to your agent's best intent. Intent matching is also called <strong><em>Intent Classification.</em></strong></p> <p><strong><em>For example:</em></strong> If you need to make an agent for the weather, which has the capability to identify and respond to the queries of the end-users related to the weather. Then you have to define an intent for the weather forecasting questions. When an end-user asks, "what is the forecast?" then the Dialogflow check and match the end-user expression to the intent of the forecast. If we want to obtain the essential information from the end-user expression such as location, time for the weather forecast according to our desire, then we have to define our intent. The obtained information is essential to the system for performing the queries related to the system.</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/basics-of-dialogflow.png" alt="Dialogflow Tutorial"> <p>The following things are comprised in the basic intent:</p> 
+           <ol class="points"> 
+            <li>Training Phrases</li> 
+            <li>Action</li> 
+            <li>Parameters</li> 
+            <li>Responses</li> 
+           </ol> <p><strong>1. Training Phrases: -</strong> Training phrases means an example phrases for what the end-users can say. If one of these phrases resembles an end-user expression, then the Dialogflow matches the intent. There is no need to define each possible example as the built-in machine learning of Dialogflow expands with other related phrases on your list.</p> <p><strong>2. Action: -</strong> For the agent, we can define an action. At the time, when we match an intent, then the Dialogflow gives the actions to the system, and the action can be used to trigger various actions that are already defined in the system.</p> <p><strong>3. Parameters: -</strong> At run time, if we want to march an intent then as a parameter the Dialogflow gives the value from the expressions of the end-user. Every parameter contains a type known as an entity type, and the entity type exactly dictates how data is retrieved. The parameters are not like raw input of end-user. Parameter means structured data, which is used to perform logic or produce responses.</p> <p><strong>4. Responses: -</strong> We can define speech, visual, or text replies to return to the end-user. These are able to give the answer to the end-user and also ask for more information to the end-user and can also terminate the conversation.</p> <p>The below figure shows the basic flow for intent matching and responding to the end-user.</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/basics-of-dialogflow2.png" alt="Dialogflow Tutorial"> <h3 class="h3">Entities</h3> <p>There is a type of every intent parameter, which is known as an <strong><em>Entity</em></strong> type. The task performed by the end-user is to explain how data can be extracted from the end-user expression. The Dialogflow offers you a various system entity which are predefined, which is able to match various types of common data. For example, there are various types of system entities for matching email addresses, colors, time, date, etc. For matching custom data, we can also make our custom entities. For example: we can define a fruit entity that matches the kinds of the fruits which are available to buy with the agent of a grocery store.</p> <h3 class="h3">Dialogflow Console</h3> <p>Dialogflow Console is defined as a web user interface which is provided by the Dialogflow. The Dialogflow console is used to build, test, and create agents. The Dialogflow console and Google Cloud Platform Console are different from each other. The main task of the Dialogflow is to control the Dialogflow agents, and the main task of the Google Cloud Platform Console (GCP) is to handle the settings of the Google Cloud Platform (GCP) Dialogflow such as billing and some other resources of the Google Cloud Platform (GCP).</p> <p>With the help of Dialogflow Console, we can also create an agent.</p> <h3 class="h3">Context</h3> <p>The context of Dialogflow is the same as a natural language context. When a person tells you, "they are blue," you have to grasp the context to know which they are referring to. In the same way, for Dialogflow, in order to handle an end-user expression, the Dialogflow context must be provided to match an intent appropriately.</p> <p>To handle the flow of the conversation, contexts are used. By setting input and output contexts, that are recognized by the string names, we can configure the contexts for the intents. If the intent is matched, then for that intent, any configured output context will be active. When the contexts are in the active state then the Dialogflow try to match intent configured to the input contexts which is corresponding to the contexts which are presently active.</p> <p>The below figure shows an example which uses context for the banking agent:</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/basics-of-dialogflow3.png" alt="Dialogflow Tutorial"> 
+           <ul class="points"> 
+            <li>End-user asks their checking account details.</li> 
+            <li>Then the Dialogflow try to match the expression of this end-user to the intent of There is a <strong><em>checking</em></strong> output context for this intent, which makes that reference active.</li> 
+            <li>The Agent asks the end-user regarding which kind of information they want, related to their checking account.</li> 
+            <li>Then the end-user provides replies by "my balance."</li> 
+            <li>This end-user expression matches with the intent of checking balance. There is a <strong><em>checking</em></strong> input context for this intent that should be active so that this intent can be matched. In a similar manner, there is another intent named <strong><em>SavingsBalance</em></strong> that matches a similar expression of the end-user if the <strong><em>savings</em></strong> context is active.</li> 
+            <li>If the required database is queried by our system, then with the help of checking account balance, the agent will reply.</li> 
+           </ul> <h3 class="h3">Follow-up Intents</h3> <p>The <strong><em>Follow-up Intents</em></strong> can be used to create contexts automatically for the pairs of intents. A follow-up intent means a child of the intent of its associated parent. When the follow-up intent is created, then automatically an output context will be added to the parent intent, and in the follow-up intent, the input context having a similar name will be added. A follow-up intent is matched only in one situation, and the situation is, if the parent intent is in the turn of previous conversational. Multiple levels nested follow-up intents can also be created in the Dialogflow.</p> <p>In the Dialogflow, there are various types of predefined follow-up intents for the replies of the common end-user such as cancel, yes, no, etc. To manage the responses of the customer, we can also create our own follow-up intent.</p> <h3 class="h3">User Interactions with Integrations</h3> <p>There are various types of conversation platforms on which the Dialogflow can integrate, such as Facebook, Slack, Google Assistant, etc. To create an agent for any platforms, you can use one of the options from the various integrations' options. In the Dialogflow, there is a facility of handling direct end-user interactions so that your more focus is to create an agent.</p> <h3 class="h3">User Interactions with the API</h3> <p>If any of the integration options you are not using, then you have to write a code that can interact with the end-user directly. For each conversational turn, you have to interact with the API of Dialogflow directly so that you can send the expression of end-user and obtain intent matches.</p> <p>The below figure shows how the processing flows when interacting with the API.</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/basics-of-dialogflow4.png" alt="Dialogflow Tutorial"> 
+           <ol class="points"> 
+            <li>The End-user is speaking or types the phrases.</li> 
+            <li>In the detect intent request message, your service sends the end-user expression to the Dialogflow.</li> 
+            <li>Then, the Dialogflow sends your service a message of intent to detect an answer. The information include in the message are related to the parameter, action, the responses and the matched intent declared for the intent.</li> 
+            <li>Your service performs those actions which are needed, such as external API calls or Database queries.</li> 
+            <li>Your service sends the replies to the end-user.</li> 
+            <li>The end-user can hear or see the replies.</li> 
+           </ol> <h3 class="h3">Fulfillment for Integrations</h3> <p>By default, the agent will react with a static response to a matched intent. You can get a more dynamic response with the help of fulfillment, if you use one of the <strong><em>integration</em></strong> options. For an intent when the fulfillment is enabled, then the Dialogflow answer to the intent by calling that service, which you define. For example: If the end-user wishes to schedule a shopping on Monday, then your service will search your database and provide the response to the end-user with details on the availability for Monday.</p> <p>To enable fulfillment, every intent contains a setting option. When intent need a dynamic response or an action by your system, then for the intent, you have to enable the fulfillment. If without enabling the fulfillment, an intent is matched, it means the Dialogflow uses the static response that you defined for the intent.</p> <p>If, with the fulfillment enabled, an intent is matched, then the request is sent by the Dialogflow with the information regarding the matched intent. Your system is able to perform any action which is needed and also provide a response to the Dialogflow with information to proceed.</p> <p>The below figure shows the processing flow for fulfillment:</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/basics-of-dialogflow5.png" alt="Dialogflow Tutorial"> 
+           <ol class="points"> 
+            <li>An expression is typed or spoken by the end-user.</li> 
+            <li>With the intent, the Dialogflow matches the expression of the end-user and extracts the parameters.</li> 
+            <li>The Dialogflow sends a message to your webhook service for a webhook request. The message comprises the several information such as the matched intent, the response defined for the intent, the parameters, and the actions.</li> 
+            <li>Your Service performs various actions, such as external API calls or database queries.</li> 
+            <li>A <strong><em>webhook response</em></strong> message is sent by your service to the Dialogflow and the message comprises the response which is sent to the end-user.</li> 
+            <li>Then, the response is sent to the end-user.</li> 
+            <li>The end-user can hear and sees the response.</li> 
+           </ol> 
+           <hr> <h2 id="Components" class="h2">Components of the Dialogflow</h2> <p>There are various components of the Dialogflow:</p> 
+           <ol class="points"> 
+            <li>Entity</li> 
+            <li>Invocation</li> 
+            <li>Fulfillment Request</li> 
+            <li>Intents</li> 
+            <li>Response</li> 
+            <li>Context</li> 
+            <li>User says</li> 
+           </ol> <p><strong>1. Entity: -</strong> Entity is defined as a knowledge repository that is used by the agent to answer the questions of the user. There are various types of system entities, such as weather, location, date, etc.</p> <p><strong>2. Invocation: -</strong> Invocation is like saying hello to a friend.</p> <p><strong>3. Fulfillment Request: -</strong> The Dialogflow send a request to retrieve the necessary data, (sent to webhook) the webhook performs the task like determine how to respond and how to send back to the Dialogflow.</p> <p><strong>4. Intents: -</strong> Intents comprises logic and elements to parse the information of the user. It helps to map what the users are saying with the responses. There are various components in the intent, such as events, response, the user says, contexts, and action.</p> <p><strong>5. Response: -</strong> The backend system will produce a set of responses, including user calls, webhook, intentions, entities, etc.</p> <p><strong>6. Context: -</strong> The context is used to store the values of the parameter for several kinds of intent. With the help of the context, the broken conversation can also be repaired.</p> <p><strong>7. User Says: -</strong> User says means there are various forms of the same question that can be asked by the user. We can add more variations so that the agent can understand in a better way.</p> 
+           <hr> <h2 id="Create-your-first-Dialogflow-Agent" class="h2">How to Create Your First Dialogflow Agent</h2> <p>There are various steps to create your first Dialogflow agent:</p> <p>1. First, we have to log in to the Dialogflow. We can log in to the Dialogflow by using the link <a href="https://dialogflow.com/" rel="nofollow" target="_blank">https://dialogflow.com/</a>. After login successfully, we have to click on the <strong>Sign up for free.</strong></p> <p>Then we have to connect with the Google account. If you want to use a Dialogflow, then it is must that you have a Google account.</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/create-your-first-dialogflow-agent.png" alt="Dialogflow Tutorial"> <p>2. Next, we have to click on the <strong>create agent</strong> to create a new agent. For this, first select the three things: language, the default time zone, and the name for your new bot.</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/create-your-first-dialogflow-agent2.png" alt="Dialogflow Tutorial"> <p>3. Then, create the bot say hello. The bot currently doesn't know how to respond to the user input. The journey to teaching it how to behave is just beginning. First, you have to model the personality of the bot a bit and answer hello to him/her and then present yourself.</p> <p>4. Click on the option named <strong>Default Welcome Intent</strong>.</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/create-your-first-dialogflow-agent3.png" alt="Dialogflow Tutorial"> <p>5. Next, we have to add 'hello' and 'hi' to training phases, and these will be in the text form and then click on the enter button.</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/create-your-first-dialogflow-agent4.png" alt="Dialogflow Tutorial"> <p>6. Next, we have to go down on the option named <strong>Responses</strong> and remove or delete the existing ones.</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/create-your-first-dialogflow-agent5.png" alt="Dialogflow Tutorial"> <p>7. Then, click on the <strong>ADD RESPONSES,</strong> and then we have to click on the <strong>Text response</strong> Then type the response which you want.</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/create-your-first-dialogflow-agent6.png" alt="Dialogflow Tutorial"> <p>8. When you text the response appropriately, then you have to save the response by clicking on the <strong>Save</strong> button.</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/create-your-first-dialogflow-agent7.png" alt="Dialogflow Tutorial"> 
+           <hr> <h2 id="Import-Example-File" class="h2">How to Import the Example File to your Agent</h2> <p>There are various steps to import the example file to your agent:</p> <p>1. First, you have to download the new-agent.zip file.</p> <p>2. Then go to the Dialogflow Console.</p> <p>3. Then, choose an agent.</p> <p>4. Next, click on the setting icon, which is present next to the agent name.</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/import-example-file-to-your-agent.png" alt="Dialogflow Tutorial"> <p>5. Then, choose the <strong>Export and Import</strong></p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/import-example-file-to-your-agent2.png" alt="Dialogflow Tutorial"> <p>6. Last, select the option named Restore from Zip and then to restore the file which you downloaded, you have to follow some instructions on each step.</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/import-example-file-to-your-agent3.png" alt="Dialogflow Tutorial"> 
+           <hr> <h2 id="Create-New-Intent" class="h2">How to create a New Intent</h2> <p>In this section, we create an agent which is capable of answering the question such as "what is your name". for every intent we have to define various training phrases. A training phrases is also known as end-user expression. It is an example of what the possible questions the end-user can say or type to the agent. We can define any number of training phrases which offer Dialogflow, a different type of expressions which must match the intent.</p> <p>There are following steps to create a new intent:</p> <p>1. First, we have to click on the add intent + button on the left sidebar menu next to the intents.</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/create-a-new-intent.png" alt="Dialogflow Tutorial"> <p>2. Next, click on the <strong>get-agent-name,</strong> which is present in the <strong>Intent name</strong></p> <p>3. Then, click on the option named <strong>Add training phrases,</strong> which is present in the <strong>Training Phrases</strong></p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/create-a-new-intent2.png" alt="Dialogflow Tutorial"> <p>4. Next, we enter the training phrases according to the requirement of the Intent. Then we have to click enter after every entry.</p> 
+           <ul class="points"> 
+            <li><strong><em>What is your name?</em></strong></li> 
+            <li><strong><em>Tell me your name?</em></strong></li> 
+            <li><strong><em>Do you have a name?</em></strong></li> 
+           </ul> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/create-a-new-intent3.png" alt="Dialogflow Tutorial"> <h4 class="n">Note: In most of the cases, it is must that we have to enter at least 10-20 training phrases so that the intent matching is reliable.</h4> <p>5. Then, in the <strong>Response section</strong>, we have to enter the response, such as "My name is ABC" in the <strong>Text Response section.</strong></p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/create-a-new-intent4.png" alt="Dialogflow Tutorial"> <p>6. Click on the Save button.</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/create-a-new-intent5.png" alt="Dialogflow Tutorial"> <p>7. Then, we have to wait till the dialog of the Agent Training indicates that <strong>training is complete</strong>.</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/create-a-new-intent6.png" alt="Dialogflow Tutorial"> <p>Type what is your name into the simulator? Click Enter.</p> <p>Your agent gives correct responses to the expression, no matter if the expression may be a little bit dissimilar from the training phrases that you supplied.</p> <p>For a machine learning model, the Dialogflow uses training phrases like an example, to match the expression of the end-user to the intents. Against each intent, in the agent, the model tests the expressions and then provides a score to each intent, and then the intent which contains the highest score is matched.</p> <p>When the intent having the highest-scoring has a very less score, then the fallback intent is matched.</p> 
+           <hr> <h2 id="Create-Parameter" class="h2">How to Create Parameters in Dialogflow</h2> <p>Whenever at runtime, the intent is matched, then as a parameter, the Dialogflow gives the values extracted from the end-user expression. And every parameter has a type which is known as an entity type. Type of entity dictates exactly how data is extracted.</p> <p>There are following steps to create a parameter:</p> <p>(create a new intent with parameters)</p> <p>1. First, we have to click on the add intent + button on the left sidebar menu next to the intents.</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/create-parameters-in-dialogflow.png" alt="Dialogflow Tutorial"> <p>2. Then, we have to give the name to the intent, and the name is as <strong>set-language,</strong> which appears at the top side of the intent form.</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/create-parameters-in-dialogflow2.png" alt="Dialogflow Tutorial"> <p>3. Now, we have to add the following training phrases:</p> 
+           <ul class="points"> 
+            <li>I speak English</li> 
+            <li>I know how to write in Spanish</li> 
+            <li>I know French</li> 
+           </ul> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/create-parameters-in-dialogflow3.png" alt="Dialogflow Tutorial"> <p>4. Now, we click on the <strong>Save</strong> button, and then we have to wait for the <strong>Agent Training</strong> dialog indicating that <strong>Agent training completed</strong>.</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/create-parameters-in-dialogflow4.png" alt="Dialogflow Tutorial"> <p>Automatically, in the training phrases, the Dialogflow recognizes parameters which are known as system entities. These are the entities which the Dialogflow gives for various common data types like date, color, and location.</p> <h4 class="n">Note: We can annotate our training phrases manually if our training phrases are not annotated automatically.</h4> <p>In the <strong>Action and parameters</strong> table, the Dialogflow creates a row, which is present below the <strong>Training phrases.</strong></p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/create-parameters-in-dialogflow5.png" alt="Dialogflow Tutorial"> 
+           <ul class="points"> 
+            <li><strong>Required: -</strong> The required parameter is optional because the checkbox is not checked.</li> 
+            <li><strong>Parameter Name: -</strong> The parameter name is language because it recognizes the parameter as a language.</li> 
+            <li><strong>Entity: -</strong> Entity is a type of entity. The entity is recognized like @<strong>language</strong> system entity.</li> 
+            <li><strong>Value: -</strong> Value is the identifier that you use whenever referring this parameter to its value.</li> 
+            <li><strong>Is List: -</strong> The checkbox of <strong>Is list</strong> is not checked. Thus, the parameter is not a list.</li> 
+           </ul> <h4 class="n">Note: We can also manually annotate the entity in the training phrases if it is not detected automatically.</h4> <h3 class="h3">Test your Parameter</h3> <p>If you want to test your parameter then first you have to type 'I Know French' and then press enter.</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/create-parameters-in-dialogflow6.png" alt="Dialogflow Tutorial"> <p>We can easily find that the Dialog extracts the <strong>language</strong> parameter appropriately with the value Spanish and Spanish is appropriately inserted where the reference of the parameter was used in the response.</p> 
+           <hr> <h2 id="Create-Own-Entities" class="h2">How to create your own Entities</h2> <p>Dialogflow provides you the facility to create your entities because there may be situations when you want to gather specific data from the users, which is not given by the system entities. So, to handle this, you can create a <strong>custom entity.</strong></p> <p><strong>There are various steps to create your own entity:</strong></p> <p>1. First, you have to click on the button add entity +, on the left sidebar menu to the <strong>Entities</strong></p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/create-your-own-entities.png" alt="Dialogflow Tutorial"> <p>2. Then for the entity name, you have to enter <strong>language-programming</strong>.</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/create-your-own-entities2.png" alt="Dialogflow Tutorial"> <p>3. Now, add the below entity entries:</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/create-your-own-entities3.png" alt="Dialogflow Tutorial"> <p>4. Then, click on the <strong>Save</strong> button, and then wait till the <strong>Agent Training</strong> dialog indicates that <strong>Agent training completed</strong>.</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/create-your-own-entities4.png" alt="Dialogflow Tutorial"> <p>The Dialogflow can easily handle a few things such as capitalization and plurality, but for the entries, you have to add all the possible synonyms. If you add more synonyms, then the agent can quickly determine the entities.</p> 
+           <hr> <h2 id="USE-New-Entity" class="h2">How to Use your New Entity</h2> <p>If you want to make the use of the new entity, then you have to add the training phrases to the set-language.</p> <p>There are various steps to use your new entity:</p> <p>1. irst, click on the option named 'Intents', which is present on the left sidebar menu.</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/use-your-new-entity.png" alt="Dialogflow Tutorial"> <p>2. Then, click on the intent <strong>set-language.</strong></p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/use-your-new-entity2.png" alt="Dialogflow Tutorial"> <p>3. Next, you have to add the various training phrases:</p> 
+           <ul class="points"> 
+            <li><strong>I know JavaScript.</strong></li> 
+            <li><strong>I know how to code in Java.</strong></li> 
+           </ul> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/use-your-new-entity3.png" alt="Dialogflow Tutorial"> <p>4. Note that the programming language in these training phrases are annotated automatically and added to the section of <strong>Action and Parameters.</strong></p> <p>5. Next, you have to add another test response, which is $language-programming is a better programming language.</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/use-your-new-entity4.png" alt="Dialogflow Tutorial"> <p>6. Then, click on the <strong>Save</strong> button, and then you have to wait till the <strong>Agent Training</strong> dialog indicates that <strong>Agent training completed</strong>.</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/use-your-new-entity5.png" alt="Dialogflow Tutorial"> <h3 class="h3">Test your New Entity</h3> <p>If you want to test your new entity, then type <em>I know how to code in py </em>and press enter. We can easily see that the Dialogflow extracted the <strong>py</strong> from the parameter <strong>language-programming</strong> and recognized py as <strong>Python</strong> entity, and then in the response, value is inserted.</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/use-your-new-entity6.png" alt="Dialogflow Tutorial"> 
+           <hr> <h2 id="Contexts" class="h2">Contexts</h2> <p>We can use contexts to manage the flow of conversations.</p> <h3 class="h3">How to Add a Follow-up Intent</h3> <p>The follow-up intent is used to handle the conversation. In this to handle a conversation, there is no need for manual creation of the contexts.</p> <p>When the follow-up intent is created, automatically, an output context will be added to the parent intent. In the follow-up intent, the input context having a similar name will be added. Only in one situation, a follow-up intent will be matched, and the situation is if the parent intent in the previous conversational turn is matched.</p> <p>There are various steps to add a follow-up intent to the set-language intent:</p> <p>1. First, choose the intent <strong>Set-language</strong> that is created previously.</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/contexts.png" alt="Dialogflow Tutorial"> <p>2. Then, we have to update the test response in the <strong>Response</strong></p> <p>Wow! Just wow! I did not know that you knew the $language.</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/contexts2.png" alt="Dialogflow Tutorial"> <p>3. Then, click on the <strong>Save</strong> button, and then wait till the <strong>Agent Training</strong> dialog indicates that <strong>Agent training completed</strong>.</p> <p>4. Now, click on the <strong>Intents</strong> option, which is on the left side of the sidebar menu.</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/contexts3.png" alt="Dialogflow Tutorial"> <p>5. Hover the mouse over the intent named set-language and then click on the <strong>Add follow-up intent</strong>.</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/contexts4.png" alt="Dialogflow Tutorial"> <p>6. Then, in the revealed list, click on the <strong>Custom</strong></p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/contexts5.png" alt="Dialogflow Tutorial"> <p>7. Last, click on the <strong>Save</strong> button, and then wait till the <strong>Agent Training</strong> dialog indicates that <strong>Agent training completed</strong>.</p> <p>Automatically the Dialogflow gives the name to the follow-up intent, and the named is <strong>set-language-custom</strong>.</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/contexts6.png" alt="Dialogflow Tutorial"> 
+           <hr> <h2 id="Default-Welcome-Intent" class="h2">How to customize the Default Welcome Intent</h2> <p>If you want to customize the default welcome intent, there are few things which you have to keep in mind regarding your greeting, and the things are set expectations, let the user take control, and welcome the user.</p> <p>There are various steps to customize the default welcome intent:</p> <p>1. First, click on the <strong>Default Welcome Intent</strong>.</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/customize-default-welcome-intent.png" alt="Dialogflow Tutorial"> <p>2. Next, navigate to the <strong>Responses</strong> section.</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/customize-default-welcome-intent2.png" alt="Dialogflow Tutorial"> <p>3. Now, remove all the default responses in the <strong>Text response.</strong></p> <p>4. Then, in the <strong>Test Response</strong>, type the response such as "Welcome. I can tell you the hours of the shop, or I can arrange an appointment. What one you want?". Click on the <strong>Save</strong> button.</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/customize-default-welcome-intent3.png" alt="Dialogflow Tutorial"> <p>5. Now, test the customize default welcome intent with the help of the simulator.</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/customize-default-welcome-intent4.png" alt="Dialogflow Tutorial"> <h3 class="h3">How to Create Response Variants</h3> <p>After creating a phrase of a new greeting, next step is to create some other variations. There are various variations responses which we include in the Default Welcome Intent:</p> 
+           <ul class="points"> 
+            <li>Hi there. I can help you to tell you the hours of the shop, and I can arrange an appointment. How can I help you today?</li> 
+            <li>I will tell you the hours of the store, or I can help you to schedule an appointment. How can I help you?</li> 
+           </ul> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/create-response-variants.png" alt="Dialogflow Tutorial"> <p>If you add many responses for the intent, then the Dialogflow chooses one of the responses from the list in a random way. </p> 
+           <hr> <h2 id="Custom-Intent" class="h2">How to Create a Custom Intent</h2> <p>Here let's take an agent of the car shop, and we want to perform two tasks <sup>from</sup> the car shop agent:</p> 
+           <ul class="points"> 
+            <li>We want to schedule appointments for the customers.</li> 
+            <li>We want to inform the customers regarding the operation hours.</li> 
+           </ul> <p>Now first, we build an intent for the customers, which helps the users to notify regarding the operation hour's for the car shop.</p> <p>We can do this by writing a very Dialogflow sample as described below:</p> <p><strong>User:</strong> On what time you will be open.</p> <p><strong>Agent:</strong> We are available daily from 10 AM to 8 PM. Is there anything else that I should do for you?</p> <p>We have to perform the following steps to make the intent which is able to handle this Dialogflow:</p> <p>1. First, we have to create a new intent and give a name to the new intent as Hours.</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/create-custom-intent.png" alt="Dialogflow Tutorial"> <p>2. Now, we enter the various training phrases in the hours intent training phrases section. <em>On what time you will be open.</em></p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/create-custom-intent2.png" alt="Dialogflow Tutorial"> <p>3. Next, in the <strong>Response</strong> section, we have to type the response in the table of the <strong>Text response</strong>: <em>We are available daily from 10 AM to 8 PM. Is there anything else that I should do for you?</em></p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/create-custom-intent3.png" alt="Dialogflow Tutorial"> <p>4. Then, we have to click on the Save button.</p> <h3 class="h3">Add more Training Phrases</h3> <p>Previously, we added only one training phrase to the Hour's intent. That is "on what time you will be open,". This intent contains no sufficient or enough knowledge that can be helpful to recognize the other same words which have a similar meaning. So, we have to give more training phrases to the intent so that the agent can match different types of user words that can express a similar intention.</p> <p>There are so many ways of forming the phrase in natural language having same meaning. We suggest that each intent starts with at least 10-20 training phrases, depending on the intent complexity. When we begin testing an agent, then using the training tool of Dialogflow, add more training phrases.</p> <p>With the training phrase "On what time you will be open?", we can add various variations that user can say instead:</p> 
+           <ul class="points"> 
+            <li><em>Business hours</em></li> 
+            <li><em>On what time you will close</em></li> 
+            <li><em>Are you open now?</em></li> 
+            <li><em>Are you open tomorrow?</em></li> 
+            <li><em>When do you close?</em></li> 
+            <li><em>What time do you open tomorrow?</em></li> 
+            <li><em>How late can I come in?</em></li> 
+            <li><em>Are you open today?</em></li> 
+            <li><em>Please tell me about opening hours?</em></li> 
+           </ul> <p>The following steps are performed to add these above variations:</p> <p>1. First, click on the intent, which we have created already as Hours.</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/add-more-training-phrases.png" alt="Dialogflow Tutorial"> <p>2. Then enter the above mention phrases in the <strong>Training phrases</strong></p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/add-more-training-phrases2.png" alt="Dialogflow Tutorial"> <p>3. Now, click on the <strong>Save</strong></p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/add-more-training-phrases3.png" alt="Dialogflow Tutorial"> <p>4. Then, we test the intent with the help of the simulator in the Dialogflow console.</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/add-more-training-phrases4.png" alt="Dialogflow Tutorial"> 
+           <hr> <h2 id="Fallback-Intent" class="h2">How to Customize the Fallback Intent</h2> <p>In the Dialogflow, there is a Fallback Intent, which is matched when the utterance of the user did not matched with another intent. As the Default Welcome Intent, the name of the fallback intent name is Default Fallback Intent.</p> <p>A Fallback intent is the one that prompts the users whose utterances are formed in such a way that the agent can understand it easily.</p> <p>There are various steps to customize the fallback intent:</p> <p>1. First, we have to click on the <strong>Default Fallback Intent</strong>.</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/customize-fallback-intent.png" alt="Dialogflow Tutorial"> <p>2. Then, go to the <strong>Responses</strong> </p> <p>3. Now, delete all the default responses which are present in the Test response section.</p> <p>4. Next, we have to add the following training phrase in the Text response section:<br> Sorry, would you like to hear about hours, or you want to set up an appointment?</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/customize-fallback-intent2.png" alt="Dialogflow Tutorial"> <p>5. Click on the Save button.</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/customize-fallback-intent3.png" alt="Dialogflow Tutorial"> 
+           <hr> <h2 id="Intent-with-Parameters" class="h2">Create an Intent with Parameters</h2> <p>Now we will build an intent which is able to schedule an appointment for the shop of the car. It is not like that intent, which we created previously. This intent can help to perform more complex tasks.</p> <p>Let's discuss the user-agent interaction that follows:</p> <p><strong>User:</strong> Hi.</p> <p><strong>Agent:</strong> Welcome. I would tell you the hours of the shop, or I can make an appointment. What one you like?</p> <p><strong>User:</strong> I want to schedule an appointment at 5 PM today.</p> <p><strong>Agent:</strong> Ok, I schedule your appointment on Monday, July 1, at 5 PM. Good-bye.</p> <p>The user utterance in the Dialogflow that is "I want to schedule an appointment at 5 PM today" comprises of some essential information, which is '5 PM' and 'today'. It helps to identify at which day and time the user needs to visit the shop of the bike. The response of the agent comprises of the information regarding the date and time mentioned in the utterance of the user, which is "Ok, I schedule your appointment on Monday, July 1 at 5 PM. Good-bye."</p> <p>To identify the essential information is very easy for the human, but for the machine, it's not an easy task. So, we have to provide the capability to the intent to extract the essential information, parameters from the utterance of the user.</p> <h3 class="h3">Extract Information using Entities and Parameters</h3> <p>In a Dialogflow, there is a concept of entities and parameters. Entities and parameters are used for information extraction from the utterances of the user and then transform the extracted information into a set of parameters, and then it can be processed by systems or functions to perform several tasks.</p> <p>There are various steps to create a new intent with the parameters:</p> <p>1. First, we create a new intent, and to create a new intent, click on the create intent option and provide a name to the intent as <strong>Make Appointment.</strong></p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/extract-information-using-entities-and-parameters.png" alt="Dialogflow Tutorial"> <p>2. Then, add the following training phrases in the <strong>Training phrases</strong> section:<br> "I want to schedule an appointment at 5 PM today".</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/extract-information-using-entities-and-parameters2.png" alt="Dialogflow Tutorial"> <p>3. Next, we verify that the entities of the system, which are @sys.time and @sys.date, have appeared in the <strong>Action and Parameters</strong></p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/extract-information-using-entities-and-parameters3.png" alt="Dialogflow Tutorial"> <p>4. Then, we add the following response phrase in the Test response section:<br> "Ok, I schedule your appointment on Monday, July 1, at 5 PM. Good-bye."</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/extract-information-using-entities-and-parameters4.png" alt="Dialogflow Tutorial"> <p>5. Then, click on the <strong>Save</strong></p> <p>By using this setup, the <strong>Make Appointment</strong> intent verifies the user statements, captures words that are mapped to the built-in system entities of the Dialogflow, which are @sys.time and @sys.date. Then, places all the captured values in the $date and $time parameters. Thus, we use $time and $date system entities in the response to the values of time and date obtained from the user statement or utterances. "Ok, I schedule your appointment on Monday, July 1, at 5 PM. Good-bye."</p> <p>In the Dialogflow, we can also create custom entities to extract uncategorized or uncommon parameters. In our case, however, the system entities are enough to capture the usual parameters like date and time.</p> <h3 class="h3">Obtain Required Parameters using Slot-Filling</h3> <p>In addition to the current training phrases, now we are require to include some more training phrases, following the best practices from the previous section, which is "I want to schedule an appointment at 5 PM today".</p> <p>Now we add the various training phrases:</p> 
+           <ul class="points"> 
+            <li>Can I schedule an appointment tomorrow at 6 PM?</li> 
+            <li>May I arrange a noon appointment on Monday?</li> 
+           </ul> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/obtain-required-parameters-using-slot-filling.png" alt="Dialogflow Tutorial"> <p>Till now, every training phrase includes information such as date and time, which are 6 PM tomorrow, 5 PM today, noon on Monday. But in the real world, it is not must that the user utterances always contain all the needed parameters.</p> <p>Now add the below training phrases:</p> 
+           <ul class="points"> 
+            <li>I want to fix my car on this Monday.</li> 
+            <li>My car is cracked.</li> 
+            <li>I would like to make an appointment on this Monday.</li> 
+            <li>Can you fix my car?</li> 
+           </ul> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/obtain-required-parameters-using-slot-filling2.png" alt="Dialogflow Tutorial"> <p>The phrases which we used above indicate that the user needs to make an appointment or schedule an appointment. So, the new intent is able to match with such phrases to manage the job of appointment scheduling. However, the information regarding time and date are not included in the phrases. These types of phrases create problems because, without the information of time and date the intent cannot make an appointment.</p> <p>So, to solve this problem, the Dialogflow offers a feature of Slot-filling, which ensures that the user gets all the required information from the user. If we want to enable the feature of slot-filling, then we have to mark the required parameters.</p> <p>Suppose an intent contains necessary parameters, but it coincides with the utterance of the user, which lacks any needed parameters. In that case, the intent immediately queries the user to get all the parameters which are needed.</p> <p>Let's have a look at the following:</p> <p><strong>User:</strong> Hi.</p> <p><strong>Agent:</strong> Welcome. I can tell you the hours of the shop, or I can make an appointment. What one you like?</p> <p><strong>User:</strong> I want to fix my car.</p> <p><strong>Agent:</strong> Alright, I will help you with this. What day would you like to come?</p> <p><strong>User:</strong> Monday</p> <p><strong>Agent:</strong> And what time does it work for you?</p> <p><strong>User:</strong> 5 PM</p> <p><strong>Agent:</strong> OK, I got it. I've scheduled your appointment for Monday, July 14, at 5 PM. See you early. Bye-Bye.</p> <p>We have to follow the following steps to make the $time and $date parameters available and include prompt questions about the parameters:</p> <p>1. First, we have to click on the intent named Make Appointment.</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/obtain-required-parameters-using-slot-filling3.png" alt="Dialogflow Tutorial"> <p>2. Then we check the required boxes for the parameters, which are $time and $date in the <strong>Actions and Parameters</strong> Then, a column is created named PROMPTS.</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/obtain-required-parameters-using-slot-filling4.png" alt="Dialogflow Tutorial"> <p>3. Next, we check that if the parameter $date is located in the table below the parameter $time, then we drag the $date parameter row which is above the parameter $time. (The order in which the prompt questions are asked is decided by the placement in the table.)</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/obtain-required-parameters-using-slot-filling5.png" alt="Dialogflow Tutorial"> <p>5. For parameter $date, we have to click on the link named <strong>Define prompts</strong> that is present in the <strong>PROMPTS</strong> column, and then we add the prompts which are mentioned below:</p> 
+           <ul class="points"> 
+            <li>Okay, on which day will you come in?</li> 
+            <li>Sure, I will help you with this. What day would you like to come?</li> 
+            <li>OK, what day would be the best suit for you.</li> 
+           </ul> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/obtain-required-parameters-using-slot-filling6.png" alt="Dialogflow Tutorial"> <p>5. Then, for parameter $time, we have to click on the link named <strong>Define prompt</strong> present in the <strong>PROMPTS</strong> column, and then we add the prompt which is mentioned below:</p> 
+           <ul class="points"> 
+            <li>OK, what day would be best suit for you?</li> 
+            <li>What time?</li> 
+            <li>Now, what time would you like to schedule your appointment.</li> 
+           </ul> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/obtain-required-parameters-using-slot-filling7.png" alt="Dialogflow Tutorial"> <p>6. Click on the Save button.</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/obtain-required-parameters-using-slot-filling8.png" alt="Dialogflow Tutorial"> <p>7. Now, with the help of the simulator, we test the setup of the slot-filling in the Dialogflow console.</p> <p>Now we have an intent to ensure that the date and time information is retrieved until a user states that they need to make an appointment.</p> <p>However, currently, the intent can only respond to the mock-up response; the actual appointment cannot be scheduled. Now there is a need to make a backend process fulfillment, which is able to perform the job of appointment scheduling on Google Calendar.</p> 
+           <hr> <h2 id="Knowledge-Base" class="h2">Knowledgebase in Dialogflow</h2> <p>In the Dialogflow, there is a concept of the knowledgebase. We can define a knowledgebase as a set of knowledge document that we offer to the Dialogflow. The knowledge document comprises the information, which can be useful in the end-user's conversations. Few of the features of Dialogflow use the concept of knowledge bases when searching for the end-user expression response.</p> <h3 class="h3">How to Create a Knowledge Base</h3> <p>There are various steps to create a knowledge base:</p> <p>1. First, go to the <strong>Dialog Console</strong>.</p> <p>2. Then choose the agent.</p> <p>3. Now, click on the option named <strong>knowledge,</strong> which is present on the left side of the menu bar.</p> <p>4. Next, click on the <strong>Create Knowledge Base</strong></p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/knowledgebase-in-dialogflow.png" alt="Dialogflow Tutorial"> <p>5. Then enter the name of the Knowledge base and then click on the Save button.</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/knowledgebase-in-dialogflow2.png" alt="Dialogflow Tutorial"> <h3 class="h3">How to Add the Document to the Knowledge Base</h3> <p>Currently, there is no document contained in the new knowledge base. So, we have to add the document in the knowledge base as per our need.</p> <p>There are various steps to add the document to the knowledge base:</p> 
+           <ol class="points"> 
+            <li>First, go to the Dialogflow console.</li> 
+            <li>Then, choose the agent.</li> 
+            <li>Next, click on the option named Knowledge which is present on the left side of the menu bar.</li> 
+            <li>Then, click on the knowledge base name in which we want to add the document.</li> 
+            <li>Click on the option named <strong>Create the First One</strong> or <strong>New Document</strong>.<br> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/knowledgebase-in-dialogflow3.png" alt="Dialogflow Tutorial"></li> 
+            <li>Then, enter the name of the document.</li> 
+            <li>Now, select the <strong>Mime Type,</strong> which is <strong>text/html</strong>.</li> 
+            <li>Next, for the <strong>Knowledge type,</strong> we have to select the option <strong>FAQ</strong>.</li> 
+            <li>Then, for the <strong>Data Source,</strong> choose the</li> 
+            <li>Now, in the URL field we have to enter the URL that is <a href="https://cloud.google.com/storage/docs/faq" rel="nofollow" target="_blank">https://cloud.google.com/storage/docs/faq</a>.</li> 
+            <li>Then click on the <strong>CREATE</strong> button.</li> 
+           </ol> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/knowledgebase-in-dialogflow4.png" alt="Dialogflow Tutorial"> <h3 class="h3">Manage Knowledge Document</h3> <p>Manage knowledge document contains two essential points.</p> 
+           <ol class="points"> 
+            <li>Update knowledge document Content</li> 
+            <li>Delete knowledge documents</li> 
+            <li>List knowledge documents</li> 
+           </ol> <p><strong>1. Update Knowledge Document Content: -</strong> If you want to update the content of the knowledge document, then you cannot automatically refresh your knowledge document.</p> <p>You have to call the method named Reload on the <strong>Document</strong> type to refresh the content of the public URI document or cloud storage.</p> <p>If you want to refresh upload raw content, rebuild your document using the methods delete and create on the document type.</p> <p><strong>2. Delete Knowledge Documents: -</strong> If you want to delete the knowledge document, then you have to call the method named <strong>delete</strong> on the <strong>Document</strong> </p> <p><strong>3. List Knowledge Documents: -</strong> If you want to create a list of all your knowledge document, then on the <strong>Document</strong> type, use the API and call the method list.</p> <p><strong>Supported Content</strong></p> <p>There are various knowledge document types that are supported:</p> 
+           <ol class="points"> 
+            <li><strong>FAQ: -</strong> The FAQ documents are the type of those documents in which the question and answer sets include like CSV or HTML.</li> 
+            <li><strong>Extract QA: -</strong> Extract QA are the documents that extract unstructured test and use it for answering questions.</li> 
+           </ol> <p>The below table shows the supported MIME types by source and Knowledge Type:</p> 
+           <table class="alt"> 
+            <tbody>
+             <tr> 
+              <th>Knowledge Type\Source</th> 
+              <th>Uploaded file (Document.raw_content) (recommended)</th> 
+              <th>Uploaded file (Document.raw_content) ( NOT recommended) File from public URL (Document.contentUri)</th> 
+              <th>File from Cloud Storage (Document.contentUri)</th> 
+             </tr> 
+             <tr> 
+              <td>FAQ Text/csv</td> 
+              <td>Test/csv</td> 
+              <td>Text/html</td> 
+              <td>Text/csv</td> 
+             </tr> 
+             <tr> 
+              <td>Extract QA</td> 
+              <td>Text/plain, text/html, application/pdf</td> 
+              <td>Test/plain, test/html</td> 
+              <td>N/A Text/plain, text/html. Application/pdf.</td> 
+             </tr> 
+            </tbody>
+           </table> 
+           <hr> <h2 id="Training" class="h2">Training in Dialogflow</h2> <p>After training the agent to develop a machine learning model mainly for the agent, the Dialogflow uses the training data. If we want to provide the training data directly, then the Dialogflow offers you the feature of the training phrases by which we can directly enter the training data to the intents. In the Dialogflow, there is a training tool that we can also use to improve, export, and import actual conversation data and to analyze our training data.</p> <h3 class="h3">How to Execute Training</h3> <p>In the Dialogflow, whenever we save the agent, then automatically, the training is executed. The Dialogflow provides the training status whenever you save your agent, and the status is in the form of a pop-up notification. Before testing the agent, we have to wait until the training completes.</p> <p>When our agent contains more than 780 intents, or the automatic training status setting is disabled, then we can execute training manually.</p> <p>There are various steps to execute training:</p> <p>1. First, go to the <strong>Dialogflow Console.</strong></p> <p>2. Then, select the agent.</p> <p>3. Now, click on the setting button, which is next to the name of the agent.</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/training-in-dialogflow.png" alt="Dialogflow Tutorial"> <p>4. Then, click on the ML Settings Tab.</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/training-in-dialogflow2.png" alt="Dialogflow Tutorial"> <p>5. Click on the Train button which is present on the bottom of the page.</p> <p>If we want to execute the training by using API, then we have to call the method named train on the agent type.</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/training-in-dialogflow3.png" alt="Dialogflow Tutorial"> <h3 class="h3">Training Tool</h3> <p>With the help of the training tool, we can improve the training data. It is used to review conversations with the end-users that your agent had.</p> <p>With the help of the training tool, we can do the following things:</p> 
+           <ul class="points"> 
+            <li>We can import the conversation data from the real conversations that you planned or recorded.</li> 
+            <li>With the help of the training tool, we can analyze the real conversations and the intents that were matched for every conversation turn.</li> 
+            <li>We can attach the expressions of the end-user from the conversations to the training phrases of the formerly matched intents, fallback intents, or the different intents.</li> 
+           </ul> <p>If you want to use the training tool, then it is must that the logging is enabled because the training tool uses the history of the agent data to load the conversations. The training tool only displays the expressions of the end-user. With the help of the more complete agent history, we can view the conversation data of both agents as well as the end-user.</p> <p>There are various steps to open the training tool.</p> 
+           <ol class="points"> 
+            <li>First, go to the Dialogflow Console.</li> 
+            <li>Now, select the agent.</li> 
+            <li>Then, click on the Training option, which is present on the left side of the menu bar.</li> 
+           </ol> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/training-in-dialogflow4.png" alt="Dialogflow Tutorial"> <h3 class="h3">Conversation List</h3> <p>When we open the training tool, then it will show you the list of conversations. This list contains all the recent conversations but in the reverse chronological order. In the list, each row gives you a summary of the conversations.</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/training-in-dialogflow5.png" alt="Dialogflow Tutorial"> <p>The below table describes each element of the UI.</p> 
+           <table class="alt"> 
+            <tbody>
+             <tr> 
+              <th>UI Element</th> 
+              <th>Description</th> 
+             </tr> 
+             <tr> 
+              <td>Conversation</td> 
+              <td>It is the first expression of the end-user in the conversation.</td> 
+             </tr> 
+             <tr> 
+              <td>Requests</td> 
+              <td>It is the number of conversations that turned in the conversation.</td> 
+             </tr> 
+             <tr> 
+              <td>No match</td> 
+              <td>It is the number of conversations turn for which no intent was matched.</td> 
+             </tr> 
+             <tr> 
+              <td>Date</td> 
+              <td>The date when the conversation was imported or occurred</td> 
+             </tr> 
+             <tr> 
+              <td><img src="https://static.javatpoint.com/tutorial/dialogflow/images/training-in-dialogflow6.png" alt="Dialogflow Tutorial"></td> 
+              <td>When we used the conversation to update the training data, then for the row, the status indicator shows a green checkmark.</td> 
+             </tr> 
+            </tbody>
+           </table> 
+           <hr> <h2 id="Intent-Matching-with-Follow-up-Intent" class="h2">Intent Matching with Follow-up Intents</h2> <p>The follow-up intent is matched after the parental intentions are matched. So, the intent <strong>language-custom</strong> is matched only after the <strong>set-language</strong> intent is matched. Suppose the users just asked the question that how long did you know $language? Now we can add the training phrases to the question for possible user answers:</p> <p>There are various steps to intent matching with the follow-up intents:</p> <p>1. First, click on the <strong>Intents</strong> option, which is present on the left sidebar menu.</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/intent-matching-with-follow-up-intents.png" alt="Dialogflow Tutorial"> <p>2. Then, click on the intent named <strong>set-language-custom</strong>.</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/intent-matching-with-follow-up-intents2.png" alt="Dialogflow Tutorial"> <p>3. Next, add various training phrases:</p> 
+           <ul class="points"> 
+            <li><strong>5 years</strong></li> 
+            <li><strong>About 6 days</strong></li> 
+            <li><strong>For 7 years</strong></li> 
+           </ul> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/intent-matching-with-follow-up-intents3.png" alt="Dialogflow Tutorial"> <p>4. Last, click on the <strong>Save</strong> button, and wait till the <strong>Agent Training</strong> dialog indicates that the <strong>Agent training completed</strong>.</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/intent-matching-with-follow-up-intents4.png" alt="Dialogflow Tutorial"> <h3 class="h3">Test your Follow-up Intent</h3> <p>If you want to test your follow-up intent, then, in the simulator, enter, <strong>I Know Spanish,</strong> and then respond to the question <strong>How long did you know Spanish</strong> with <strong>about 4 weeks</strong>.</p> <p>As we know for the expression <strong>about 4 weeks,</strong> there is no response, and we can easily see that the expression is matched appropriately to the accurate intent <strong>set-language-custom</strong>. The parameter for the duration is accurately parsed (<strong>4 weeks).</strong></p> <h3 class="h3">Contexts and Parameters</h3> <p>In the context, the values of the parameter are stored. We can access the parameter values, which are defined in the intent Set-language when the output context of the set language intent is active.</p> <p>In the set-language-custom, we can only ask one thing, which is the duration of the language that the user knows.</p> <p>We have to perform the following steps to reference the language in the response:</p> <p>1. First, update the intent <strong>set-language-custom</strong> to text the response, and the response is <strong>I cannot believe you know #set-language-followup.language</strong> for $duration!</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/contexts-and-parameters.png" alt="Dialogflow Tutorial"> <p>2. Then click on the <strong>Save</strong> button, and then wait till the <strong>Agent Training</strong> dialog indicates that the <strong>Agent training completed</strong>.</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/contexts-and-parameters2.png" alt="Dialogflow Tutorial"> <p>The #set-language-followup.language reference is called a parameter reference for an active context.</p> <h3 class="h3">Test the Context Parameter</h3> <p>If you want to test the context parameter, then type <strong>I know French</strong> in the simulator. Then answer the question as 'one week'. Note that the value of the parameter is received from the context.</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/contexts-and-parameters3.png" alt="Dialogflow Tutorial"> 
+           <hr> <h2 id="Integratio-with-an-Integration" class="h2">Interaction with an Integration</h2> <p>There are various types of conversation platforms on which the Dialogflow can integrate, such as Facebook, Slack, Google Assistant, etc. To create an agent for any platforms, you can use one of the options from the various integration options. In the Dialogflow, there is a facility of handling direct end-user interactions so that your more focus is to create an agent.</p> <h3 class="h3">How to Enable the Integration</h3> <p>There are various steps to enable integration:</p> <p>1. First, go to the Dialogflow Console.</p> <p>2. Then, select an agent.</p> <p>3. Next, click on the option named Integration present on the left sidebar menu.</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/interaction-with-an-integration.png" alt="Dialogflow Tutorial"> <p>4. Then, enable <strong>Web Demo</strong> integration.</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/interaction-with-an-integration2.png" alt="Dialogflow Tutorial"> <p>When the web demo enables the dialog, the window offers you the following:</p> 
+           <ul class="points"> 
+            <li>It provides you the URL to a web page that hosts the integration.</li> 
+            <li>It provides HTML code so that the agent in your website can be embedded.</li> 
+            <li>It also provides a link for the agent setting, which is used to customize the webpage aspects.</li> 
+           </ul> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/interaction-with-an-integration3.png" alt="Dialogflow Tutorial"> <h3 class="h3">How to Interact with your Agent</h3> <p>If you want to interact with your agent, use the above provided link, open the webpage of the agent. This webpage gives you a text chat interface. You have to type what's your name and then click enter. Then the agent provides the response with the response which you set up in the previous QuickStart.</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/interaction-with-an-integration4.png" alt="Dialogflow Tutorial"> 
+           <hr> <h2 id="Build-Resume-Chatbot" class="h2">How to Build Resume Chatbot for Google Assistant</h2> <p>There are various steps to build resume chatbot for Google assistant:</p> <h3 class="h3">1. Google Signup</h3> <p>First, log in to the Dialogflow. We can log in to the Dialogflow by using the link <a href="https://dialogflow.com/">https://dialogflow.com/</a>. After login successfully, we have to click on the <strong>Sign up for free.</strong></p> <p>Then we have to connect with the Google account. If we want to use a Dialogflow, then it is must that to have a Google account.</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/build-resume-chatbot-for-google-assistant.png" alt="Dialogflow Tutorial"> <h3 class="h3">2. Agent Creation</h3> <p>If we want to develop a new chatbot in the Dialogflow, then we have to create an agent. To create an agent, first click on the option name 'create agent' then, give a name to our agent, and then we have to select various things such as default time zone and default language as per our need.</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/build-resume-chatbot-for-google-assistant2.png" alt="Dialogflow Tutorial"> <h3 class="h3">3. Create New Intent</h3> <p>Next, we have to create a new intent. We can create a new intent by clicking on the symbol +, which is next to the intents option or by clicking on the button <strong>CREATE INTENT,</strong> which is present on the top of the Dialogflow window.</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/build-resume-chatbot-for-google-assistant3.png" alt="Dialogflow Tutorial"> <p>Type intent name (Introduction) and click on the Save button.</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/build-resume-chatbot-for-google-assistant4.png" alt="Dialogflow Tutorial"> <p>Then, in the training phrases section, there is a textbox. So, add the user expression in the textbox, and after enter, click on the Save button.</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/build-resume-chatbot-for-google-assistant5.png" alt="Dialogflow Tutorial"> <p>As per the intent, we need to enter the training phrases. We have to decide which type of user input is going to invoke this intent. Such as for the <strong>Introduction</strong> intent, we added "Introduce Yourself" and "Tell me about yourself'.</p> <p>Then we go to the <strong>responses</strong> section. At least one response is required for each intent. So, we have to type the response in the <strong>Text response</strong> box and then press enter. After enter, the text responses, click on the <strong>Save</strong> button. Multiple responses can also be added in the responses section. Intent use responses in a random way from the list in which we have entered the responses.</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/build-resume-chatbot-for-google-assistant6.png" alt="Dialogflow Tutorial"> <h3 class="h3">4. Rich Responses</h3> <p>There are different types of responses available in the Dialogflow. We can have each one for different purposes so that our information is shown in a good way. For example: sometimes we may require to display some images, external links, or a list of items. Those cases lead to rich responses.</p> <p>According to chat platforms such as Google, Telegram, Slack, Facebook Messenger, etc., there are various options available for the rich responses, but all the types are not supported on various chat platforms.</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/build-resume-chatbot-for-google-assistant7.png" alt="Dialogflow Tutorial"> <p>Now we have to click on the symbol +, which is near the default option in the response section, and then from the list choose the Google Assistant option.</p> <p>Then click on the 'ADD RESPONSES' button, and we can see various kinds of responses.</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/build-resume-chatbot-for-google-assistant8.png" alt="Dialogflow Tutorial"> <h3 class="h3">5. Suggestion Chips in Welcome Intent</h3> <p>Suggestion chips are used as a guide for more conversation. Suggestion chips help to indicate what to do next, such as Introduction, Experience, Projects, contact.</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/build-resume-chatbot-for-google-assistant9.png" alt="Dialogflow Tutorial"> <h3 class="h3">6. Create Introduction Intent</h3> <p>For the introduction intent, we can add various training phrases such as:</p> 
+           <ul class="points"> 
+            <li>Introduce your self</li> 
+            <li>Introduction</li> 
+            <li>Tell me about yourself</li> 
+           </ul> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/build-resume-chatbot-for-google-assistant10.png" alt="Dialogflow Tutorial"> <p>There are various types of responses that we can use, such as Simple Response/ Basic Card/ List/ Carousel. But we use Simple Response for this intent.</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/build-resume-chatbot-for-google-assistant11.png" alt="Dialogflow Tutorial"> <h3 class="h3">7. Create Experience Intent</h3> <p>We can add various training phrases for the Experience intent such as:</p> 
+           <ul class="points"> 
+            <li>Tell me about your experience.</li> 
+            <li>Experience</li> 
+           </ul> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/build-resume-chatbot-for-google-assistant12.png" alt="Dialogflow Tutorial"> <p>We can use table card and simple response for the response.</p> <p>If we want to represent our data in a data form, then table card is used, it also offers static data.</p> <h4 class="n">Note: If we want to use a table card response, then it require at least one simple response.</h4> <h3 class="h3">8. Create Projects Intent</h3> <p>For the project intent, we can use various phrases such as:</p> 
+           <ul class="points"> 
+            <li>Your academic projects</li> 
+            <li>Tell me about your projects</li> 
+           </ul> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/build-resume-chatbot-for-google-assistant13.png" alt="Dialogflow Tutorial"> <p>We can use a Simple Response or Browser Carousel Card for the response.</p> <p>We can scroll browser carousel card horizontally. We used this card in browser to open selected external links of the website.</p> <h3 class="h3">9. Create Career Objective Intent</h3> <p>For the career objective intent, we can use various training phrases like:</p> 
+           <ul class="points"> 
+            <li>Your career objective</li> 
+            <li>Your goal</li> 
+           </ul> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/build-resume-chatbot-for-google-assistant14.png" alt="Dialogflow Tutorial"> <p>We can use Suggestion chips/Simple Response for the response.</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/build-resume-chatbot-for-google-assistant15.png" alt="Dialogflow Tutorial"> <h3 class="h3">10. Create an Area of Interest Intent</h3> <p>For the area of interest intent, we can add various training phrases such as:</p> 
+           <ul class="points"> 
+            <li>What are your interests</li> 
+            <li>Tell me about your interests</li> 
+           </ul> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/build-resume-chatbot-for-google-assistant16.png" alt="Dialogflow Tutorial"> <p>We can use suggestion chips or simple response for the response.</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/build-resume-chatbot-for-google-assistant17.png" alt="Dialogflow Tutorial"> <h3 class="h3">11. Create Educational Qualification Intent</h3> <p>For the educational qualification intent, we can use the various training phrases such as:</p> 
+           <ul class="points"> 
+            <li>Tell me about your qualifications</li> 
+            <li>Education</li> 
+            <li>Educational qualifications</li> 
+           </ul> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/build-resume-chatbot-for-google-assistant18.png" alt="Dialogflow Tutorial"> <p>For the response, we have various options such as suggestion chips, simple response, and basic card.</p> <p>For display images, text description, title, subtitle we can use basic card response.</p> <h3 class="h3">12. Create Strengths and Weakness Intent</h3> <p>For the strengths and weakness intent, we can use various training phrases such as:</p> 
+           <ul class="points"> 
+            <li>Tell me about your strength and weakness.</li> 
+            <li>What are your Strengths.</li> 
+           </ul> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/build-resume-chatbot-for-google-assistant19.png" alt="Dialogflow Tutorial"> <p>We can use list and simple response for the response. With the help of the list response, we can display various items like a list.</p> <p>We can see in the below image that in the response we have added the needed values. This mean that if the user clicks on the specific item, the next user input will be the key of that item.</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/build-resume-chatbot-for-google-assistant20.png" alt="Dialogflow Tutorial"> <h3 class="h3">13. Create Contact Intent</h3> <p>For the contact intent, we can use the various training phrases such as:</p> 
+           <ul class="points"> 
+            <li>How can I Contact you?</li> 
+            <li>Your contact details</li> 
+           </ul> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/build-resume-chatbot-for-google-assistant21.png" alt="Dialogflow Tutorial"> <p>For the responses, we have different kinds of options such as Text Response/ Simple Response/ Browse Carousel Card.</p> <h3 class="h3">14. Create References Intent</h3> <p>For the reference intent, we can use training phrases such as:</p> <p>What are your references</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/build-resume-chatbot-for-google-assistant22.png" alt="Dialogflow Tutorial"> <p>For the response, we can use Basic card, Simple Response, Link out suggestion, and suggestion chips. We have used link out suggestion we want to link the external website URL. Anchor text will be the title of the link.</p> <h3 class="h3">15. Create Exit Intent</h3> <p>For the exit intent, we can use various training phrases such as:</p> 
+           <ul class="points"> 
+            <li>Farewell</li> 
+            <li>Bye bye</li> 
+            <li>Get lost</li> 
+            <li>Good bye</li> 
+            <li>Bye</li> 
+           </ul> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/build-resume-chatbot-for-google-assistant23.png" alt="Dialogflow Tutorial"> <p>We can use Text Response/ Simple Response for the response.</p> <p>We can see in the below figure that for end, the conversation of this intent, we select/ turn on "set this intent as end of conversation: switch/button/option.</p> <p>If the user enters or type good bye, bye bye or bye then the simple response will be appear. When we make the intent as "End of conversation" then our conversation will end and user exit from the app. Now our resume chatbot has been created.</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/build-resume-chatbot-for-google-assistant24.png" alt="Dialogflow Tutorial"> 
+           <hr> <h2 id="Build-an-Appointment-Scheduler" class="h2">How to Build an Appointment Scheduler with Dialogflow</h2> <p>There are various steps to build an appointment scheduler with Dialogflow:</p> 
+           <ol class="points"> 
+            <li>Create a Dialogflow agent</li> 
+            <li>Create Intent</li> 
+            <li>Test the Chatbot</li> 
+            <li>Enable Web Integration</li> 
+           </ol> <h3 class="h3">1. Create a Dialogflow Agent</h3> <p>If we want to build an appointment scheduler with Dialogflow then first we have to create a Dialogflow agent:</p> <p>There are various steps to create a Dialogflow Agent:</p> 
+           <ol class="pointsa"> 
+            <li>First, go to the <strong>Dialogflow console</strong>.</li> 
+            <li>Next, as using the Dialogflow first time, sign in with the email; otherwise, it is not required.</li> 
+            <li>Then accept the terms and condition, and after accepting terms and conditions, we can use the Dialogflow console.</li> 
+            <li>Now, we can create the agent by clicking on the <strong>Create new agent</strong> option, which on the left sidebar menu.<br> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/build-an-appointment-scheduler.png" alt="Dialogflow Tutorial"></li> 
+            <li>Then, give the name to the agent as "Appointment Scheduler" and click on the 'CREATE' button.<br> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/build-an-appointment-scheduler2.png" alt="Dialogflow Tutorial"></li> 
+           </ol> <p>In the Dialogflow, as a part of the agent, there are two types of default intents:</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/build-an-appointment-scheduler3.png" alt="Dialogflow Tutorial"> <p>1. Default Fallback Intent: - It helps to capture those questions which the bot doesn't understand.</p> <p>2. Default Welcome Intent: - The default welcome intent is matched whenever the end-user starts a conversation with your agent.</p> <h3 class="h3">Test the Agent</h3> <p>There is a testing panel in the Dialogflow console that is used to test the agent. The testing panel appears on the right side of the Dialogflow console window.</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/build-an-appointment-scheduler4.png" alt="Dialogflow Tutorial"> <p>Type "Hi" to test the agent. Then the agent will respond with the default greeting, which is defined in the default welcome intent. It will say, "Greetings! "Hello! How can I help you?" we can update the response.</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/build-an-appointment-scheduler5.png" alt="Dialogflow Tutorial"> <p>If we type "set an appointment," then the agent will not be able to give the response to this because the agent does not know what to do and so it provides the response, which is defined in the default fallback intent. Because we have not created any intent that catch this specific question.</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/build-an-appointment-scheduler6.png" alt="Dialogflow Tutorial"> <h3 class="h3">2. Create Intent</h3> <p>After creating the agent, we have to create the intent.</p> <p>There are various steps to create the intent:</p> <p>(a) First, click on the <strong>Intent</strong> option which is present on the left side of the Dialogflow window then click on the <strong>CREATE INTENT</strong></p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/build-an-appointment-scheduler7.png" alt="Dialogflow Tutorial"> <p>(b) Then, click on the <strong>Training phrases</strong> and enter the various phrases:</p> 
+           <ul class="points"> 
+            <li>I need an appointment on Saturday at 4 PM.</li> 
+            <li>Schedule an appointment on Monday at 5 PM.</li> 
+            <li>I'd like to arrange an appointment on Wednesday for 2 PM.</li> 
+           </ul> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/build-an-appointment-scheduler8.png" alt="Dialogflow Tutorial"> <p>When we enter the above phrases, we will see that the date and time are automatically recognized as system entities, which are <em>@sys.date</em> and <em>@sys.time.</em></p> <p><strong>(c)</strong> Next, go to the <strong>Responses,</strong> and in the text response section, enter "you are all set, see you then! We can also write this in another way, like "You are all set for $date at $time." If we add a dollar($) sign, the system can easily access the entity values and click on the <strong>Add Responses.</strong></p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/build-an-appointment-scheduler9.png" alt="Dialogflow Tutorial"> <p>(e) Then, click on the Save button. Then, we will test the agent.</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/build-an-appointment-scheduler10.png" alt="Dialogflow Tutorial"> <h3 class="h3">Slot Filling</h3> <p>Now, "set an appointment" will be tested. This is not really clear and you didn't need to deal with the situation. Thus, the default fallback intent handles this, and we can use slot filling for this purpose.</p> <p>Slot filling enables you to build a parameter-value-collection conversation flow in a single intent. Slot filling is helpful in the situation where without a set of parameter values we cannot complete an action.</p> <p>There are various steps to setup slot filling:</p> <p>1. First, click on the 'Action and Parameter' option. Make the needed entities, and ask for the date and time in Dialogflow before answering.</p> <p>2. For date, we enter or type "what date?"</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/build-an-appointment-scheduler11.png" alt="Dialogflow Tutorial"> <p>3. For time, we enter or type "what time would you like to come in?"</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/build-an-appointment-scheduler12.png" alt="Dialogflow Tutorial"> <p>4. Then, we click on the 'Save' button.</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/build-an-appointment-scheduler13.png" alt="Dialogflow Tutorial"> <h3 class="h3">4. Test your Chatbot</h3> <p>Now our chatbot for appointment scheduler is ready and now we test the chatbot. To test the chatbot, we have to enter the various conversations in the testing panel of the Dialogflow console.</p> 
+           <ul class="points"> 
+            <li>User: "hi"</li> 
+            <li>Chatbot: "Greetings! How can I assist?</li> 
+           </ul> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/build-an-appointment-scheduler14.png" alt="Dialogflow Tutorial"> 
+           <ul class="points"> 
+            <li>User: "Set an appointment"</li> 
+            <li>Chatbot: "what date?"</li> 
+           </ul> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/build-an-appointment-scheduler15.png" alt="Dialogflow Tutorial"> 
+           <ul class="points"> 
+            <li>User: "25 July"</li> 
+            <li>Chatbot: "What time would you like to come in?"</li> 
+           </ul> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/build-an-appointment-scheduler16.png" alt="Dialogflow Tutorial"> 
+           <ul class="points"> 
+            <li>User: "9AM"</li> 
+            <li>Chatbot: "you are all set for 2020-07-25 at 09:00:00. See you then!"</li> 
+           </ul> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/build-an-appointment-scheduler17.png" alt="Dialogflow Tutorial"> <p>Now we can see in the above screenshot that the chatbot we developed is working correctly.</p> <h3 class="h3">5. Enable One-Click Web Integration</h3> <p>If we want to share the schedule with others, use the option named one-click we integration. In Dialogflow, there are various types of integration available for the chatbot. Look at a sample chatbot web user interface.</p> <p>There are various steps to use one-click web integration:</p> <p>1. In the Dialogflow, click on the</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/build-an-appointment-scheduler18.png" alt="Dialogflow Tutorial"> <p>2. Then enable the Web Demo.</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/build-an-appointment-scheduler19.png" alt="Dialogflow Tutorial"> <p>3. Next to launch the Web Demo, click on the URL.</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/build-an-appointment-scheduler20.png" alt="Dialogflow Tutorial"> <p>After performing the above steps, we are able to use the chat interface. We can use the chat interface by typing something where it says 'Ask Something'.</p> <p>By using the below conversation, we can begin using the chat interface.</p> <p>1. Enter "Hi" when you enter "Hi" or something then the chatbot will respond you.</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/build-an-appointment-scheduler21.png" alt="Dialogflow Tutorial"> <p>2. Then, enter "set an appointment for 6 PM tomorrow" and then the chatbot will respond.</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/build-an-appointment-scheduler22.png" alt="Dialogflow Tutorial"> 
+           <hr> <h2 id="Build-a-Chatbot" class="h2">How to Build a Chatbot for FAQ with Dialogflow</h2> <p>There are various steps to build a chatbot for FAQ with Dialogflow:</p> 
+           <ol class="points"> 
+            <li>Create an agent</li> 
+            <li>Enable beta features and APIs</li> 
+            <li>Create a Knowledge Base</li> 
+            <li>Handle Response</li> 
+            <li>Test your chatbot</li> 
+           </ol> <h3 class="h3">Create an Agent</h3> <p>If we want to build a chatbot for FAQ with Dialogflow, create an agent and to create an agent we have to follow the various steps:</p> 
+           <ol class="pointsa"> 
+            <li>First, we have to go to the <strong>Dialogflow console.</strong></li> 
+            <li>Next, if using Dialogflow first time, sign in with your email; otherwise, it is not required.</li> 
+            <li>Then accept the terms and conditions, and after accepting terms and conditions, we can use the Dialogflow console.</li> 
+           </ol> <p>Now, we can create the agent by clicking on the <strong>Create new agent</strong> option, which is on the left sidebar menu.</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/build-chatbot-for-faq.png" alt="Dialogflow Tutorial"> <p>(b) Next, give the name to the agent. We are building an agent for the FAQ. So, we give the related name to this as <strong>FAQ_agent</strong>. Click on the 'CREATE' button.</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/build-chatbot-for-faq2.png" alt="Dialogflow Tutorial"> <h3 class="h3">Enable Beta Features and APIs</h3> <p>We enable Beta features and APIs. After enabling the Beta features and APIs, we are able to create a knowledge connector.</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/build-chatbot-for-faq3.png" alt="Dialogflow Tutorial"> <h3 class="h3">Create a Knowledge Base</h3> <p>There are various steps to create a knowledge base:</p> <p>(a) First, click on the option named "Create Knowledge Base."</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/build-chatbot-for-faq4.png" alt="Dialogflow Tutorial"> <p>(b) Then, give the name to the knowledge base, and then save it by clicking on the 'SAVE' button.</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/build-chatbot-for-faq5.png" alt="Dialogflow Tutorial"> <p>(c) Next, a knowledge document is required, which we will use to auto-generate the chatbot of the FAQ. We use this FAQ as a sample. For this purpose, we can also use our document.</p> <p>(d) Now, move back further to the Dialogflow agent, and then build our first knowledge connector.</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/build-chatbot-for-faq6.png" alt="Dialogflow Tutorial"> 
+           <ul class="points"> 
+            <li>Give the name to the knowledge connector. In this example, we have given the name "FAQ chatbot."</li> 
+            <li>Next, choose the knowledge type, which is the FAQ.</li> 
+            <li>Then, choose the Mimi type, and in this, choose a text/html file as a Mimi type.</li> 
+            <li>Now, add a URL to the document <a href="https://developers.facebook.com/docs/messenger-platform/faq/" rel="nofollow" target="_blank">https://developers.facebook.com/docs/messenger-platform/faq/</a>.</li> 
+            <li>After performing the above steps, click on the <strong>Create</strong> </li> 
+           </ul> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/build-chatbot-for-faq7.png" alt="Dialogflow Tutorial"> <p>Now, the FAQ chatbot for Facebook is created by the knowledge connector, click on the Facebook FAQ.</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/build-chatbot-for-faq8.png" alt="Dialogflow Tutorial"> <p>We can see that the questions are parsed into the requests and answers.</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/build-chatbot-for-faq9.png" alt="Dialogflow Tutorial"> <p>Now, to enable the automated responses, we have to click on the <strong>Add response</strong> and then <strong>SAVE</strong>.</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/build-chatbot-for-faq10.png" alt="Dialogflow Tutorial"> <p>Before start testing our agent, firstly enable the chatbot. To enable the chatbot, click the checkbox next to the FAQ name and press enable.</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/build-chatbot-for-faq11.png" alt="Dialogflow Tutorial"> <h3 class="h3">Handle Responses</h3> <p>After creating the knowledge base and adding the FAQ, our next step is to add some variants under the Responses section to check how the chatbot must present the knowledge base's response.</p> <p>The following responses are added in the responses section:</p> 
+           <ul class="points"> 
+            <li>I found some information for you: $Knowledge.Answer[1].</li> 
+            <li>$Knowledge.Answer [1].</li> 
+            <li>Here you go.$Knowledge.Answer[1].</li> 
+           </ul> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/build-chatbot-for-faq12.png" alt="Dialogflow Tutorial"> <h3 class="h3">Test your Chatbot</h3> <p>Now, with the help of the simulator, we can test the chatbot. To test the chatbot, type something in the simulator related to the FAQ. In this example, we created a FAQ chatbot for Facebook. To test the chatbot, we have to type the questions related to the FAQ Facebook chat, such as "Can my app use both standard messaging and message tags to send messages." After typing this question, we will get a response from the bot. Then, we can also try some more examples like "What happens if my bot messages a person more than once beyond the 24-hour standard messaging window". We will notice that the correct intent is still mapped even if we do not type the particular question from the FAQ. That's the specialty of the knowledge connector.</p> <img src="https://static.javatpoint.com/tutorial/dialogflow/images/build-chatbot-for-faq13.png" alt="Dialogflow Tutorial"> 
+           <hr> <br><br> </td>
+         </tr> 
+        </tbody>
+       </table> 
+      </div> 
+      <hr class="hrhomebox"> 
+      <div>
+       <img class="lazyload" data-src="https://static.javatpoint.com/images/youtube-32.png" style="vertical-align:middle;" alt="Youtube"> <span class="h3" style="vertical-align:middle;font-size:22px"> For Videos Join Our Youtube Channel: <a href="https://bit.ly/2FOeX6S" target="_blank"> Join Now</a></span> 
+      </div> 
+      <hr class="hrhomebox"> 
+      <h3 class="h3">Feedback</h3> 
+      <ul class="points"> 
+       <li>Send your Feedback to <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c4a2a1a1a0a6a5a7af84aea5b2a5b0b4abadaab0eaa7aba9">[email&nbsp;protected]</a></li> 
+      </ul> 
+      <hr class="hrhomebox"> 
+      <h2 class="h2">Help Others, Please Share</h2> <a rel="nofollow" title="Facebook" target="_blank" href="https://www.facebook.com/sharer.php?u=https://www.javatpoint.com/dialogflow"><img src="https://www.javatpoint.com/images/facebook32.png" alt="facebook"></a> <a rel="nofollow" title="Twitter" target="_blank" href="https://twitter.com/share?url=https://www.javatpoint.com/dialogflow"><img src="https://www.javatpoint.com/images/twitter32.png" alt="twitter"></a> <a rel="nofollow" title="Pinterest" target="_blank" href="https://www.pinterest.com/pin/create/button/?url=https://www.javatpoint.com/dialogflow"><img src="https://www.javatpoint.com/images/pinterest32.png" alt="pinterest"></a> 
+      <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> 
+      <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4699858549023382" data-ad-slot="5022809933" data-ad-format="auto" data-full-width-responsive="true"></ins> 
+      <script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script> 
+      <hr class="hrhomebox"> 
+      <fieldset class="gra1"> 
+       <h2 class="h3">Learn Latest Tutorials</h2> 
+       <div class="firsthomecontent"> <a href="https://www.javatpoint.com/splunk"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/splunk.png" alt="Splunk tutorial"> 
+          <p>Splunk</p> 
+         </div> </a> <a href="https://www.javatpoint.com/spss"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/spss.png" alt="SPSS tutorial"> 
+          <p>SPSS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/swagger"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/swagger.png" alt="Swagger tutorial"> 
+          <p>Swagger</p> 
+         </div> </a> <a href="https://www.javatpoint.com/t-sql"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/transact-sql.png" alt="T-SQL tutorial"> 
+          <p>Transact-SQL</p> 
+         </div> </a> <a href="https://www.javatpoint.com/tumblr"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/tumblr.png" alt="Tumblr tutorial"> 
+          <p>Tumblr</p> 
+         </div> </a> <a href="https://www.javatpoint.com/reactjs-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/react.png" alt="React tutorial"> 
+          <p>ReactJS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/regex"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/regex.png" alt="Regex tutorial"> 
+          <p>Regex</p> 
+         </div> </a> <a href="https://www.javatpoint.com/reinforcement-learning"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/react.png" alt="Reinforcement learning tutorial"> 
+          <p>Reinforcement Learning</p> 
+         </div> </a> <a href="https://www.javatpoint.com/r-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/r-programming.png" alt="R Programming tutorial"> 
+          <p>R Programming</p> 
+         </div> </a> <a href="https://www.javatpoint.com/rxjs"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/rxjs.png" alt="RxJS tutorial"> 
+          <p>RxJS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/react-native-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/react-native.png" alt="React Native tutorial"> 
+          <p>React Native</p> 
+         </div> </a> <a href="https://www.javatpoint.com/python-design-pattern"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python-design-patterns.png" alt="Python Design Patterns"> 
+          <p>Python Design Patterns</p> 
+         </div> </a> <a href="https://www.javatpoint.com/python-pillow"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python-pillow.png" alt="Python Pillow tutorial"> 
+          <p>Python Pillow</p> 
+         </div> </a> <a href="https://www.javatpoint.com/python-turtle-programming"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python-turtle.png" alt="Python Turtle tutorial"> 
+          <p>Python Turtle</p> 
+         </div> </a> <a href="https://www.javatpoint.com/keras"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/keras.png" alt="Keras tutorial"> 
+          <p>Keras</p> 
+         </div> </a> 
+       </div> 
+      </fieldset> 
+      <hr class="hrhomebox"> 
+      <fieldset class="gra1"> 
+       <h2 class="h3">Preparation</h2> 
+       <div class="firsthomecontent"> <a href="https://www.javatpoint.com/aptitude/quantitative"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/aptitude/images/quantitative-aptitude-home.png" alt="Aptitude"> 
+          <p>Aptitude</p> 
+         </div> </a> <a href="https://www.javatpoint.com/reasoning"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/reasoning/images/reasoning-home.png" alt="Logical Reasoning"> 
+          <p>Reasoning</p> 
+         </div> </a> <a href="https://www.javatpoint.com/verbal-ability"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/verbal-ability/images/verbal-ability-home.png" alt="Verbal Ability"> 
+          <p>Verbal Ability</p> 
+         </div> </a> <a href="https://www.javatpoint.com/interview-questions-and-answers"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/logo/interviewhome.png" alt="Interview Questions"> 
+          <p>Interview Questions</p> 
+         </div> </a> <a href="https://www.javatpoint.com/company-interview-questions-and-recruitment-process"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/interview/images/company-home.jpeg" alt="Company Interview Questions"> 
+          <p>Company Questions</p> 
+         </div> </a> 
+       </div> 
+      </fieldset> 
+      <hr class="hrhomebox"> 
+      <fieldset class="gra1"> 
+       <h2 class="h3">Trending Technologies</h2> 
+       <div class="firsthomecontent"> <a href="https://www.javatpoint.com/artificial-intelligence-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/artificial-intelligence.png" alt="Artificial Intelligence Tutorial"> 
+          <p>Artificial Intelligence</p> 
+         </div> </a> <a href="https://www.javatpoint.com/aws-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/amazon-web-services.png" alt="AWS Tutorial"> 
+          <p>AWS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/selenium-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/selenium.png" alt="Selenium tutorial"> 
+          <p>Selenium</p> 
+         </div> </a> <a href="https://www.javatpoint.com/cloud-computing-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/cloud-computing.png" alt="Cloud Computing tutorial"> 
+          <p>Cloud Computing</p> 
+         </div> </a> <a href="https://www.javatpoint.com/hadoop-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/hadoop.png" alt="Hadoop tutorial"> 
+          <p>Hadoop</p> 
+         </div> </a> <a href="https://www.javatpoint.com/reactjs-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/reactjs.png" alt="ReactJS Tutorial"> 
+          <p>ReactJS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/data-science"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-science.png" alt="Data Science Tutorial"> 
+          <p>Data Science</p> 
+         </div> </a> <a href="https://www.javatpoint.com/angular-7-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/angular7.png" alt="Angular 7 Tutorial"> 
+          <p>Angular 7</p> 
+         </div> </a> <a href="https://www.javatpoint.com/blockchain-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/blockchain.png" alt="Blockchain Tutorial"> 
+          <p>Blockchain</p> 
+         </div> </a> <a href="https://www.javatpoint.com/git"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/git.png" alt="Git Tutorial"> 
+          <p>Git</p> 
+         </div> </a> <a href="https://www.javatpoint.com/machine-learning"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/machine-learning.png" alt="Machine Learning Tutorial"> 
+          <p>Machine Learning</p> 
+         </div> </a> <a href="https://www.javatpoint.com/devops"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/devops.png" alt="DevOps Tutorial"> 
+          <p>DevOps</p> 
+         </div> </a> 
+       </div> 
+      </fieldset> 
+      <hr class="hrhomebox"> 
+      <fieldset class="gra1"> 
+       <h2 class="h3">B.Tech / MCA</h2> 
+       <div class="firsthomecontent"> <a href="https://www.javatpoint.com/dbms-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/dbms.png" alt="DBMS tutorial"> 
+          <p>DBMS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/data-structure-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-structures.png" alt="Data Structures tutorial"> 
+          <p>Data Structures</p> 
+         </div> </a> <a href="https://www.javatpoint.com/daa-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/daa.png" alt="DAA tutorial"> 
+          <p>DAA</p> 
+         </div> </a> <a href="https://www.javatpoint.com/os-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/operating-system.png" alt="Operating System tutorial"> 
+          <p>Operating System</p> 
+         </div> </a> <a href="https://www.javatpoint.com/computer-network-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/computer-network.png" alt="Computer Network tutorial"> 
+          <p>Computer Network</p> 
+         </div> </a> <a href="https://www.javatpoint.com/compiler-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/compiler-design.png" alt="Compiler Design tutorial"> 
+          <p>Compiler Design</p> 
+         </div> </a> <a href="https://www.javatpoint.com/computer-organization-and-architecture-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/computer-organization.png" alt="Computer Organization and Architecture"> 
+          <p>Computer Organization</p> 
+         </div> </a> <a href="https://www.javatpoint.com/discrete-mathematics-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/discrete-mathematics.png" alt="Discrete Mathematics Tutorial"> 
+          <p>Discrete Mathematics</p> 
+         </div> </a> <a href="https://www.javatpoint.com/ethical-hacking-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/ethical-hacking.png" alt="Ethical Hacking Tutorial"> 
+          <p>Ethical Hacking</p> 
+         </div> </a> <a href="https://www.javatpoint.com/computer-graphics-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/computer-graphics.png" alt="Computer Graphics Tutorial"> 
+          <p>Computer Graphics</p> 
+         </div> </a> <a href="https://www.javatpoint.com/software-engineering-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/software-engineering.png" alt="Software Engineering Tutorial"> 
+          <p>Software Engineering</p> 
+         </div> </a> <a href="https://www.javatpoint.com/html-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/web-technology.png" alt="html tutorial"> 
+          <p>Web Technology</p> 
+         </div> </a> <a href="https://www.javatpoint.com/cyber-security-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/cyber-security.png" alt="Cyber Security tutorial"> 
+          <p>Cyber Security</p> 
+         </div> </a> <a href="https://www.javatpoint.com/automata-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/automata.png" alt="Automata Tutorial"> 
+          <p>Automata</p> 
+         </div> </a> <a href="https://www.javatpoint.com/c-programming-language-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/c-programming.png" alt="C Language tutorial"> 
+          <p>C Programming</p> 
+         </div> </a> <a href="https://www.javatpoint.com/cpp-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/cpp.png" alt="C++ tutorial"> 
+          <p>C++</p> 
+         </div> </a> <a href="https://www.javatpoint.com/java-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/java.png" alt="Java tutorial"> 
+          <p>Java</p> 
+         </div> </a> <a href="https://www.javatpoint.com/net-framework"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/dot-net.png" alt=".Net Framework tutorial"> 
+          <p>.Net</p> 
+         </div> </a> <a href="https://www.javatpoint.com/python-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python.png" alt="Python tutorial"> 
+          <p>Python</p> 
+         </div> </a> <a href="https://www.javatpoint.com/programs-list"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/programs.png" alt="List of Programs"> 
+          <p>Programs</p> 
+         </div> </a> <a href="https://www.javatpoint.com/control-system-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/control-system.png" alt="Control Systems tutorial"> 
+          <p>Control System</p> 
+         </div> </a> <a href="https://www.javatpoint.com/data-mining"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-mining.png" alt="Data Mining Tutorial"> 
+          <p>Data Mining</p> 
+         </div> </a> <a href="https://www.javatpoint.com/data-warehouse"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-warehouse.png" alt="Data Warehouse Tutorial"> 
+          <p>Data Warehouse</p> 
+         </div> </a> 
+       </div> 
+      </fieldset> 
+     </div> 
+     <br>
+     <br>
+     <div class="mobilemenu" style="clear:both"> 
+      <ins class="adPushupAds" data-adpcontrol="jrfe7" data-ver="2" data-siteid="37780" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSByZXNwb25zaXZlbW9iaWxlZm9vdGVyIC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTpibG9jayIKICAgICBkYXRhLWFkLWNsaWVudD0iY2EtcHViLTQ2OTk4NTg1NDkwMjMzODIiCiAgICAgZGF0YS1hZC1zbG90PSI4MjIyODY2MzE4IgogICAgIGRhdGEtYWQtZm9ybWF0PSJhdXRvIgogICAgIGRhdGEtZnVsbC13aWR0aC1yZXNwb25zaXZlPSJ0cnVlIj48L2lucz4KPHNjcmlwdD4KKGFkc2J5Z29vZ2xlID0gd2luZG93LmFkc2J5Z29vZ2xlIHx8IFtdKS5wdXNoKHt9KTsKPC9zY3JpcHQ+"></ins>
+      <script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script> 
+     </div>
+    </div> 
+    <div id="right"> 
+     <div id="e59d93b5-7231-4043-a19e-e7ec340efd1f" class="_ap_apex_ad"> 
+      <script>
+		var adpushup = window.adpushup = window.adpushup || {};
+		adpushup.que = adpushup.que || [];
+		adpushup.que.push(function() {
+			adpushup.triggerAd("e59d93b5-7231-4043-a19e-e7ec340efd1f");
+		});
+	</script> 
+     </div> 
+     <br>
+     <br> 
+    </div> 
+    <div class="right1024" style="float:left;margin-left:10px;margin-top:120px;"> 
+     <ins class="adPushupAds" data-adpcontrol="6d5qg" data-ver="2" data-siteid="37780" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSByaWdodDEwMjRvbmx5IC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTppbmxpbmUtYmxvY2s7d2lkdGg6MTIwcHg7aGVpZ2h0OjYwMHB4IgogICAgIGRhdGEtYWQtY2xpZW50PSJjYS1wdWItNDY5OTg1ODU0OTAyMzM4MiIKICAgICBkYXRhLWFkLXNsb3Q9IjIxODAxMTg3MTYiPjwvaW5zPgo8c2NyaXB0PgooYWRzYnlnb29nbGUgPSB3aW5kb3cuYWRzYnlnb29nbGUgfHwgW10pLnB1c2goe30pOwo8L3NjcmlwdD4K"></ins>
+     <script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script> 
+     <br>
+     <br> 
+     <ins class="adPushupAds" data-adpcontrol="6d5qg" data-ver="2" data-siteid="37780" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSByaWdodDEwMjRvbmx5IC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTppbmxpbmUtYmxvY2s7d2lkdGg6MTIwcHg7aGVpZ2h0OjYwMHB4IgogICAgIGRhdGEtYWQtY2xpZW50PSJjYS1wdWItNDY5OTg1ODU0OTAyMzM4MiIKICAgICBkYXRhLWFkLXNsb3Q9IjIxODAxMTg3MTYiPjwvaW5zPgo8c2NyaXB0PgooYWRzYnlnb29nbGUgPSB3aW5kb3cuYWRzYnlnb29nbGUgfHwgW10pLnB1c2goe30pOwo8L3NjcmlwdD4K"></ins>
+     <script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script> 
+    </div> 
+    <br> 
+    <div id="footer" style="clear:both;width:100%"> 
+     <div style="width:100%;margin-top:10px;color:white;background-image: linear-gradient(145deg,#52a2fc,#480fcc);line-height:28px;"> 
+      <h2 style="padding:60px 0px 0px 20px">Javatpoint Services</h2> 
+      <p style="padding:0px 20px 0px 20px">JavaTpoint offers too many high quality services. Mail us on <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b9d1cbf9d3d8cfd8cdc9d6d0d7cd97dad6d4">[email&nbsp;protected]</a>, to get more information about given services. </p>
+      <ul class="points"> 
+       <li>Website Designing</li>
+       <li>Website Development</li>
+       <li>Java Development</li>
+       <li>PHP Development</li>
+       <li>WordPress</li>
+       <li>Graphic Designing</li>
+       <li>Logo</li>
+       <li>Digital Marketing</li>
+       <li>On Page and Off Page SEO</li>
+       <li>PPC</li>
+       <li>Content Development</li>
+       <li>Corporate Training</li>
+       <li>Classroom and Online Training</li>
+       <li>Data Entry</li>
+      </ul> 
+      <p style="padding-bottom:60px"></p>
+     </div>
+     <div style="width:100%;margin-top:-20px;color:white;background-image: linear-gradient(145deg,#dc8140,#b16b15);line-height:28px;"> 
+      <h2 style="padding:60px 0px 0px 20px">Training For College Campus</h2> 
+      <p style="padding:0px 20px 60px 20px">JavaTpoint offers college campus training on Core Java, Advance Java, .Net, Android, Hadoop, PHP, Web Technology and Python. Please mail your requirement at <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f69e84b69c9780978286999f9882d895999bd8">[email&nbsp;protected]</a> <br>Duration: 1 week to 2 week<br></p>
+     </div>
+     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+     <script>var _gaq=_gaq || []; _gaq.push(['_setAccount', 'UA-24880427-1']); _gaq.push(['_trackPageview']); (function(){var ga=document.createElement('script'); ga.type='text/javascript'; ga.async=true; ga.src=('https:'==document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js'; var s=document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();</script>
+     <div style="margin-top:5px;text-align:center"> <sup style="font:16px arial;">Like/Subscribe us for latest updates or newsletter </sup> <a target="_blank" rel="nofollow noopener" href="https://feeds.feedburner.com/javatpointsonoo"><img src="https://static.javatpoint.com/images/social/rss1.png" alt="RSS Feed"></a> <a target="_blank" rel="nofollow noopener" href="https://feedburner.google.com/fb/a/mailverify?uri=javatpointsonoo"><img src="https://static.javatpoint.com/images/social/mail1.png" alt="Subscribe to Get Email Alerts"></a> <a rel="nofollow noopener" target="_blank" href="https://www.facebook.com/javatpoint"><img src="https://static.javatpoint.com/images/social/facebook1.jpg" alt="Facebook Page"></a> <a target="_blank noopener" rel="nofollow" href="https://twitter.com/pagejavatpoint"><img src="https://static.javatpoint.com/images/social/twitter1.png" alt="Twitter Page"></a> <a target="_blank" rel="nofollow noopener" href="https://www.youtube.com/channel/UCUnYvQVCrJoFWZhKK3O2xLg"><img src="https://static.javatpoint.com/images/youtube32.png" alt="YouTube"></a> <a target="_blank" rel="nofollow noopener" href="https://javatpoint.blogspot.com"><img src="https://static.javatpoint.com/images/social/blog.png" alt="Blog Page"></a> 
+     </div>
+     <footer class="footer1">
+      <div class="column4">
+       <h3>Learn Tutorials</h3><a href="https://www.javatpoint.com/java-tutorial">Learn Java</a><a href="https://www.javatpoint.com/data-structure-tutorial">Learn Data Structures</a><a href="https://www.javatpoint.com/c-programming-language-tutorial">Learn C Programming</a><a href="https://www.javatpoint.com/cpp-tutorial">Learn C++ Tutorial</a><a href="https://www.javatpoint.com/c-sharp-tutorial">Learn C# Tutorial</a><a href="https://www.javatpoint.com/php-tutorial">Learn PHP Tutorial</a><a href="https://www.javatpoint.com/html-tutorial">Learn HTML Tutorial</a><a href="https://www.javatpoint.com/javascript-tutorial">Learn JavaScript Tutorial</a><a href="https://www.javatpoint.com/jquery-tutorial">Learn jQuery Tutorial</a><a href="https://www.javatpoint.com/spring-tutorial">Learn Spring Tutorial</a>
+      </div>
+      <div class="column4">
+       <h3>Our Websites</h3><a href="https://www.javatpoint.com">Javatpoint.com</a><a rel="dofollow noopener" target="_blank" href="https://www.hindi100.com">Hindi100.com</a><a rel="dofollow noopener" target="_blank" href="https://www.lyricsia.com">Lyricsia.com</a><a rel="nofollow noopener" target="_blank" href="https://www.quoteperson.com">Quoteperson.com</a><a rel="nofollow noopener" target="_blank" href="https://www.jobandplacement.com">Jobandplacement.com</a>
+      </div>
+      <div class="column4">
+       <h3>Our Services</h3>
+       <p>Website Development</p>
+       <p>Android Development</p>
+       <p>Website Designing</p>
+       <p>Digital Marketing</p>
+       <p>Summer Training</p>
+       <p>Industrial Training</p>
+       <p>College Campus Training</p>
+      </div>
+      <div class="column4">
+       <h3>Contact</h3>
+       <p>Address: G-13, 2nd Floor, Sec-3</p>
+       <p>Noida, UP, 201301, India</p>
+       <p>Contact No: 0120-4256464, 9990449935</p><a href="https://www.javatpoint.com/contact-us">Contact Us</a> <a href="https://www.javatpoint.com/subscribe.jsp">Subscribe Us</a> <a href="https://www.javatpoint.com/privacy-policy">Privacy Policy</a><a href="https://www.javatpoint.com/sitemap.xml">Sitemap</a>
+       <br><a href="https://www.javatpoint.com/sonoo-jaiswal">About Me</a>
+      </div>
+     </footer>
+     <footer class="footer2">
+      <p>© Copyright 2011-2021 www.javatpoint.com. All rights reserved. Developed by JavaTpoint.</p>
+     </footer> 
+     <div id="bot-root"></div> 
+     <script> 
+ (function() {
+ var e = document.createElement('script');
+ e.src = 'https://app.pushbrothers.com/js/notification-bot.js?cnfg=a3cc04a1-8471-450e-b01e-c9d752b16eb0';
+ document.getElementById('bot-root').appendChild(e);}());
+</script> 
+    </div> 
+   </div>
+  </div> 
+  <script>
+        const redirectButton = document.querySelector('#redirect');
+        redirectButton.addEventListener('click', () => {
+          const form = document.createElement('form');
+          form.method = 'POST';
+          const textArea = document.createElement('textarea');
+          const language = document.querySelector('#jtp_compiler').classList[0];
+          textArea.name = 'code';
+          textArea.value = document.querySelector('#jtp_compiler').textContent;
+          form.appendChild(textArea);
+          document.body.appendChild(form);
+          form.action = `https://onlinecompiler.javatpoint.com/`;
+          form.submit();
+        });
+      </script> 
+  <script src="https://static.javatpoint.com/js/shcoreandbrush.js"></script>
+  <script> dp.SyntaxHighlighter.HighlightAll('code'); </script> 
+  <script src="https://static.javatpoint.com/lazysizes.min.js" async></script>  
+ </body>
+</html>

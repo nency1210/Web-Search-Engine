@@ -1,0 +1,921 @@
+https://www.javatpoint.com/programs-list::programs list | programming examples - javatpoint ⇧ scroll to top home programs c c++ c# java servlet jsp ejb struts2 mail hibernate spring android design p quiz projects interview q comment forum training programs basic programs number programs array programs matrix programs pattern programs string programs tree programs singly linked list circular linked list doubly linked list programs list | programming examples a list of programs or programming examples on c, c++, java, c#, python and php are given below. basic programs number programs array programs matrix programs pattern programs string programs tree programs singly linked list programs circular linked list programs doubly linked list programs miscellaneous basic programs 1) program to calculate the area of rectangle input: 
+width = 10, height = 5
+ output: area of rectangle = width * height
+                  = 10 * 5
+                  = 50
+ 2) program to calculate the volume of sphere input: 
+radius = 48, pie = 3.14
+ output: volume = (4.0/3.0) * pie * (radius * radius * radius); 
+       = (4.0/3.0) * 3.14 * 48 * 48 * 48
+       = 463433.132812 
+ 3) program to find the area of the pentagon input: 
+s = 13
+a = 5;
+ output: area of pentagon = (5.0/2.0) * s * a
+                 = (5.0/2.0) * 13 * 5
+                 = 162.5
+ 4) program to find the area of parallelogram input: 
+base = 4;
+height = 18;
+ output: area of parallelogram = base * height;
+                      = 4 * 18
+                      = 72
+ 5) program to find the area of square input: 
+a = 13
+ output: area of square = a2 
+               = 132
+               = 169
+ 6) program to find the surface area of sphere input: 
+radius = 37, pie = 3.14
+ output: volume = 4 * pie * (radius * radius);
+       = 4 * 3.14 * 37 * 37
+       = 17210.285714
+ 7) program to find the volume of cone input: 
+radius = 38, height = 35, pie = 3.14
+ output: volume = pie * radius * radius * height/3;
+       = 3.14 * 38 * 38 * 35/3
+       = 48766.666667
+ 8) program to find the volume of the cube input: 
+side = 4
+ output: volume of cube = side3
+               = 43
+               = 64
+ 9) program to find the volume of cylinder input: 
+radius (r) = 38 , height (h) = 35
+ output: volume of the cylinder = pie * radius2 * height
+                       = 3.14 * 38* 38 * 35
+                       = 146300.000000
+ 10) program to calculate the cgpa percentage cgpa percentage is = (float)(9.5 * (cgpa)); input: 
+cgpa = (grades in all subjects) / (total number of subjects).
+english = 9.1;
+hindi = 8.5;
+maths = 9.5;
+science =9.6;
+socialstudy = 8.6;
+cgpa = (9.1+8.5+9.5+9.6+8.6)/(5.0);
+ output: cgpa percentage is = 86.070000
+ 11) program to convert celsius into fahrenheit temperature in fahrenheit = ((celsius * 9) / 5) + 32 input: 
+celsius= 12
+ output: temperature in fahrenheit = 53.6
+ 12) program to convert days into years input: 
+days= 799;
+ output: number of years = days / 365;
+                = 799 / 365
+                = 2
+ 13) program to convert fahrenheit into celsius temperature in celsius = ((fahrenheit-32)*5)/9 input: 
+fahrenheit = 54
+ output: temperature in celsius= ((54-32)*5)/9 = 12.22222
+ 14) program to find the area of an equilateral triangle input: 
+side (a) = 5
+ output: area of equilateral triangle = ( 1.73 * a * a) / 4
+                             = ( 1.73 * 5 * 5) / 4
+                             = 10.81250
+ 15) program to find the area of a triangle input: 
+b = 5
+h = 12
+ output: area of triangle = (b * h) / 2
+                 = (5 * 12) / 2
+                 = 30.0
+ 16) program to find the area of the right angle triangle input: 
+b = 5
+h = 8
+ output: area of triangle = (b * h) / 2
+                 = (5 * 8) / 2
+                 = 20.0
+ 17) program to find the perimeter of the rectangle input: 
+a = c = 5
+b = d = 4
+ output: perimeter of rectangle = 2 * ( a + b);
+                       = 2 * (5 + 4)
+                       = 18.00000
+ 18) program to find the simple interest simple interest = (p × r × t) / 100 input: 
+p = 34000, r = 30,t = 5
+where p = principal amount, r = rate per annum, t = time (years)
+ output: simple interest = 51000.000
+ 19) program to find the surface area of a cube surface area of cube = 6 ( a * a ) input: 
+b = 5, h = 5
+a (side) = length = breadth = height
+ output: surface area of cube = 6 * 5 * 5=150.00000
+ 20) program to find the surface area of cuboid input: 
+l= 2, w = 3, h = 5;
+where l = length, w = width and h = height.
+ output: surface area ofcuboid = 2 * (l * w+ w * h + h * l)
+                      = 2 * (2 * 3 + 3 * 5 + 5 * 2)
+                      = 62.00000
+ 21) program to find the surface area of the cylinder surface area of cylinder = 2 π (r + h) input: 
+r = 2.0, h = 5.0 
+ output: surface area of cylinder = 2 π (r + h)
+here, r = radius, h = height, and π ( pie ) = 3.14
+        = 2 * 3.14 * ( 2.0 + 5.0)
+        = 44.00000
+ number programs 1) program to check disarium number input: 
+num = 175
+ output: 11 + 72 + 53 = 1 + 49 + 125 = 175
+175 is a disarium number
+ 2) program to check happy number input: 
+num = 82
+ output: 82 + 22 = 68
+62 + 82 = 100
+12 + 02 + 02 = 1
+82 is a happy number number
+ 3) program to check harshad number a number is said to be the harshad number if it is divisible by the sum of its digit. input: 
+num = 156
+ output: 156 is a harshad number
+ 4) program to print all disarium numbers between 1 to 100 input: 
+range(1, 101)
+ output: disarium numbers between 1 and 100 are: 1 2 3 4 5 6 7 8 9 89
+ 5) program to print all happy numbers between 1 to 100 input: 
+range(1, 101)
+ output: list of happy numbers between 1 and 100: 1 7 10 13 19 23 28 31 32 44 49 68 70 79 82 86 91 94 97 100
+ 6) program to print all pronic numbers between 1 to 100 a number is said to be pronic number if it is a product of two consecutive numbers. for examples: 6 = 2 x 3 72 = 8 x 9 input: 
+range(1, 101)
+ output: pronic numbers between 1 and 100: 2 6 12 20 30 42 56 72 90
+ 7) program to determine whether a given number is a deficient number 8) program to determine whether a given number is an abundant number 9) program to determine whether a given number is a twisted prime number 10) program to print all abundant numbers between 1 to 100 11) program to print all kaprekar numbers between 1 to 100 12) program to print all prime numbers between 1 to 100 13) program to print the average of n numbers 14) program to print the combination (ncr) of the given number 15) program to print the first 10 prime numbers 16) program to print the permutation (npr) of the given number 17) program to print the sum of digits without using modulus 18) program to swap two numbers 19) program to swap two numbers without using the third variable array programs 1) program to copy all the elements of one array into another array input: 
+arr1 = [1, 2, 3, 4, 5];
+arr2 = [none] * len(arr1);
+ output: elements of original array: 1 2 3 4 5
+elements of new array: 1 2 3 4 5
+ 2) program to find the frequency of each element of an array input: 
+arr = [1, 2, 8, 3, 2, 2, 2, 5, 1]
+ output: element | frequency
+       1|2
+       2|4
+       8|1
+       3|1
+       5|1
+ 3) program to left rotate the elements of an array input: 
+arr = [1, 2, 3, 4, 5]
+here, n determine the number of times an array should be rotated
+n = 3
+ output: original array: 1 2 3 4 5
+array after left rotation: 4 5 1 2 3
+ 4) program to print the duplicate elements of an array input: 
+arr = [1, 2, 3, 4, 2, 7, 8, 8, 3];
+ output: duplicate elements in given array:
+2
+3
+8
+ 5) program to print the elements of an array input: 
+arr = [1, 2, 3, 4, 5]
+ output: elements of given array: 1 2 3 4 5
+ 6) program to print the elements of an array in reverse order input: 
+arr = [1, 2, 3, 4, 5]
+ output: original array: 1 2 3 4 5
+array in reverse order: 5 4 3 2 1
+ 7) program to print the elements of an array present on even position input: 
+arr = [1, 2, 3, 4, 5]
+ output: elements of given array present on even position:
+2
+4
+ 8) program to print the elements of an array present on odd position input: 
+arr = [1, 2, 3, 4, 5]
+ output: elements of given array present on odd position:
+1
+3
+5
+ 9) program to print the largest element present in an array input: 
+arr = [25, 11, 7, 75, 56]
+ output: largest element present in given array: 75
+ 10) program to print the number of elements present in an array input: 
+arr = [1, 2, 3, 4, 5]
+ output: number of elements present in given array: 5
+ 11) program to print the smallest element present in an array input: 
+arr = [25, 11, 7, 75, 56]
+ output: smallest element present in given array: 7
+ 12) program to print the sum of all the elements of an array input: 
+arr = [1, 2, 3, 4, 5]
+sum = 0
+ output: sum of all the elements of an array: 15
+ 13) program to right rotate the elements of an array input: 
+arr = [1, 2, 3, 4, 5]
+here, n determine the number of times an array should be rotated
+      n = 3
+ output: original array: 1 2 3 4 5
+array after right rotation: 3 4 5 1 2
+ 14) program to sort the elements of an array in ascending order input: 
+arr = [5, 2, 8, 7, 1]
+ output: elements of original array: 5 2 8 7 1
+elements of array sorted in ascending order: 1 2 5 7 8
+ 15) program to sort the elements of an array in descending order input: 
+arr = [5, 2, 8, 7, 1]
+ output: elements of original array: 5 2 8 7 1
+elements of array sorted in descending order: 8 7 5 2 1
+ matrix programs 1) program to calculate the addition of 2 matrices input: 
+matrix a = [1, 0, 1]
+           [4, 5, 6]
+           [1, 2, 3]
+ 
+matrix b = [1, 1, 1]
+           [2, 3, 1]
+           [1, 5, 1]
+ output: addition of two matrices: [2 1 2]
+                          [6 8 7]
+                          [2 7 4]
+ 2) program to calculate the subtraction of 2 matrices input: 
+matrix a = [4, 5, 6]
+           [3, 4, 1]
+           [1, 2, 3]
+
+matrix b = [2, 0, 3]
+           [2, 3, 1]
+           [1, 1, 1]
+ output: subtraction of two matrices: [2 5 3]
+                             [1 1 0]
+                             [0 1 2]
+ 3) program to determine whether a given matrix is an identity matrix input: 
+matrix a =[1, 0, 0]
+          [0, 1, 0]
+          [0, 0, 1]
+ output: given matrix is an identity matrix
+ 4) program to determine whether a given matrix is a sparse matrix input: 
+matrix a = [4, 0, 0]
+           [0, 5, 0]
+           [0, 0, 6]
+ output: given matrix is a sparse matrix
+ 5) program to determine whether two matrices are equal input: 
+matrix a = [1, 2, 3]
+           [8, 4, 6]
+           [4, 5, 7]
+
+matrix b = [1, 2, 3]
+           [8, 4, 6]
+           [4, 5, 7]
+ output: matrices are equal
+ 6) program to display the lower triangular matrix input: 
+matrix a = [1, 2, 3]
+           [8, 6, 4]
+           [4, 5, 6]
+ output: lower triangular matrix: [1 0 0]
+                         [8 6 0]
+                         [4 5 6]
+ 7) program to display the upper triangular matrix input: 
+matrix a = [1, 2, 3]
+           [8, 6, 4]
+           [4, 5, 6]
+ output: upper triangular matrix: [1 2 3]
+                         [0 6 4]
+                         [0 0 6]
+ 8) program to find the frequency of odd & even numbers in the given matrix input: 
+matrix a = [4, 1, 3]
+           [3, 5, 7]
+           [8, 2, 6]
+ output: frequency of odd numbers: 5
+frequency of even numbers: 4
+ 9) program to find the product of two matrices input: 
+matrix a = [1, 3, 2]
+           [3, 1, 1]
+           [1, 2, 2]
+
+matrix b = [2, 1, 1]
+           [1, 0, 1]
+           [1, 3, 1]
+ output: product of two matrices: [7 7 6]
+                         [8 6 5]
+                         [6 7 5]
+ 10) program to find the sum of each row and each column of a matrix input: 
+matrix a = [1, 2, 3]
+           [4, 5, 6]
+           [7, 8, 9]
+ output: sum of 1 row: 6
+sum of 2 row: 15
+sum of 3 row: 24
+sum of 1 column: 12
+sum of 2 column: 15
+sum of 3 column: 18
+ 11) program to find the transpose of a given matrix input: 
+matrix a = [1, 2, 3]
+           [4, 5, 6]
+           [7, 8, 9]
+ output: transpose of given matrix: [1 4 7]
+                           [2 5 8]
+                           [3 6 9]
+ string programs 1) program to count the total number of punctuation characters exists in a string input: 
+char str [] = "good morning! mr. james potter. had your breakfast?"
+ output: if any character in the string is matched with ('!', "," ,"\'" ,";" ,"\"", ".", "-" ,"?"), increment the count by 1. total number of punctuation characters exists in string: 4
+ 2) program to count the total number of vowels and consonants in a string input: 
+str = "this is a really simple sentence"
+ output: vowels = a, e, i, o, u
+consonants = b, c, d, f, g, h, j, k, l, m, n, p, q, r, s, t, v, w, x, y, z
+ 3) program to determine whether two strings are the anagram input: two strings are called the anagram if they contain the same characters. however, the order or sequence of the characters can be different. str1 = "grab";
+str2 = "brag";
+ output: both the strings are anagram.
+ 4) program to divide a string in 'n' equal parts input: 
+str = "aaaabbbbcccc"
+ output: equal parts of given string are
+aaaa
+bbbb
+cccc
+ 5) program to find all the permutations of a string input: 
+char str[] = "abc" 
+ output: all the permutations of the string are:
+abc
+acb
+bac
+bca
+cba
+cab
+ 6) program to find all possible subsets of a string input: 
+str = "abc"
+ output: all subsets for given string are:
+a
+ab
+abc
+b
+bc
+c
+ 7) program to find the longest repeating sequence in a string input: 
+str = "acbdfghybdf"
+ output: longest repeating sequence: bdf
+ 8) program to remove all the white spaces from a string input: 
+str1 = "remove white spaces"
+ output: string after removing all the white spaces : removewhitespaces
+ 9) program to replace lower-case characters with upper-case and vice versa input: 
+str1 = "great power"
+ output: string after case conversion : great power
+ 10) program to replace the spaces of a string with a specific character input: 
+char string[] = "once in a blue moon"
+char ch = '-'
+ output: string after replacing spaces with given character: once-in-a-blue-moon
+ 11) program to count the total number of characters in a string input: 
+string = "the best of both worlds"
+ output: total number of characters in a string: 19
+ 12) program to count the total number of words in a string input: 
+sentence = "beauty lies in the eyes of beholder"
+ output: total number of words in the given string: 7
+ 13) program to determine whether a given string is palindrome input: 
+string = "kayak"
+ output: given string is palindrome.
+ 14) program to determine whether one string is a rotation of another input: 
+str1 = "abcde"
+str2 = "deabc"
+ output: second string is a rotation of first string.
+ 15) program to find maximum and minimum occurring character in a string input: 
+string = "grass is greener on the other side"
+ output: minimum occurring character: a
+maximum occurring character: e
+ 16) program to find reverse of a string input: 
+string = "dream big"
+ output: original string: dream big
+reverse of given string: gib maerd
+ 17) program to find the duplicate characters in a string input: 
+string = "great responsibility"
+ output: duplicate characters in a given string:
+r
+e
+t
+s
+i
+ 18) program to find the duplicate words in a string input: 
+string = "big black bug bit a big black dog on his big black nose"
+ output: duplicate words in a given string:
+big
+black
+ 19) program to find the frequency of characters input: 
+string = "picture perfect"
+ output: characters and their corresponding frequencies
+p-2
+i-1
+c-2
+t-2
+u-1
+r-2
+e-3
+f-1
+ 20) program to find the largest and smallest word in a string input: 
+string = "hardships often prepare ordinary people for an extraordinary destiny"
+ output: smallest word: an
+largest word: extraordinary
+ 21) program to find the most repeated word in a text file input: 
+file = open("data.txt", "r")
+ data.txt file content: the term "computer" is derived from latin word "computare" which means to calculate. computer is a programmable electronic device. computer accepts raw data as input and processes it with set of instructions to produce result as output. the history of computer begins with the birth of abacus which is believed to be the first computer. output: most repeated word: computer
+ 22) program to find the number of words in the given text file input: 
+file = open("data.txt", "r")
+ data.txt file content: the term "computer" is derived from latin word "computare" which means to calculate. computer is a programmable electronic device. computer accepts raw data as input and processes it with set of instructions to produce result as output. the history of computer begins with the birth of abacus which is believed to be the first computer. output: number of words present in given file: 117
+ 23) program to print smallest and biggest possible palindrome word in a given string input: 
+string = "wow you own kayak"
+ output: smallest palindromic word: wow
+biggest palindromic word: kayak
+ 24) program to separate the individual characters from a string input: 
+string = "characters"
+ output: individual characters from given string: characters
+ 25) program to swap two string variables without using third or temp variable input: 
+str1 = "good";
+str2 = "morning";
+ output: strings before swapping: good morning
+strings after swapping: morning good
+ pattern programs 1) program to print following pattern 2) program to print following pattern 5432* 543*1 54*21 5*321 *4321 3) program to print following pattern *000*000* 0*00*00*0 00*0*0*00 000***000 4) program to print following pattern 1 2 4 3 6 9 4 8 12 16 5 10 15 20 25 6 12 18 24 30 36 7 14 21 28 35 42 49 8 16 24 32 40 48 56 64 9 18 27 36 45 54 63 72 81 10 20 30 40 50 60 70 80 90 100 5) program to print following pattern 6) program to print following pattern 7) program to print following pattern 12344321 123**321 12****21 1******1 8) program to print following pattern 9) program to print following pattern 0 909 89098 7890987 678909876 56789098765 4567890987654 345678909876543 23456789098765432 1234567890987654321 10) program to print following pattern 11) program to print following pattern a b b c c c d d d d e e e e e 12) program to print following pattern 13) program to print following pattern 1 2 3 4 5 1 2 3 4 1 2 3 1 2 1 14) program to print following pattern 15) program to print following pattern 16) program to print following pattern 17) program to print following pattern 1 2 3 4 5 6 7 8 9 10 18) program to print following pattern 1 1 2 1 2 3 1 2 3 4 1 2 3 4 5 19) program to print following pattern tree programs 1) program to calculate the difference between the sum of the odd level and even level nodes of a binary tree input: output: oddlevelsum = 1 + 4 + 5 + 6 = 16
+evenlevelsum = 2 + 3 = 5
+difference = |16 - 5| = 11
+ 2) program to construct a binary search tree and perform deletion and inorder traversal input: output: binary search tree after insertion: 10 30 50 60 70 90
+binary search tree after deleting node 90: 10 30 50 60 70
+binary search tree after deleting node 30: 10 50 60 70
+binary search tree after deleting node 50: 10 60 70
+ 3) program to convert binary tree to binary search tree input: output: inorder representation of binary tree: 4 2 5 1 6 3 7
+inorder representation of resulting binary search tree: 1 2 3 4 5 6 7
+ 4) program to determine whether all leaves are at same level input: output: all leaves are at same level
+ 5) program to determine whether two trees are identical input: output: both the binary trees are identical
+ 6) program to find maximum width of a binary tree input: output: maximum width of the binary tree: 4
+ 7) program to find the largest element in a binary tree input: output: largest element in the binary tree: 74
+ 8) program to find the maximum depth or height of a tree input: output: maximum height of given binary tree: 5
+ 9) program to find the nodes which are at the maximum distance in a binary tree input: output: nodes which are at maximum distance:
+( 4,9 )
+( 5,9 )
+ 10) program to find the smallest element in a binary tree input: output: smallest element in the binary tree: 1
+ 11) program to find the sum of all the nodes of a binary tree input: output: sum of all nodes of binary tree: 31
+ 12) program to find the total number of possible binary search trees with n keys input: output: total number of possible binary search trees with given key: 42
+ 13) program to implement binary tree using the linked list input: output: binary tree after insertion: 1
+binary tree after insertion: 2 1 3
+binary tree after insertion: 4 2 5 1 3
+binary tree after insertion: 4 2 5 1 6 3 7
+ 14) program to search a node in a binary tree input: search for node 5 in the binary tree output: element is present in the binary tree
+ singly linked list programs 1) singly linked list examples input: 
+head node = 100
+second node = 200
+third node = 300
+ output: 100
+200
+300
+ 2) program to create and display a singly linked list input: 
+#add nodes to the list
+slist.addnode(1);
+slist.addnode(2);
+slist.addnode(3);
+slist.addnode(4);
+ output: nodes of singly linked list: 1 2 3 4
+ 3) program to create a singly linked list of n nodes and count the number of nodes input: 
+#add nodes to the list
+slist.addnode(1);
+slist.addnode(2);
+slist.addnode(3);
+slist.addnode(4);
+ output: nodes of singly linked list: 1 2 3 4
+count of nodes present in the list: 4
+ 4) program to create a singly linked list of n nodes and display it in reverse order input: 
+#add nodes to the list
+slist.addnode(1);
+slist.addnode(2);
+slist.addnode(3);
+slist.addnode(4);
+ output: original list: 1 2 3 4
+reversed list: 4 3 2 1
+ 5) program to delete a new node from the beginning of the singly linked list input: 
+#add nodes to the list
+slist.addnode(1);
+slist.addnode(2);
+slist.addnode(3);
+slist.addnode(4);
+ output: original list: 1 2 3 4
+updated list: 2 3 4
+updated list: 3 4
+updated list: 4
+updated list: list is empty
+ 6) program to delete a new node from the middle of the singly linked list input: 
+#add nodes to the list
+slist.addnode(1);
+slist.addnode(2);
+slist.addnode(3);
+slist.addnode(4);
+ output: original list: 1 2 3 4
+updated list: 1 3 4
+updated list: 1 4
+updated list: 4
+updated list: list is empty
+ 7) program to delete a node from the end of the singly linked list input: 
+#add nodes to the list
+slist.addnode(1);
+slist.addnode(2);
+slist.addnode(3);
+slist.addnode(4);
+ output: original list: 1 2 3 4
+updated list: 1 2 3
+updated list: 1 2
+updated list: 1
+updated list: list is empty
+ 8) program to determine whether a singly linked list is the palindrome input: 
+#add nodes to the list
+slist.addnode(1);
+slist.addnode(2);
+slist.addnode(3);
+slist.addnode(2); 
+slist.addnode(1); 
+ output: nodes of the singly linked list: 1 2 3 2 1
+given singly linked list is a palindrome
+ 9) program to find the maximum and minimum value node from a singly linked list input: 
+#add nodes to the list
+slist.addnode(5);
+slist.addnode(8);
+slist.addnode(1);
+slist.addnode(6);
+ output: minimum value node in the list: 1
+maximum value node in the list: 8
+ 10) program to insert a new node at the middle of the singly linked list input: 
+#adds data to the list
+slist.addnode(1);
+slist.addnode(2);
+#inserting node '3' in the middle
+slist.addinmid(3);
+#inserting node '4' in the middle
+slist.addinmid(4); 
+ output: original list: 1 2 
+updated list: 1 3 2 
+updated list: 1 3 4 2 
+ 11) program to insert a new node at the beginning of the singly linked list input: 
+#adding 1 to the list
+slist.addatstart(1); 
+#adding 2 to the list
+slist.addatstart(2);
+#adding 3 to the list
+slist.addatstart(3);
+#adding 4 to the list
+slist.addatstart(4);
+ output: adding nodes to the start of the list: 1
+adding nodes to the start of the list: 2 1
+adding nodes to the start of the list: 3 2 1
+adding nodes to the start of the list: 4 3 2 1
+ 12) program to insert a new node at the end of the singly linked list input: 
+#adding 1 to the list
+slist.addatend(1);
+#adding 2 to the list
+slist.addatend(2);
+#adding 3 to the list
+slist.addatend(3);
+#adding 4 to the list
+slist.addatend(4);
+ output: adding nodes to the end of the list: 1
+adding nodes to the end of the list: 1 2
+adding nodes to the end of the list: 1 2 3
+adding nodes to the end of the list: 1 2 3 4
+ 13) program to remove duplicate elements from a singly linked list input: 
+#adds data to the list
+slist.addnode(1);
+slist.addnode(2);
+slist.addnode(3);
+slist.addnode(2);
+slist.addnode(2);
+slist.addnode(4);
+slist.addnode(1);
+ output: originals list: 1 2 3 2 2 4 1
+list after removing duplicates: 1 2 3 4
+ 14) program to search an element in a singly linked list input: 
+#add nodes to the list
+slist.addnode(1);
+slist.addnode(2);
+slist.addnode(3);
+slist.addnode(4); 
+#search for node 2 in the list
+slist.searchnode(2);
+#search for the nodein the list
+slist.searchnode(7);
+ output: element is present in the list at the position : 2
+element is not present in the list
+ 15) program to sort the elements of the singly linked list input: 
+#adds data to the list
+slist.addnode(9);
+slist.addnode(7);
+slist.addnode(2);
+slist.addnode(5);
+slist.addnode(4);
+ output: original list: 9 7 2 5 4
+sorted list: 2 4 5 7 9
+ 16) program to swap nodes in a singly linked list without swapping data input: 
+#add nodes to the list
+slist.addnode(1);
+slist.addnode(2);
+slist.addnode(3);
+slist.addnode(4);
+slist.addnode(5);
+#swaps the node 2 with node 5
+slist.swap(2,5);
+ output: original list: 1 2 3 4 5
+list after swapping nodes: 1 5 3 4 2
+ 17) program to swap the last element of the singly linked list from the first one input: 
+#add nodes to the list
+slist.addnode(1);
+slist.addnode(2);
+slist.addnode(3);
+slist.addnode(4);
+ output: originals list: 1 2 3 4
+list after swapping the first node with last: 4 2 3 1
+ circular linked list programs 1) program to create a circular linked list of n nodes and count the number of nodes input: 
+#adds data to the list
+cl.add(1);
+cl.add(2);
+cl.add(4);
+cl.add(1);
+cl.add(2);
+cl.add(3); 
+ output: count of nodes present in circular linked list: 6
+ 2) program to create a circular linked list of n nodes and display it in reverse order input: 
+#adds data to the list
+cl.add(1);
+cl.add(2);
+cl.add(3);
+cl.add(4);
+cl.add(5);
+cl.add(6);
+ output: original list: 1 2 3 4 5 6
+reversed list: 6 5 4 3 2 1
+ 3) program to create and display a circular linked list input: 
+#adds data to the list
+cl.add(1);
+cl.add(2);
+cl.add(3);
+cl.add(4); 
+ output: nodes of the circular linked list: 1 2 3 4
+ 4) program to delete a new node from the beginning of the circular linked list input: 
+#adds data to the list
+cl.add(1);
+cl.add(2);
+cl.add(3);
+cl.add(4); 
+ output: original list:1 2 3 4
+updated list:2 3 4
+updated list:3 4
+updated list:4
+updated list: list is empty
+ 5) program to delete a new node from the end of the circular linked list input: 
+#adds data to the list
+cl.add(1);
+cl.add(2);
+cl.add(3);
+cl.add(4); 
+ output: original list:1 2 3 4
+updated list:1 2 3
+updated list:1 2
+updated list:1
+updated list: list is empty
+ 6) program to delete a new node from the middle of the circular linked list input: 
+#adds data to the list
+cl.add(1);
+cl.add(2);
+cl.add(3);
+cl.add(4); 
+ output: original list:1 2 3 4
+updated list:1 3 4
+updated list:1 4
+updated list:4
+updated list: list is empty
+ 7) program to find the maximum and minimum value node from a circular linked list input: 
+#adds data to the list
+cl.add(5);
+cl.add(20);
+cl.add(10);
+cl.add(1); 
+ output: minimum value node in the list: 1
+maximum value node in the list: 20
+ 8) program to insert a new node at the beginning of the circular linked list input: 
+#adding 1 to the list
+cl.addatstart(1); 
+#adding 2 to the list
+cl.addatstart(2); 
+#adding 3 to the list
+cl.addatstart(3); 
+#adding 4 to the list
+cl.addatstart(4);
+ output: adding nodes to the start of the list: 1
+adding nodes to the start of the list: 2 1
+adding nodes to the start of the list: 3 2 1
+adding nodes to the start of the list: 4 3 2 1
+ 9) program to insert a new node at the end of the circular linked list input: 
+#adding 1 to the list
+cl.addatend(1);
+#adding 2 to the list
+cl.addatend(2); 
+#adding 3 to the list
+cl.addatend(3); 
+#adding 4 to the list
+cl.addatend(4); 
+ output: adding nodes to the end of the list: 1
+adding nodes to the end of the list: 1 2
+adding nodes to the end of the list: 1 2 3
+adding nodes to the end of the list: 1 2 3 4
+ 10) program to insert a new node at the middle of the circular linked list input: 
+#adds data to the list
+cl.add(1);
+cl.add(2);
+cl.add(3);
+cl.add(4);
+#inserting node '5' in the middle
+cl.addinmid(5); 
+#inserting node '6' in the middle
+cl.addinmid(6); 
+ output: original list: 1 2 3 4
+updated list: 1 2 5 3 4
+updated list: 1 2 5 6 3 4
+ 11) program to remove duplicate elements from a circular linked list input: 
+#adds data to the list
+cl.add(1);
+cl.add(2);
+cl.add(3);
+cl.add(2);
+cl.add(2);
+cl.add(4); 
+ output: originals list:1 2 3 2 2 4
+list after removing duplicates:1 2 3 4
+ 12) program to search an element in a circular linked list input: 
+#adds data to the list
+cl.add(1);
+cl.add(2);
+cl.add(3);
+cl.add(4);
+#search for node 2 in the list
+cl.search(2);
+#search for node in the list
+cl.search(7);
+ output: element is present in the list at the position : 2
+element is not present in the list
+ 13) program to sort the elements of the circular linked list input: 
+#adds data to the list
+cl.add(70);
+cl.add(90);
+cl.add(20);
+cl.add(100);
+cl.add(50);
+ output: original list:70 90 20 100 50
+sorted list:20 50 70 90 100
+ doubly linked list programs 1) program to convert a given binary tree to doubly linked list input: 
+#add nodes to the binary tree
+bt.root = node(1);
+bt.root.left = node(2);
+bt.root.right = node(3);
+bt.root.left.left = node(4);
+bt.root.left.right = node(5);
+bt.root.right.left = node(6);
+bt.root.right.right = node(7);
+ output: nodes of generated doubly linked list: 4 2 5 1 6 3 7 
+ 2) program to create a doubly linked list from a ternary tree input: 
+#add nodes to the ternary tree
+tree.root = node(5);
+tree.root.left = node(10);
+tree.root.middle = node(12);
+tree.root.right = node(15);
+tree.root.left.left = node(20);
+tree.root.left.middle = node(40);
+tree.root.left.right = node(50);
+tree.root.middle.left = node(24);
+tree.root.middle.middle = node(36);
+tree.root.middle.right = node(48);
+tree.root.right.left = node(30);
+tree.root.right.middle = node(45);
+tree.root.right.right = node(60); 
+ output: nodes of the generated doubly linked list: 5 10 20 40 50 12 24 36 48 15 30 45 60 
+ 3) program to create a doubly linked list of n nodes and count the number of nodes input: 
+#add nodes to the list
+dlist.addnode(1);
+dlist.addnode(2);
+dlist.addnode(3);
+dlist.addnode(4);
+dlist.addnode(5); 
+ output: nodes of doubly linked list: 1 2 3 4 5 
+count of nodes present in the list: 5
+ 4) program to create a doubly linked list of n nodes and display it in reverse order input: 
+#add nodes to the list
+dlist.addnode(1);
+dlist.addnode(2);
+dlist.addnode(3);
+dlist.addnode(4);
+dlist.addnode(5); 
+ output: original list: 1 2 3 4 5 
+reversed list: 5 4 3 2 1 
+ 5) program to create and display a doubly linked list input: 
+#add nodes to the list
+dlist.addnode(1);
+dlist.addnode(2);
+dlist.addnode(3);
+dlist.addnode(4);
+dlist.addnode(5); 
+ output: nodes of doubly linked list: 1 2 3 4 5
+ 6) program to delete a new node from the beginning of the doubly linked list input: 
+#add nodes to the list
+dlist.addnode(1);
+dlist.addnode(2);
+dlist.addnode(3);
+dlist.addnode(4);
+dlist.addnode(5); 
+ output: original list: 1 2 3 4 5 
+updated list: 2 3 4 5 
+updated list: 3 4 5 
+updated list: 4 5 
+updated list: 5 
+updated list: list is empty
+ 7) program to delete a new node from the end of the doubly linked list input: 
+#add nodes to the list
+dlist.addnode(1);
+dlist.addnode(2);
+dlist.addnode(3);
+dlist.addnode(4);
+dlist.addnode(5); 
+ output: original list: 1 2 3 4 5 
+updated list: 1 2 3 4 
+updated list: 1 2 3 
+updated list: 1 2 
+updated list: 1 
+updated list: list is empty
+ 8) program to delete a new node from the middle of the doubly linked list input: 
+#add nodes to the list
+dlist.addnode(1);
+dlist.addnode(2);
+dlist.addnode(3);
+dlist.addnode(4);
+dlist.addnode(5); 
+ output: original list: 1 2 3 4 5 
+updated list: 1 2 4 5 
+updated list: 1 4 5 
+updated list: 1 5 
+updated list: 5 
+updated list: list is empty
+ 9) program to find the maximum and minimum value node from a doubly linked list input: 
+#add nodes to the list
+dlist.addnode(5);
+dlist.addnode(7);
+dlist.addnode(9);
+dlist.addnode(1);
+dlist.addnode(2);
+ output: minimum value node in the list: 1
+maximum value node in the list: 9
+ 10) program to insert a new node at the beginning of the doubly linked list input: 
+#adding 1 to the list
+dlist.addatstart(1);
+#adding 2 to the list
+dlist.addatstart(2);
+#adding 3 to the list
+dlist.addatstart(3);
+#adding 4 to the list
+dlist.addatstart(4);
+#adding 5 to the list
+dlist.addatstart(5);
+ output: adding a node to the start of the list: 1 
+adding a node to the start of the list: 2 1 
+adding a node to the start of the list: 3 2 1 
+adding a node to the start of the list: 4 3 2 1 
+adding a node to the start of the list: 5 4 3 2 1 
+ 11) program to insert a new node at the end of doubly linked list input: 
+#adding 1 to the list
+dlist.addatend(1);
+#adding 2 to the list
+dlist.addatend(2);
+#adding 3 to the list
+dlist.addatend(3); 
+#adding 4 to the list
+dlist.addatend(4);
+#adding 5 to the list
+dlist.addatend(5);
+ output: adding a node to the end of the list: 1 
+adding a node to the end of the list: 1 2 
+adding a node to the end of the list: 1 2 3 
+adding a node to the end of the list: 1 2 3 4 
+adding a node to the end of the list: 1 2 3 4 5
+ 12) program to insert a new node at the middle of doubly linked list input: 
+#add nodes to the list
+dlist.addnode(1);
+dlist.addnode(2);
+#adding node '3' in the middle
+dlist.addinmid(3);
+#adding node '4' in the middle
+dlist.addinmid(4);
+#adding node '5' in the middle
+dlist.addinmid(5);
+ output: original list: 1 2 
+updated list: 1 3 2 
+updated list: 1 3 4 2 
+updated list: 1 3 5 4 2 
+ 13) program to remove duplicate elements from a doubly linked list input: 
+#add nodes to the list
+dlist.addnode(1);
+dlist.addnode(2);
+dlist.addnode(3);
+dlist.addnode(2);
+dlist.addnode(2);
+dlist.addnode(4);
+dlist.addnode(5);
+dlist.addnode(3);
+ output: originals list: 1 2 3 2 2 4 5 3 
+list after removing duplicates: 1 2 3 4 5 
+ 14) program to rotate doubly linked list by n nodes input: 
+#add nodes to the list
+dlist.addnode(1);
+dlist.addnode(2);
+dlist.addnode(3);
+dlist.addnode(4);
+dlist.addnode(5);
+ output: original list: 1 2 3 4 5 
+updated list: 4 5 1 2 3 
+ 15) program to search an element in a doubly linked list input: 
+#add nodes to the list
+dlist.addnode(1);
+dlist.addnode(5);
+dlist.addnode(4);
+dlist.addnode(2);
+dlist.addnode(3);
+ output: node is present in the list at the position : 3
+node is not present in the list
+ 16) program to sort the elements of the doubly linked list input: 
+#add nodes to the list
+dlist.addnode(7);
+dlist.addnode(1);
+dlist.addnode(4);
+dlist.addnode(5);
+dlist.addnode(2);
+ output: original list: 7 1 4 5 2 
+sorted list: 1 2 4 5 7 
+ miscellaneous program to convert cm to feet and inches program to convert feet to cm program to convert feet to inches program to convert inches to cm program to convert inches to feet program to convert kilometer to cm pyramid programs in vb program to calculate volume of cone write a program to calculate the perimeter of hexagon write a program to calculate the area of rhombus write a program to calculate the surface area of cone write a program to calculate the surface area of hemisphere write a program to find the perimeter of ellipse write a program to calculate the altitude of isosceles triangle write a program to calculate the area of isosceles triangle write a program to find the volume of tetrahedron write a program to find the area of an icosahedron write a program to find the volume of octahedron write a program to find the area of tetrahedron write a program to find the surface area of the pentagonal prism write a program to find the area of the rectangular prism write a program to find the surface area of a triangular prism write a program to find the area of hexagonal prism write a program to find the volume of a hexagonal prism write a program to find the volume of the rectangular prism program to convert centimeter to millimeter program to convert centimeter to meter program to convert feet to millimeter program to convert meter to centimeter program to convert mm to cm program to convert millimeter to feet program to convert feet to m program to convert inches to meter program to convert inches to mm program to convert m to feet and inches write a program to calculate the perimeter of a rhombus write a program to find the quotient and remainder program to convert kilobytes to bytes and bits program to find the area and perimeter of the semicircle program to find the area and perimeter of trapezium program to find the type of triangle from the given coordinates program to convert hours into minutes and seconds program to convert temperature degree from celsius to kelvin write a program to find the sum of even numbers for videos join our youtube channel: join now feedback send your feedback to [email protected] help others, please share learn latest tutorials splunk spss swagger transact-sql tumblr reactjs regex reinforcement learning r programming rxjs react native python design patterns python pillow python turtle keras preparation aptitude reasoning verbal ability interview questions company questions trending technologies artificial intelligence aws selenium cloud computing hadoop reactjs data science angular 7 blockchain git machine learning devops b.tech / mca dbms data structures daa operating system computer network compiler design computer organization discrete mathematics ethical hacking computer graphics software engineering web technology cyber security automata c programming c++ java .net python programs control system data mining data warehouse javatpoint services javatpoint offers too many high quality services. mail us on [email protected], to get more information about given services. website designing website development java development php development wordpress graphic designing logo digital marketing on page and off page seo ppc content development corporate training classroom and online training data entry training for college campus javatpoint offers college campus training on core java, advance java, .net, android, hadoop, php, web technology and python. please mail your requirement at [email protected] duration: 1 week to 2 week like/subscribe us for latest updates or newsletter learn tutorialslearn javalearn data structureslearn c programminglearn c++ tutoriallearn c# tutoriallearn php tutoriallearn html tutoriallearn javascript tutoriallearn jquery tutoriallearn spring tutorial our websitesjavatpoint.comhindi100.comlyricsia.comquoteperson.comjobandplacement.com our services website development android development website designing digital marketing summer training industrial training college campus training contact address: g-13, 2nd floor, sec-3 noida, up, 201301, india contact no: 0120-4256464, 9990449935contact us subscribe us privacy policysitemap about me © copyright 2011-2021 www.javatpoint.com. all rights reserved. developed by javatpoint.

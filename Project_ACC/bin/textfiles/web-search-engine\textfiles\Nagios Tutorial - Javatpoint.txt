@@ -1,0 +1,105 @@
+https://www.javatpoint.com/nagios::nagios tutorial - javatpoint ⇧ scroll to top home java nagios c shell scripting sql html css javascript xml ajax python android quiz nagios tutorial nagios nagios tutorial what is nagios? nagios is a free and open-source software application for computer systems. it is used for monitoring the systems, networks and infrastructure. its original name was netsaint developed by ethan galstad with the group of some developers in the year 1999. this software application mainly provides the services of monitoring and alerting for switches, applications, and servers inside the devops culture. it is also used to notify the users when the things go bad, and also alerts them when the things become better. this software application is written in c language, which was mainly designed to run under the linux operating systems. but it can also run under unix and windows operating system. this software application is available in its following two variants: nagios core: the nagios is also known as a nagios core. it is an open-source product. it is released on 1st march in the year 2002. nagios xi: it is an extended version of nagios. it provides advanced components and tools for monitoring. this variant needs a software license. why nagios? following are some reasons for using the nagios software application: it is used for monitoring the performance issues of servers. it helps the users of this software application to easily find the root cause of any problem. it is also used to detect all the possible networks. we can easily maintain the issues of security and also detect the availability of the services. this application automatically fix the problems or issues when occurs. users can easily run it on any operating system. before the failure of a system, it helps you to update the infrastructure. using this application, user can quickly detect any type of infrastructure issues. it also monitors the various servers of database such as sql server, mysql. history of nagios 1996: in this year, ethan galstad creates a new application using the third-party application which is used for creating the nagios. 1998: in this year, ethan starts to build a new application using the ideas and architecture which is designed to run under linux. 1999: he releases his work which is done in the year of 1998 as a free and open-source project under the name "netsaint". he hopes that there are one dozen people who are interested in this application. 2002: in this year, he decided to rename the project name as nagios, because there was the trademark issue with the "netsaint" name. and, the plugins project of 'netsaint' is also moved to 'nagios' plugins project. 2005: in the june month of this year, the nagios project becomes the sourceforge.net project. 2007: in this year, linuxworld.com rates the nagios project in the enterprise as one of the top 5 open security tools. 2009: in this year, nagios is renamed as nagios core, and the enterprises of nagios release the first commercial version of nagios as nagios xi. 2011: in this year, nagios bpi is released for monitoring the process of a business. and, the webhostingsearch.com awarded nagios as a "best web tool". 2013: in this year, the 4th version of nagios core is released. 2016: in this year, nagios core cross the 7,500,000 downloads from the sourceforge.net website. features of nagios following are the various features or characteristics of nagios application: this application provides an attractive web interface. it is highly secure and scalable. users can easily manage it. this software application perfectly stores the data, because there is a log management system. plugins of data graphing are available in this application. it defines the event handlers which are running during the services. it supports for backend database. it also supports to implement the unnecessary monitoring hosts. it has an optional web interface for viewing the notifications, log files, etc. users can also set up this application in 'distribute' system, if they require to have a monitoring system in multiple locations for monitoring. it helps the users for defining the hierarchy of networks hosts using parent hosts. it monitors the various services of a network such as smtp, http, ftp, ssh. it also monitors the various resources of a server such as memory, processor, and disk drives, system logs. users can easily monitor or detect the whole infrastructure of it and business process with a single pass. it provides the remote monitoring through ssl and ssh encrypted tunnels. architecture of nagios the architecture of nagios is built on the basis of server-client architecture. the server of nagios usually run on a host and the plugins run on the remote server/ or remote host which are to be monitored. the plugins of nagios collect the useful data and send them to the process scheduler, which displays the information over the graphical user interface (gui). following are the three main components in the architecture of nagios application: scheduler gui plugin. scheduler the scheduler is the server part of the nagios system. this component checks the plugins at regular interval and according to their results perform some action. gui it is a user interface of the nagios system, which is displayed on the web pages generated by the cgi. gui can be a button to red or green, graph, sound, etc. the button of green color becomes red color on gui, when the plugins returns an error or warning. plugins plugins is a component of the nagios system, which is configurable by the users. this component detects the services and return the results to the server of nagios. installation of nagios core in this section, we will learn how to install the nagios on linux platform. so, follow the given steps for installing the nagios: step 1: in this step, we have to install the packages apache and php which are required to be available on your ubuntu system. so, firstly type the following command in the linux terminal, which checks the latest updates: 
+sudo apt-get update
+ now, after the completion of the above command, run the following two commands one by one: 
+sudo apt-get install wget build-essential unzip openssl libssl-dev
+sudo apt-get install apache2 php libapache2-mod-php php-gd libgd-dev 
+ step 2: in this step, we have to create a new user and group for nagios in the system. so, firstly type the following command to create a new user for nagios: 
+sudo adduser nagios
+ after that, we have to create a new group and add the nagios user to the apache group. 
+sudo groupadd nagcmd
+sudo usermod -a -g nagcmd nagios
+sudo usermod -a -g nagcmd www-data
+ step 3: in this step, we have to download the latest package of nagios core from the official site. but we will first change the directory to /opt/ using the following cd command: 
+cd /opt/
+ now, download the latest package of nagios using the command which is given below: 
+wget https://assets.nagios.com/downloads/nagioscore/releases/nagios-4.4.5.tar.gz
+ now, type the following command for extracting the tar file. 
+tar xzf nagios-4.4.5.tar.gz
+ after extracting, again change the directory to nagios-4.4.5 by using the cd command: 
+cd nagios-4.4.5
+ after that, run the given command for compiling the nagios from the source code: 
+sudo ./configure --with-command-group=nagcmd
+ now, we have to install the nagios with additional requirements using the make command: 
+sudo make all
+sudo make install
+sudo make install-init
+sudo make install-daemoninit
+sudo make install-config
+sudo make install-commandmode
+sudo make install-exfoliation
+ after the successful execution of above commands, now, we will require to copy the scripts of event handler under the libexec directory using the following two commands. 
+sudo cp -r contrib/eventhandlers/ /usr/local/nagios/libexec/
+sudo chown -r nagios:nagios /usr/local/nagios/libexec/eventhandlers
+ step 4: in this step, we have to set up an authentication gateway for preventing the unauthorized access to nagios system: so, firstly we have to create a configuration file of apache for our nagios server using the following command: 
+sudo nano /etc/apache2/conf-available/nagios.conf
+ when the file is opened in terminal, then you have to type or paste the following code into your file, and then save and close the file.: 
+scriptalias /nagios/cgi-bin "/usr/local/nagios/sbin"
+<directory "/usr/local/nagios/sbin">
+   options execcgi
+   allowoverride none
+   order allow,deny
+   allow from all
+   authname "restricted area"
+   authtype basic
+   authuserfile /usr/local/nagios/etc/htpasswd.users
+   require valid-user
+</directory>
+alias /nagios "/usr/local/nagios/share"
+<directory "/usr/local/nagios/share">
+   options none
+   allowoverride none
+   order allow,deny
+   allow from all
+   authname "restricted area"
+   authtype basic
+   authuserfile /usr/local/nagios/etc/htpasswd.users
+   require valid-user
+</directory>
+ now, we need to set up an authentication gateway of apache for the default user nagiosadmin, by executing the following command. sudo htpasswd -c /usr/local/nagios/etc/htpasswd.users nagiosadmin now, we have to enable the configuration of apache and restart the apache using the following three commands: 
+sudo a2enconf nagios
+$ sudo a2enmod cgi rewrite
+$ sudo service apache2 restart
+ step 5: after the installation and configuration of nagios core services, we have to download and install the plugins of nagios using the following commands. firstly, we have to change the directory to /opt. cd /opt now, download the plugins and extract the tar file : 
+wget http://www.nagios-plugins.org/download/nagios-plugins-2.2.1.tar.gz
+tar xzf nagios-plugins-2.2.1.tar.gz
+cd nagios-plugins-2.2.1
+ now, we have to compile and install the plugins using the following commands: 
+sudo ./configure --with-nagios-user=nagios --with-nagios-group=nagios --with-openssl
+ after the execution of above command, also run the following two commands on terminal: 
+sudo make 
+sudo make install
+ step 6: now, we have to verify the installation and configuration file of nagios using the following commands: 
+sudo /usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg
+ now, type the following command for starting the nagios service: 
+service nagios start
+ now, enable the nagios to start automatically on system boot: 
+sudo systemctl enable nagios
+ step 7: it is the last step, in this we have access to the web interface of nagios using the ip address of a system. if you do not know the ip address of your system, then you check by running the following command on terminal: 
+ifconfig
+ this command gives the following output. here, below we specify the ip address: 
+docker0: flags=4099<up,broadcast,multicast>  mtu 1500
+        inet 172.17.0.1  netmask 255.255.0.0  broadcast 172.17.255.255
+        ether 02:42:4d:3e:03:3e  txqueuelen 0  (ethernet)
+        rx packets 0  bytes 0 (0.0 b)
+        rx errors 0  dropped 0  overruns 0  frame 0
+        tx packets 0  bytes 0 (0.0 b)
+        tx errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+lo: flags=73<up,loopback,running>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (local loopback)
+        rx packets 58251  bytes 5650636 (5.6 mb)
+        rx errors 0  dropped 0  overruns 0  frame 0
+        tx packets 58251  bytes 5650636 (5.6 mb)
+        tx errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+wlp1s0: flags=4163<up,broadcast,running,multicast>  mtu 1500
+        inet 192.168.43.174  netmask 255.255.255.0  broadcast 192.168.43.255
+        inet6 fe80::57fc:f515:2e2c:bf1c  prefixlen 64  scopeid 0x20<link>
+        ether e8:9e:b4:49:49:ad  txqueuelen 1000  (ethernet)
+        rx packets 1033721  bytes 889387362 (889.3 mb)
+        rx errors 0  dropped 0  overruns 0  frame 0
+        tx packets 782902  bytes 214913360 (214.9 mb)
+        tx errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+ after then, we have to type the following url on a browser. the url uses the ip address followed by /nagios like: 
+http://ip-address/nagios
+ after pressing the enter key, browser takes us to the apache authentication, here we have to enter the username and password, which are specified by us in the above steps: after the successful login, you will get the home page of nagios core as shown in the following screenshot: advantages of nagios application following are the benefits or advantages of nagios: this application is an open-source software, so we can use and edit it freely. it provides various plugins, which are free to download and develop. you can easily understand the plugin architecture. the main advantage of this application software is that, it quickly detects the failed services, servers, and the batch jobs. it also monitors or detects the failures of network and protocols quickly. this software application also handles the warnings and critical situations. we can also set up a monitoring system on various machines across multiple locations, so that they communicate all their outputs to the central nagios server. disadvantages of nagios following are the limitations or disadvantages of nagios: if we want to add the advance features of nagios, then these features are not available in its free version, but only available on the application of nagios xi, which is very expensive to use. the interface of the nagios core is confusing. this application software cannot manage the network but only monitor the network. it cannot monitor the throughput of a network. in this application, there are various files of configuration, which are very hard for the user to configure them. this nagios application treats each device as a host. for videos join our youtube channel: join now feedback send your feedback to [email protected] help others, please share learn latest tutorials splunk spss swagger transact-sql tumblr reactjs regex reinforcement learning r programming rxjs react native python design patterns python pillow python turtle keras preparation aptitude reasoning verbal ability interview questions company questions trending technologies artificial intelligence aws selenium cloud computing hadoop reactjs data science angular 7 blockchain git machine learning devops b.tech / mca dbms data structures daa operating system computer network compiler design computer organization discrete mathematics ethical hacking computer graphics software engineering web technology cyber security automata c programming c++ java .net python programs control system data mining data warehouse javatpoint services javatpoint offers too many high quality services. mail us on [email protected], to get more information about given services. website designing website development java development php development wordpress graphic designing logo digital marketing on page and off page seo ppc content development corporate training classroom and online training data entry training for college campus javatpoint offers college campus training on core java, advance java, .net, android, hadoop, php, web technology and python. please mail your requirement at [email protected] duration: 1 week to 2 week like/subscribe us for latest updates or newsletter learn tutorialslearn javalearn data structureslearn c programminglearn c++ tutoriallearn c# tutoriallearn php tutoriallearn html tutoriallearn javascript tutoriallearn jquery tutoriallearn spring tutorial our websitesjavatpoint.comhindi100.comlyricsia.comquoteperson.comjobandplacement.com our services website development android development website designing digital marketing summer training industrial training college campus training contact address: g-13, 2nd floor, sec-3 noida, up, 201301, india contact no: 0120-4256464, 9990449935contact us subscribe us privacy policysitemap about me © copyright 2011-2021 www.javatpoint.com. all rights reserved. developed by javatpoint.

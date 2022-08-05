@@ -1,0 +1,128 @@
+https://www.javatpoint.com/python-cgi-programming::python cgi programming - javatpoint ⇧ scroll to top home python cgi python opencv java sql android cloud javascript servlet jsp struts2 spring quiz projects interview q comment forum python cgi programming python cgi python cgi programming in the python cgi programming, we will learn how we can run the python script on the web; we will learn how python file can be executed as cgi script and discuss the its configuration of web-browser to python script run as a cgi. also, we will learn the following topics: what is cgi? web browsing configure apache web server for cgi using the cgi module cgi architecture diagram running first python program as cgi legends and syntaxes debugging of python cgi script functions of cgi advantages of cgi disadvantages of cgi common problems and solutions what is cgi? the word cgi is the acronyms of the "common gateway interface", which is used to define how to exchange information between the web server and a custom script. the ncsa officially manages the cgi scripts. the common gateway interface is a standard for external gateway programs to interface with the server, such as http servers. in simple words, it is the collection of methods used to set up a dynamic interaction between the server, and the client application. when a client sends a request to the webserver, the cgi programs execute that particular request and send back the result to the webserver. the users may submit the information in web browser by using html <form> or <isindex> element. there is a server's special directory called cgi-bin, where cgi script is generally stored. when a client makes a request, the server adds the additional information to request. this additional information can be the hostname of the client, the query string, the requested url, and so on. the webserver executes and sends the output to the web browser (or other client application). sometimes the server passes the data by a query string that is the part of the url. a query string may not be conventionally a hierarchical path structure such as the following link. 
+https://www.google.com/search?q=wikipedia&oq=wiki&aqs=chrome.1.69i57j0l6j5.3046j0j7&sourceid=chrome&ie=utf-8
+ python provides the cgi module, which helps to debug the script and also support for the uploading files through a html form. so here the question arises what does a python cgi script output look like? the https server gives back the output as two sections separated by a blank line. the first section grasps the number of headers, notifying the client what kind of data is following. let's understand the following example of generate the minimal header section in the python cgi programming. example - 
+# html is following
+print("content-type: text/html")   
+# blank line, end of headers
+print() 
+ in the above example, the first statement says that, the server that html code follows; the second blank line indicates the header is ended here. let's understand the following example of generating the minimal header section in the python cgi programming. example - 
+print("<title> this is a cgi script output</title>")
+print("<h1>this is my first cgi script</h1>")
+print("hello, javatpoint!")
+ web browsing before understanding the cgi concepts, we should know the internal process of web page or url when we click on the given link. the client (web browser) communicates with the http server and asks for the url i.e., filename. if the web browser finds that requested file, then it sends back to the client (web browser), otherwise it sends the error message to the client as error file. here the responsibility of the web browser to display either the received file or an error message. however, we can set a http server so that whenever user requests in a particular dictionary, then it should be sent to the client; instead, it executed as a program and whatever the result is sent back for the client to display. this process is called the common gateway interface or cgi and the programs are called cgi scripts. we can write the cgi programs as python script, perl, script, shell script, c or c++, programs, etc. configure apache web server for cgi we need to configure the apache web server in order to run the cgi script on the server. cgi architecture using the cgi module python provides the cgi module, which consists of many useful built-in functions. we can use them by importing the cgi module. 
+import cgi
+ now, we can write further script. 
+import cgi
+cgitb.enable()
+ the above script will stimulate an exception handler to show the detailed report in the web browser of occurred errors. we can also save the report by using the following script. 
+import cgitb
+cgitb.enable(display=0, logdir="/path/to/logdir")
+ the above feature of the cgi module is helpful during the script development. these reports help us to debug the script effectively. when we get the expected output, we can remove this. previously, we have discussed the users save information using the form. so how can we get that information? python provides the fieldstorage class. we can apply the encoding keyword parameter to the document if the form contains the non-ascii character. we will find the content <meta> tag in the <head> section in our html document. the fieldstorage class reads the form information from the standard input or the environment. a fieldstorage instance is the same as the python dictionary. we can use the len() and all dictionary function in the fieldstorage instance. it overlooks fields with empty string values. we can also consider the empty values using the optional keyword parameter keep_blank_values by setting true. example - 
+form = cgi.fieldstorage()
+if ("name" not in form or "addr" not in form):
+    print("<h1>error</h1>")
+    print("please enter the information in the name and address fields.")
+    return
+print("<p>name:", form["name"].value)
+print("<p>addr:", form["addr"].value)
+#next lines of code will execute here...
+ in the above example, we have used the form ["name"], here name is key. this is used to extract the value which is entered by the user. we can use the getvalue() method to fetch the string value directly. this function also takes an optional second argument as a default. if the key is not present, it returns the default value. if the submitted form data have more than one field with the same name, we should use the form.getlist() function. it returns the list of strings. look at the following code, we add the any number of username field, which is separated by commas. 
+value1 = form.getlist("username")
+usernames1 = ",".join(value)
+ if the field is uploaded file, then it can be accessed by value attribute or the getvalue() method and read that uploaded file in bytes. let's understand the following code if user upload the file. example - 
+file_item = form["userfile"]
+if (fileitem.file):
+    # it represent the uploaded file; counting lines
+    count_line = 0
+    while(true):
+        line = fileitem.file.readline()
+        if not line: break
+        count_line = count_line + 1
+ sometimes an error can interrupt the program while reading the content of the uploaded file (when a user clicks on cancel button or back button). fieldstorage class provides the done attribute to set to the value -1. if we submit the form in the "old" format, the item will be instances of the class minifieldstorage. in this class, the list, file, and filename attributes are always none. generally, the form is submitted via post and contains a query string with both fieldstorage and ministorage items. here, we are defining the fieldstorage attribute in the following table. attributes description name it represents the field name. filename it represents client side filename. file it is a file(-like) object from which we can read data as bytes. value it is a string type value. use for file uploads, reads the file and returns bytes. type it is used to display the content-type. header it is a dictionary type object which contains all headers. the fieldstorage instance uses the many built-in methods to manipulate the users' data. below are a few fieldstorage's methods. fieldstorage methods: methods description getfirst() it returns the first value received. getlist() it returns the list of the received values. getvalue() it is a dictionary get() method. keys() it is dictionary keys() method make_file() it returns a readable and writable file. running first python file as cgi in this section, we will discuss how can run the cgi program over the server. before doing this, we must ensure that our system has the following configuration- apache server python if you already have the xampp server in your system then you can skip this part. installing the xampp server xampp stands for cross-platform, apache, mysql, php, and perl, and it provides the localhost server to test or deploy websites. generally, it gives the two essential components for its installation, first is - apache that creates a local server and mysql, which we can use a database. follow the below steps to install xampp. step - 1: visit its official website (https://www.apachefriends.org/download.html) and download the latest version. step - 2: once the download is complete, click on the run button. step - 3: now, click on the next button. step - 4: next, it will display the xampp components. we can remove some of these but we will install all components of xampp, it won't affect our application. step - 6: now, our set up is ready to install, start the installation by clicking the next button. it will take away on the webserver and start installing all packages and files. step - 7: here, the download has completed. select your desire language, and then, it will display the following dashboard of xampp. python installation to install the python, visit out python installation guide (https://www.javatpoint.com/how-to-install-python). first cgi program we have created a new folder called example in xampp's htdocs folder. then, we write a python script, which includes the html tags. let's see the following directory structure and the demo.py file. demo.py 
+#c:\users\devansh sharma\appdata\local\programs\python\python37
+
+print ("content-type : text/html\r\n\r\n")
+# then come the rest hyper-text documents
+print ("<html>")
+print ("<head>")
+print ("<title>my first cgi-program </title>")
+print ("<head>")
+print ("<body>")
+print ("
+<h1>this is my cgi script </h1>
+")
+print ("</body>")
+print ("</html>")
+ and, its directory structure as follow. type the localhost/example/demo.py into the web browser. it will display the following output. note - we need to start the apache server then execute the cgi script. our script demo.py will run on host 127.0.0.1 by default. let's understand another example of cgi script. example - 2: 
+#!/usr/bin/python3
+# importing the 'cgi' module
+import cgi
+print("content-type: text/htmlrnrn")
+print("<html><body>")
+print("
+ 
+<h1> hello program! </h1>
+ 
+")
+# using the inbuilt methods
+form = cgi.fieldstorage()
+if form.getvalue("name")
+name = form.getvalue("name")
+print("
+ 
+<h1>hello" +name+"! thanks for using my script!</h1>
+ 
+")
+if form.getvalue("happy")
+print("
+ yayy! i'm happy too! 
+")
+if form.getvalue("sad")
+#!/usr/bin/python3
+# importing the 'cgi' module
+import cgi
+print("content-type: text/htmlrnrn")
+print("<html><body>")
+print("
+ 
+<h1> hello program! </h1>
+ 
+")
+# using the inbuilt methods
+form = cgi.fieldstorage()
+if form.getvalue("name")
+name = form.getvalue("name")
+print("
+ 
+<h1>hello" +name+"! thanks for using my script!</h1>
+ 
+")
+if form.getvalue("happy")
+print("
+ yayy! i'm happy too! 
+") 
+if form.getvalue("sad")
+print("
+ oh no! why are you sad? 
+")
+# using html input and forms method
+print("
+ 
+<form method='post' action='demo2.py'>
+")
+print("
+name: <input type='text' name='name' />
+") 
+print("<input type='checkbox' name='happy' /> happy")
+print("<input type='checkbox' name='sad' /> sad")
+print("<input type='submit' value='submit' />")
+print("</form")
+print("</body></html>")
+ structure of a python cgi program let's understand the following structure of the program. the cgi script must contain two sections which separated by a blank line. the header must be in the first section, and the second section will contain the kind of data that will be used during the execution of the script. legend of syntaxes when scripting a cgi program in python, take note of the following commonly used syntaxes. html header in the above program, the line content-type:text/html\r\n\r\n is a portion of the http, which we will use in our cgi programs. 
+http field name: field content
+
+for example
+content-type: text/html\r\n\r\n
+ sr. header description 1. content-type it is a mime string that is used to define the format of the file being returned. 2. expires: date it displays the valid date information. 3. location: url the url that is returned by the server. 4. last-modified: date it displays the date of the last modification of the resource. 5. content-length: n this information is used to report the estimated download time for a file. 6. set-cookies: string it is used to set the cookies by using string. cgi environment variables we should remember the following cgi environment variable along with the html syntax. let's understand the commonly used cgi environment variables. content_type - it describes the data and type of content. content_lenght - it defines the length of a query or information. http_cookie - it is used to return the cookie, which is set by the user in the current scenario. http_user_agent - this variable is used to display the type of browser that the user is currently using. remote_host - it is used to describe the path of the cgi scripts. path_info - this variable is used to define the path of the cgi script. remote_addr - we can define the ip address of the visitor by using it. request_method - it is used to make a request either via post or get. functions of python cgi programming the cgi module provides the many functions to work with the cgi. we are defining a few important functions as follows. parse(fp = none, environ = os.environ, keep_blanks_values = false, strict_parsing = false) - it is used to parse a query in the environment. we can also parse it using a file, the default for which is sys.stdin. parse_qs(qs, keep_blank_values = false, strict _parsing = false) - while this is denigrated, python uses it for urllib.parse.parse_qs() instead. parse_qsl(qs, keep_blank_value = false, strict_parsing = false) - this is also denigrated, and maintains of for backward-compatibility. parse_multipart(fb, pdict) - it is used to parse input of type multipart/form-data for file uploads. the first argument is the input file, and the second argument is a dictionary holding in the other parameters in the content-type header. parse_header(string) - it is used to parse the header. it permits the mime header into the main value and a dictionary of parameters. test() - it is used to test a cgi script, and we can use it in our program. it will generally write minimal http headers. print_form(form) - it formats a form in html. print_directory() - it formats the current directory in html. escape(s, quote = false) - the escape() function is used to convert characters '<', '>', and '&' in the string's to html safe sequence. debugging cgi scripts first, we need to check the trivial installation error. most of the time, the error occurs during the installation of the cgi script. in the beginning, we must follow the installation instructions and try installing a copy of this module file cgi.py as a cgi script. next, we can use test() function from the script. type the following code with a single statement. 
+cgi.test()
+ advantages of cgi programming there are various advantages of using cgi programming. below are some of its advantages. they are language independent. we can use cgi programs with any programming languages. the cgi programs can work on almost any web server and the portable. they are portable. the cgi programs can perform both simple and complex tasks; means they are fairly scalable. the cgis can increase the dynamic communication in the web applications. the cgis can also be profitable, if we use them in development; they reduce the development costs and maintenance costs. the cgis takes less time to process the requests. disadvantages of cgi consider the following disadvantages of cgi. cgi programs are too complex and hard to debug. when we initiate the program, the interpreter has to evaluate a cgi script in each initiation. the result is, creates a lot of traffic because are many requests from the side of the client-server. cgi programs are quite vulnerable, as most of them are free and easily available without the server security. cgi uses a lot of process time. during the page load, the data doesn't store in the cache memory. there are huge extensive codebases, most of it perl. common problems and solutions we can face problems during the implement the cgi script on the server. we have listed below the few common problems and their solutions. first of all, check the installation instructions. most of the problems occur during the installation of server. follow the installation guide properly. check the http server's log file. the tail -f logfile in a separated window may be valuable. in the cgi, it is possible to display the progress report on the client's screen of running requests. most http servers save the output from the cgi script until the script is finished. before executing the file, check the syntax error in your script, following as python script.py. if the script does not have any syntax error then import the library such as import cgitb; cgitb.enable() to the top of the script. the absolute path must be included when importing the external program. the path is usually not set to a very useful value in a cgi script. when reading or writing external files, make sure that they can be read or written by the user under which your cgi script will be running. this is authorized user id where the script file in which the web server is running or some specified userid for a web server. it should be remembered that the cgi script must not set in set-uid it won't work on most systems, and also a security liability. for videos join our youtube channel: join now feedback send your feedback to [email protected] help others, please share learn latest tutorials splunk spss swagger transact-sql tumblr reactjs regex reinforcement learning r programming rxjs react native python design patterns python pillow python turtle keras preparation aptitude reasoning verbal ability interview questions company questions trending technologies artificial intelligence aws selenium cloud computing hadoop reactjs data science angular 7 blockchain git machine learning devops b.tech / mca dbms data structures daa operating system computer network compiler design computer organization discrete mathematics ethical hacking computer graphics software engineering web technology cyber security automata c programming c++ java .net python programs control system data mining data warehouse javatpoint services javatpoint offers too many high quality services. mail us on [email protected], to get more information about given services. website designing website development java development php development wordpress graphic designing logo digital marketing on page and off page seo ppc content development corporate training classroom and online training data entry training for college campus javatpoint offers college campus training on core java, advance java, .net, android, hadoop, php, web technology and python. please mail your requirement at [email protected] duration: 1 week to 2 week like/subscribe us for latest updates or newsletter learn tutorialslearn javalearn data structureslearn c programminglearn c++ tutoriallearn c# tutoriallearn php tutoriallearn html tutoriallearn javascript tutoriallearn jquery tutoriallearn spring tutorial our websitesjavatpoint.comhindi100.comlyricsia.comquoteperson.comjobandplacement.com our services website development android development website designing digital marketing summer training industrial training college campus training contact address: g-13, 2nd floor, sec-3 noida, up, 201301, india contact no: 0120-4256464, 9990449935contact us subscribe us privacy policysitemap about me © copyright 2011-2021 www.javatpoint.com. all rights reserved. developed by javatpoint.
